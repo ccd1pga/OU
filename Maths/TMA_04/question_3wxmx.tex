@@ -1,0 +1,162 @@
+\documentclass[fleqn]{article}
+
+%% Created with wxMaxima 25.01.0
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{iftex}
+\ifPDFTeX
+  % PDFLaTeX or LaTeX 
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}}
+\else
+  %  XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+\fi
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[leqno]{amsmath}
+\usepackage{ifthen}
+\newsavebox{\picturebox}
+\newlength{\pictureboxwidth}
+\newlength{\pictureboxheight}
+\newcommand{\includeimage}[1]{
+    \savebox{\picturebox}{\includegraphics{#1}}
+    \settoheight{\pictureboxheight}{\usebox{\picturebox}}
+    \settowidth{\pictureboxwidth}{\usebox{\picturebox}}
+    \ifthenelse{\lengthtest{\pictureboxwidth > .95\linewidth}}
+    {
+        \includegraphics[width=.95\linewidth,height=.80\textheight,keepaspectratio]{#1}
+    }
+    {
+        \ifthenelse{\lengthtest{\pictureboxheight>.80\textheight}}
+        {
+            \includegraphics[width=.95\linewidth,height=.80\textheight,keepaspectratio]{#1}
+            
+        }
+        {
+            \includegraphics{#1}
+        }
+    }
+}
+\newlength{\thislabelwidth}
+\DeclareMathOperator{\abs}{abs}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+Let A be the quantities of onions, carrots and garlic cloves needed to make vegetable , minestrone and French onion soup respectively.
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i8)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+A:\ matrix(\\
+\ [2,2,8],\ \\
+\ [3,1,0],\ \\
+\ [2,3,4]\\
+);
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{A} 
+\begin{pmatrix}2 & 2 & 8\\
+3 & 1 & 0\\
+2 & 3 & 4\end{pmatrix}\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+Let x=vegtable, y=minestone and z=French onion.
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i18)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+B:\ matrix(\\
+[x],\ \\
+[y],\\
+[z]\\
+);
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{B} 
+\begin{pmatrix}x\\
+y\\
+z\end{pmatrix}\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+Let C be the quatities of the ingredients in the store cupboard.
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i39)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+C:\ matrix(\\
+\ \ \ \ [40],\ \\
+\ \ \ \ [10],\ \\
+\ \ \ \ [25]\\
+);\\
+
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{C} 
+\begin{pmatrix}40\\
+10\\
+25\end{pmatrix}\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+By using these matrices to represent the 3 simultaneous equation,
+2x+2y+8z=40
+3x+1y+0z=10
+2x+3y+4z=25
+The inverse of A is
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i43)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+A\_inv:invert(A);
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{A\_ inv} 
+\begin{pmatrix}\frac{1}{10} & \frac{2}{5} & \mathop{-}\left( \frac{1}{5}\right) \\
+\mathop{-}\left( \frac{3}{10}\right)  & \mathop{-}\left( \frac{1}{5}\right)  & \frac{3}{5}\\
+\frac{7}{40} & \mathop{-}\left( \frac{1}{20}\right)  & \mathop{-}\left( \frac{1}{10}\right) \end{pmatrix}\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+By multiply both sides of the equations by the inverse of A
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i42)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+A\_inv.C;
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{\% o42} 
+\begin{pmatrix}3\\
+1\\
+4\end{pmatrix}\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+So we can mke 3 portions of vegtable soup, 1 minestone soup and 4 French onion soup.
+\end{document}

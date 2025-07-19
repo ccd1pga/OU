@@ -1,0 +1,256 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%tufte-Handout%%%%%%%%%%
+
+%\usepackage{hyperref}
+%\hypersetup{
+%    pdffitwindow=false,            % window fit to page
+%    pdfstartview={Fit},            % fits width of page to window
+%    pdftitle={Lab notes 2014},     % document title
+%    pdfauthor={Your Name},         % author name
+%    pdfsubject={},                 % document topic(s)
+%    pdfnewwindow=true,             % links in new window
+%    colorlinks=true,               % coloured links, not boxed
+%    linkcolor=DarkScarletRed,      % colour of internal links
+%    citecolor=DarkChameleon,       % colour of links to bibliography
+%    filecolor=DarkPlum,            % colour of file links
+%    urlcolor=DarkSkyBlue           % colour of external links
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%.sty%%%%%%%%%%
+%\usepackage[latin1]{inputenc}
+
+%\usepackage{bigdelim}
+%\usepackage{epsfig}
+%\usepackage{extract}
+\usepackage{colortbl}
+\usepackage{mleftright}
+\usepackage{mathtools}
+\usepackage[thinc]{esdiff}
+%\usepackage{framed}
+%\usepackage{graphicx}
+%\graphicspath{ {figures/} }
+%\usepackage{multibib}
+%\usepackage{multirow}
+%\usepackage{pdflscape}
+%\usepackage{pstricks}
+%\usepackage{textcomp}
+%\usepackage{url}
+%\usepackage{wrapfig}
+%--------------------------------------------------Packages---------------------------------------------------%
+%\usepackage{tkz-euclide}                                      %Tkz-Euclide diagrams
+%\usepackage{amsmath,amsthm,amssymb,cancel,amsfonts}                    %Math packages
+%\usepackage{mathrsfs}                                         %Maths symbols
+%\usepackage{float}                                            %Float for figures
+%\usepackage{siunitx}                                          %Units
+%\usepackage{cleveref}                                         %Enhanced cross-referencing
+%\usepackage[utf8]{inputenc}                                   %Input encoding
+%\usepackage[table]{xcolor}                                    %Better control over table colors
+%\usepackage{graphicx}                                         %Include graphics
+%\usepackage{subcaption}                                       %Subfigures
+%\usepackage{booktabs}                                         %Better horizontal rules in tables
+%\usepackage{xspace}                                           %Better space handling
+%\usepackage{microtype}                                        %Improves character and word spacing
+%\usepackage[many]{tcolorbox}                                  %Boxes for headings or text
+%\usepackage{lmodern}                                          %Better font support
+%\usepackage{titlesec}                                         %Customize chapter and section titles
+%\usepackage{epigraph}                                         %Epigraphs
+%\usepackage{etoolbox}                                         %Programming tools for LaTeX
+%\usepackage{natbib}                                           %Bibliography management
+%\usepackage{marginfix}                                        %Fix margin figure placement
+%\usepackage{libertine}                                        %Use the Linux Libertine font
+%\usepackage{fancyhdr}                                         %Customize headers and footers
+%\usepackage{parskip}                                          %Zero paragraph indent, spacing
+
+
+
+
+%%% LISTINGS
+%\usepackage{listings}
+%\lstset{
+%  backgroundcolor=\color{tenPercentGrey}, %
+%  basicstyle=\color{Black}\ttfamily{}, %
+%  keywordstyle=[1]\color{DarkSkyBlue}, %
+%  keywordstyle=[2]\color{DarkScarletRed}, %
+%  keywordstyle=[3]\bfseries{}, %
+%  keywordstyle=[4]\color{DarkPlum}, %
+%  keywordstyle=[5]\color{SkyBlue}, %
+%  commentstyle=\color{Aluminium4}, %
+%  stringstyle=\color{Chocolate}, %
+%  identifierstyle=\color{Black}, %
+%  emphstyle=\color{Black}, %
+%  numbers=left, %
+%  stepnumber=1, % 
+%  frame=tb, %
+%  captionpos=b, %
+%  lineskip=\smallskipamount{}, %
+%  aboveskip=\bigskipamount{}, %
+%  belowskip=\medskipamount{}, %
+%  commentstyle=\itshape\small{}, %
+%  tabsize=2, %
+%  breaklines=false, %
+%  rulecolor=\color{Black!30}, %
+%  showspaces=false, %
+%  showstringspaces=false, %
+%  showtabs=false, %
+%} % chktex 6
+
+%%%%%%%%%%%% ASTRONOMY %%%%%%%%%%%%%%%%
+% Code from Research Diary Template by Mikhail Klassen
+\newcommand{\Msun}{M_\odot}
+\newcommand{\Lsun}{L_\odot}
+\newcommand{\Rsun}{R_\odot}
+\newcommand{\Mearth}{M_\oplus}
+\newcommand{\Learth}{L_\oplus}
+\newcommand{\Rearth}{R_\oplus}
+
+%%%%%%%%%%% MATHEMATICS %%%%%%%%%%%%%%%
+% Code from Research Diary Template by Mikhail Klassen
+\newcommand{\grad}{\nabla}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\eqnarr}{\begin{eqnarray}}
+\newcommand{\eqnend}{\end{eqnarray}}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\bigO}{\mathcal{O}}
+\DeclareMathSymbol{\umu}{\mathalpha}{operators}{0}
+
+%%%%%%%%%%% HEADER / FOOTER %%%%%%%%%%%
+%\pagestyle{fancy}
+%\setlength\parindent{0in}
+%\setlength\parskip{0.1in}
+%\setlength\headheight{15pt}
+
+%\lhead{\textsc{\userName}}
+%\chead{\textsc{Lab Notes}}
+%\rhead{\workingDate}
+%\lfoot{\includegraphics[width=0.1\textwidth]{logo.png}}
+%\cfoot{~~\textit{Last modified: \today}}
+%\rfoot{\textsc{\thepage}}
+
+%%%%%%%%%%% NEW ENVIRONMENTS %%%%%%%%%%
+%\newenvironment{projects}%
+%	{\section*{Projects \& Collaborations}}%
+%	{\vspace{2mm}\hrule\hspace{\stretch{1}}}
+
+%\newenvironment{maybe}%
+%	{\section*{Someday / Maybe}}%
+%	{\vspace{2mm}\hrule\hspace{\stretch{1}}}
+
+%%%%%%%%%%% NEW COMMANDS %%%%%%%%%%%%%%
+%\newcommand{\univlogo}{%
+%  \noindent
+%  \begin{wrapfigure}{r}{0.3\textwidth}
+%    \vspace{-33pt}
+%    \begin{center}
+%      \includegraphics[width=0.3\textwidth]{logo.png}
+%    \end{center}
+%    \vspace{-105pt}
+%  \end{wrapfigure}
+%}
+
+%\newcommand{\newday}[1]{%
+%    \section*{#1}%
+%}
+
+
+
+
+%-------------------------------------------------Symbols----------------------------------------------------%
+%\makeatletter                                                %eqparallel
+%\newcommand{\eqparallel}{\mathrel{\vphantom{\parallel}\mathpalette\eqparallel@\relax}}
+%\newcommand{\eqparallel@}[2]{%
+%  \ooalign{\hidewidth$\m@th#1\parallel$\hidewidth\cr$\m@th#1=$\cr}%
+%}
+%\makeatother
+
+%\DeclareSymbolFont{yhlargesymbols}{OMX}{yhex}{m}{n}
+%\DeclareMathAccent{\widetriangle}{\mathord}{yhlargesymbols}{"E6}
+
+%-----------------------------------------------Environments---------------------------%
+% Customize theorem environments
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{remark}{Remark}[section]
+
+%-----------------------------------------------Library-------------------------------------------------------%
+%\usetikzlibrary{decorations.markings, fit, shapes.geometric, tikzmark, arrows, backgrounds, calc, hobby, positioning}
+
+%-----------------------------Page Layout------------------------------------%
+%\usepackage[
+%    b5paper,                          %Paper size
+ %   inner=40mm,                        %Inner margin
+ %   outer=20mm,                        %Outer margin
+ %   top=25mm,                          %Top margin
+ %   bottom=25mm,                       %Bottom margin
+  %  marginparsep=5mm,                  %Margin separator
+ %   marginparwidth=40mm                %Margin paragraph width
+%]{geometry}
+
+%\pagestyle{fancy}
+%\fancyhf{}                            %Clear existing header/footer
+%\fancyfoot[C]{\thepage\ of \pageref{LastPage}} %Footer with page X of Y
+
+
+%\titleformat{\chapter}[display]
+%  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+%\titleformat{\section}
+%  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+%\titleformat{\subsection}
+%  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+%\setlength{\headheight}{14.5pt}
+%\setlength{\parskip}{1em}
+%\setlength{\parindent}{0em}
+
+% Greek Writing
+%\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+
+% Define custom command for TMA number
+%\newcommand{\tma}[1]{
+%    \fancyhead[L]{Paul Allen}        % Left header (name)
+%    \fancyhead[C]{Y362220X}          % Center header (student number)
+%    \fancyhead[R]{MST124 TMA:#1}     % Right header (course and TMA number)
+%}
+
+% Set up counters for questions and parts
+%\newcounter{question}
+%\newcounter{qpart}[question]
+%\newcounter{qsubpart}[qpart]
+%\renewcommand{\thequestion}{\arabic{question}}
+%\renewcommand{\theqpart}{\alph{qpart}} % parts as (a), (b), ...
+%\renewcommand{\theqsubpart}{\roman{qsubpart}} % subparts as (i), (ii), ...
+
+% Define the question environment with automatic new page
+%\newenvironment{question}[1][0]{%
+%    \ifthenelse{#1>0}{\setcounter{question}{#1-1}}{\relax}%
+%    \stepcounter{question}
+%    \noindent\textbf{Question \thequestion:}\quad
+%    \newline \newline % Creates space for answering
+%}{%
+%    \par \vspace{3em}
+%    \newpage % Automatically start on new page
+%}
+
+% Define part and subpart commands
+%\newcommand{\qpart}[1][0]{%
+%    \ifthenelse{#1>0}{\setcounter{qpart}{#1-1}}{\relax}%
+%    \stepcounter{qpart}%
+%    \noindent\textbf{Part (\theqpart): }\newline % Creates space for answering
+%}
+
+%\newcommand{\qsubpart}[1][0]{%
+%    \ifthenelse{#1>0}{\setcounter{qsubpart}{#1-1}}{\relax}%
+%    \stepcounter{qsubpart}%
+%    \noindent\textbf{Subpart (\theqsubpart): }\newline % Creates space for answering
+}
+
+% Derivatives and Math Commands
+%\newcommand{\deriv}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+%\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+%\newcommand{\psderiv}[3]{\frac{\partial ^2#1}{\partial #2\partial #3}}
+%\newcommand{\dd}{\ensuremath{\, \mathrm{d}}}
+%\newcommand{\e}{\ensuremath{\mathrm{e}}}
+%\newcommand{\ii}{\ensuremath{\mathrm{i}}

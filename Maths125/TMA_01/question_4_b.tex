@@ -1,0 +1,93 @@
+\documentclass[fleqn]{article}
+
+%% Created with wxMaxima 25.01.0
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{iftex}
+\ifPDFTeX
+  % PDFLaTeX or LaTeX 
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}}
+\else
+  %  XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+\fi
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[leqno]{amsmath}
+\usepackage{ifthen}
+\newsavebox{\picturebox}
+\newlength{\pictureboxwidth}
+\newlength{\pictureboxheight}
+\newcommand{\includeimage}[1]{
+    \savebox{\picturebox}{\includegraphics{#1}}
+    \settoheight{\pictureboxheight}{\usebox{\picturebox}}
+    \settowidth{\pictureboxwidth}{\usebox{\picturebox}}
+    \ifthenelse{\lengthtest{\pictureboxwidth > .95\linewidth}}
+    {
+        \includegraphics[width=.95\linewidth,height=.80\textheight,keepaspectratio]{#1}
+    }
+    {
+        \ifthenelse{\lengthtest{\pictureboxheight>.80\textheight}}
+        {
+            \includegraphics[width=.95\linewidth,height=.80\textheight,keepaspectratio]{#1}
+            
+        }
+        {
+            \includegraphics{#1}
+        }
+    }
+}
+\newlength{\thislabelwidth}
+\DeclareMathOperator{\abs}{abs}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+Using the general formula for a  conic .of Ax\^ 2+Bxy+C\^ 2+Dx+Ey+f=0 My OU number is Y362220X, hence the last non zero digit is 2, therefore B=2.
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i1)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+conic:-2*x\^\ 2+2*x*y+3*y\^\ 2-x+3*y-5=0;
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{conic} 
+3 {{y}^{2}}\mathop{+}2 x y\mathop{+}3 y\mathop{-}2 {{x}^{2}}\mathop{-}x\mathop{-}5\mathop{=}0\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+Drawing the graph of this conic
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i3)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+load("draw")\$\\
+draw2d(\\
+\ \ implicit(\\
+\ \ \ \ conic,\\
+\ \ \ \ x,\ -5,\ 5,\\
+\ \ \ \ y,\ -5,\ 5\\
+\ \ )\\
+);
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{\% o3} 
+\left[ \mathop{gr2d}\left( \ensuremath{\mathrm{implicit}}\right) \right] qt.qpa.fonts: Populating font family aliases took 107 ms. Replace uses of missing font family "Sans" with one that exists to avoid this cost. 
+\] \texttt{%error
+Warning: slow font initialization2025-03-03 09:38:42.161 gnuplot\_ qt[5615:55353974] +[IMKClient subclass]: chose IMKClient\_ Modern
+}\[2025-03-03 09:38:42.161 gnuplot\_ qt[5615:55353974] +[IMKInputSession subclass]: chose IMKInputSession\_ Modern\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+\end{document}

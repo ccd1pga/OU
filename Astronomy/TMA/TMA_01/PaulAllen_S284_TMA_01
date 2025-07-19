@@ -1,0 +1,205 @@
+\documentclass{tufte-handout}
+
+\usepackage{/Users/paulallen/OU/Astronomy/style}
+\usepackage{unicode-math}
+\begin{document}
+\tma{01}
+
+\begin{question}
+
+\qpart
+
+\qsubpart
+
+\begin{figure*}[h]
+  \includegraphics[width=\linewidth]{question_1_a_i.jpg}%
+  \caption{Screenshot of the basic data of alpha Sco.
+  \emph{Accessed 01/11/2024.}}%
+ \label{fig:alf_Sco}%
+\end{figure*}
+
+\vspace{5cm}
+
+\qsubpart
+
+From the SIMBAD database for alf Sco, we have RA; 
+\[(\mu_{\alpha^{\ast}}=\mu_{\alpha} \cos \delta): \SI{-12.11}{\mas \per\year}\]
+and proper motion in Dec;
+\[\mu_{\delta}: \SI{-23.30}{\mas \per\year}\]
+
+Using equation 1.10:
+\begin{equation}
+\tag{eqn 1.10}\label{eq:1.10}
+    \mu^{2}=(\mu_{\alpha^{\ast}})^{2}+(\mu_{\delta})^{2}
+    \end{equation}
+	
+Substituting in our values:
+\begin{align*}
+\mu^{2}&=(-12.11)^{2}+(-23.30)^{2}\\[8pt]
+\mu&=\sqrt{(-12.11)^{2}+(-23.30)^{2}}\\[8pt]
+\mu&=\sqrt{146.6521+542.89}\\[8pt]
+\mu&=\sqrt{689.54212}\\[8pt]
+\mu&=26.259...\\[8pt]
+\mu&= 26.26\\ \snote{to 2 d.p}
+\end{align*}
+
+\clearpage
+
+\qpart
+
+\qsubpart
+
+\begin{figure*}[h]
+  \includegraphics[width=\linewidth]{question_1_b_i.jpg}%
+  \caption{Screenshot of the basic data of NGC 0001.
+  \emph{Accessed 01/11/2024.}}%
+ \label{fig:NGC_0001}%
+\end{figure*}
+
+\clearpage
+
+\qsubpart
+
+From the NED database for NGC 0001, we have pysical distance (D):  $\SI{29.65}{\kilo\parsec}$ and angular diameter ($\theta$): $\SI{108.00}{\arcsecond}$.
+
+Using equation 1.5:
+\begin{equation}
+\tag{eqn 1.5}\label{eq:1.5}
+    \sin \theta = \frac{D}{d}
+    \end{equation}
+
+\marginnote[2.5cm]{\begin{align*}\SI{108.00}{\arcsecond} &\approx
+ \biggl(\frac{108}{3600}\biggl)^{\circ} \times\biggl(\frac{2\pi}{\ang{360}}\biggl)\\[5pt]
+&\approx \SI{5.235e-4}{\radian}\end{align*}}
+
+\begin{align*}
+ \sin \theta &= \frac{D}{d}\\[8pt]
+\shortintertext{using approximation theorey}
+\sin \theta &\approx \theta \snote{when $\theta$ is in radians}\\[8pt]
+\shortintertext{So:}
+\theta &\approx \frac{D}{d}\\[8pt]
+D&\approx d \div \theta
+\shortintertext{ Substituting our values:}
+ &\approx 29.65 \div \num{5.235e-4}\\[8pt]
+ &\approx \SI{56627.32875}{\parsec}\\[8pt]
+ &\approx \SI{56.63}{\mega\parsec} \snote{to 2 d.p}
+\end{align*}
+
+\end{question}
+
+\begin{question}
+
+\qpart
+
+\qsubpart
+
+Plane plot of the distribution of the proper motions in the Alpha Persei cluster, proper motion in right assension (\unit[per-mode=symbol]{\pmra\per\mas\per\year}) versus the proper motion in declination (\unit[per-mode=symbol]{\pmdec\per\mas\per\year}) . With the co-moving group marked in blue.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{comoving.jpg}%
+  \caption{A plane plot to show proper motion in right ascension versus proper motion in declination.
+  \emph{Created 01/11/2024.}}%
+ \label{fig:proper_motion}%
+\end{figure}
+
+\clearpage
+
+An image of the same data but zoomed in so you can properly identify the area of stars that are co-moving.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{comoving_zoom.jpg}%
+  \caption{A plane plot to show proper motion in right ascension versus proper motion in declination, focused on the co-moving section of the cluster..
+  \emph{Created 01/11/2024.}}%
+ \label{fig:proper_motion_zoom}%
+\end{figure}
+
+\clearpage
+
+\qsubpart
+
+A histogram of the parallax (\unit[per-mode=symbol]{\parallax\per\mas}) of the Alpha Perei cluster:
+
+\begin{figure}[!hbp]
+  \includegraphics[width=\linewidth]{parallax.jpg}%
+  \caption{A histogram of the parallax of the cluster.
+  \emph{Created 01/11/2024.}}%
+ \label{fig:parallax}%
+\end{figure}
+
+\clearpage
+
+A histogram of the parallax (\unit[per-mode=symbol]{\parallax\per\mas}) of the co-moving subset, ie within the range $5.25<\unit[per-mode=symbol]{\parallax\per\mas}<6.25$ of the Alpha Perei cluster:
+
+\begin{figure}[!hbp]
+  \includegraphics[width=\linewidth]{parallax_cluster.jpg}%
+  \caption{A histogram of the parallax of just the co-moving cluster.
+  \emph{Created 01/11/2024.}}%
+ \label{fig:parallax_cluster}%
+\end{figure}
+
+\clearpage
+
+\qsubpart
+
+A plane plot of the CMD of the co-moving subset of the cluster, this is the 'blue-minus-red' (\unit[per-mode=symbol]{\phot\per\mag}) colour of each star versus the 'green' magnitude (\unit[per-mode=symbol]{\bprp\per\mag}), With the Y-axis flipped so that the magnitudes values increase downwards.
+
+\begin{figure}[!hbp]
+  \includegraphics[width=\linewidth]{CMD.jpg}%
+  \caption{\text{A plane plot of the bp\_rp versus phot\_g\_mean\_mag}
+  \emph{Created 01/11/2024.}}%
+ \label{fig:CMD}%
+\end{figure}
+
+\clearpage
+
+\qpart
+
+The mean parallax for this cluster in Alpha Persie is 
+	\[\SI{5.72459}{\mas}= \num{5.72479e-3}\unit{\arcsecond}\] 
+
+with a standard deviation of 
+	\[\pm\SI{0.185625}{\mas} = \num{0.185625e-3}\unit{\arcsecond}\]
+	
+\vspace{5cm}
+
+Using equation 3.1
+\begin{equation}
+\tag{eqn 3.1}\label{eq:3.1}
+    (d\unit[per-mode=symbol]{\per{\parsec}}) = \frac{1}{\varpi\unit[per-mode=symbol]{\per{\arcsecond}}}
+\end{equation}
+    
+\begin{align*}
+ d &= \frac{1}{\varpi \, \si[per-mode=symbol]{\per{\arcsecond}}} \\[8pt]
+    \shortintertext{Substituting our values}
+    &= \frac{1}{\num{5.72479e-3}"} \\[8pt]
+        &= 174.678\ldots \unit{\parsec}\\[8pt]
+ &= 174.7\unit{\parsec}\\ \snote{to 1 d.p}
+ \end{align*}
+ 
+\clearpage
+
+Using equation 3.2 to work out the error:
+
+\begin{equation}
+\tag{eqn 3.2}\label{eq:3.2}
+    \Delta d = \frac{\Delta\upvarpi}{\varpi^{2}}
+    \end{equation}
+    
+\begin{align*}
+ \Delta d &= \frac{\Delta\upvarpi}{\varpi^{2}}\unit{\parsec}\\[8pt]
+ \shortintertext{Substituting our values}
+ &= \biggl(\frac{\num{0.185625e-3}}{(\num{5.72479e-3})^2}\biggl)\\[8pt]
+ &= 5.6639\dots\\
+ &= \SI{5.7}{\parsec}\\ \snote{To 1 D.P}
+\end{align*}
+
+\vspace{3cm}
+
+Therefore the approximate distance to the star cluster is
+	\[ d \approx 174.7 \pm 5.7 \unit{\parsec}\]
+
+\end{question}
+
+
+
+\end{document}

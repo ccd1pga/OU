@@ -1,0 +1,94 @@
+\documentclass{tufte-handout}
+
+\begin{document}
+
+When you want to calculate the total proper motion of a star based on its motion in right ascension (RA) and declination (Dec), you're essentially finding the magnitude of a vector from its components. Here's the step-by-step process:
+
+ Step 1: Gather the Proper Motion Components
+
+From the SIMBAD data for tau Sco, we have:
+- Proper motion in RA (\( \mu_{\alpha} \cos \delta \)): \( -9.89 \) mas/yr
+- Proper motion in Dec (\( \mu_{\delta} \)): \( -22.83 \) mas/yr
+
+ Step 2: Understand the RA Proper Motion Component
+
+The proper motion in RA is usually given as \( \mu_{\alpha} \cos \delta \), meaning it’s the proper motion along the RA axis but adjusted for the declination of the star. This accounts for the fact that a change in RA corresponds to a smaller physical distance at high declinations (near the celestial poles).
+
+ Step 3: Calculate the Total Proper Motion
+
+The total proper motion (\( \mu \)) combines the RA and Dec components, like calculating the hypotenuse of a right triangle. The formula is:
+
+\[
+\mu = \sqrt{(\mu_{\alpha} \cos \delta)^2 + (\mu_{\delta})^2}
+\]
+
+This equation adds the squares of each component and then takes the square root to find the total vector magnitude.
+
+ Step 4: Substitute Values and Solve
+
+For tau Sco, you would plug in:
+- \( \mu_{\alpha} \cos \delta = -9.89 \) mas/yr
+- \( \mu_{\delta} = -22.83 \) mas/yr
+
+Then calculate:
+
+\[
+\mu = \sqrt{(-9.89)^2 + (-22.83)^2}
+\]
+
+ Step 5: Interpret the Result
+
+The result will give you the star’s total proper motion in milliarcseconds per year (mas/yr), which represents the rate at which it appears to move across the sky relative to distant background stars.
+
+---
+
+Let me know if you’d like to check your calculation for another star, and I’ll be here to confirm the process!
+
+%%%%%%%
+To calculate the distance to a galaxy using its angular and physical diameters, you can use the **small angle formula**. This approach is helpful when you know the galaxy's actual size (physical diameter) and its apparent size (angular diameter in the sky).
+
+ Step-by-Step Calculation Using Angular Diameter and Physical Diameter
+
+The small angle formula is given by:
+
+\[
+D = \frac{d}{\theta}
+\]
+
+where:
+- \( D \) is the distance to the galaxy (in the same units as the physical diameter),
+- \( d \) is the actual (physical) diameter of the galaxy, and
+- \( \theta \) is the angular diameter in radians.
+
+Since angular diameter is often given in arcseconds, we need to convert it to radians:
+
+\[
+\theta (\text{radians}) = \theta (\text{arcseconds}) \times \frac{\pi}{648000}
+\]
+
+Applying to NGC 0002
+
+1. **Convert Angular Diameter to Radians**:
+   - The angular diameter \( \theta \) is given as \( 72.00 \) arcseconds.
+   - Converting to radians:
+
+   \[
+   \theta = 72.00 \times \frac{\pi}{648000} \approx 3.4907 \times 10^{-4} \, \text{radians}
+   \]
+
+2. **Plug in the Physical Diameter**:
+   - The physical diameter \( d \) of NGC 0002 is \( 32.72 \) kpc.
+
+3. **Calculate the Distance**:
+   - Using the formula \( D = \frac{d}{\theta} \):
+
+   \[
+   D = \frac{32.72 \, \text{kpc}}{3.4907 \times 10^{-4}} \approx 93.7 \, \text{Mpc}
+   \]
+
+ Result Interpretation
+
+This calculation gives a distance of about \( 93.7 \) Mpc, which aligns with the mean distance provided in the data. This approach is valuable for distance measurement in astronomy, especially when independent of redshift-based methods, allowing confirmation or refinement of distance estimates.
+
+\end{document}
+

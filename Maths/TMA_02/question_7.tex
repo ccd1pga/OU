@@ -1,0 +1,100 @@
+\documentclass[fleqn]{article}
+
+%% Created with wxMaxima 25.01.0
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{iftex}
+\ifPDFTeX
+  % PDFLaTeX or LaTeX 
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}}
+\else
+  %  XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+\fi
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[leqno]{amsmath}
+\usepackage{ifthen}
+\newsavebox{\picturebox}
+\newlength{\pictureboxwidth}
+\newlength{\pictureboxheight}
+\newcommand{\includeimage}[1]{
+    \savebox{\picturebox}{\includegraphics{#1}}
+    \settoheight{\pictureboxheight}{\usebox{\picturebox}}
+    \settowidth{\pictureboxwidth}{\usebox{\picturebox}}
+    \ifthenelse{\lengthtest{\pictureboxwidth > .95\linewidth}}
+    {
+        \includegraphics[width=.95\linewidth,height=.80\textheight,keepaspectratio]{#1}
+    }
+    {
+        \ifthenelse{\lengthtest{\pictureboxheight>.80\textheight}}
+        {
+            \includegraphics[width=.95\linewidth,height=.80\textheight,keepaspectratio]{#1}
+            
+        }
+        {
+            \includegraphics{#1}
+        }
+    }
+}
+\newlength{\thislabelwidth}
+\DeclareMathOperator{\abs}{abs}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+Question 7
+a)
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i2)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+f(x):=(3*x+15*x\^\ {2}-x\^\ {4})/(9*x\^\ {2}+1);
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{\% o2} 
+\mathop{f}(x)\mathop{:=}\frac{3 x\mathop{+}15 {{x}^{{2}}}\mathop{-}{{x}^{{4}}}}{9 {{x}^{{2}}}\mathop{+}1}\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i3)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+f(1);
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle \tag{\% o3} 
+\frac{17}{10}\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%
+%% INPUT:
+\begin{minipage}[t]{4.000000em}\color{red}\bfseries
+(\% i5)	
+\end{minipage}
+\begin{minipage}[t]{\textwidth}\color{blue}
+plot2d([f(x)],\ [x,\ -5,\ 5],\ [y,\ -1,\ 2],\ \\
+\ \ \ \ \ \ \ [plot\_format,\ xmaxima],\ \\
+\ \ \ \ \ \ \ [gnuplot\_postamble,\ "set\ zeroaxis;"])\$
+\end{minipage}
+%%%% OUTPUT:
+\[\displaystyle plot2d: expression evaluates to non-numeric value somewhere in plotting range.\mbox{}
+\]
+%%%%%%%%%%%%%%%%
+\end{document}

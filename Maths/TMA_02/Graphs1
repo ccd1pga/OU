@@ -1,0 +1,143 @@
+ \[ d(x) = \sin x \]
+
+\begin{center}
+    \begin{tikzpicture}
+\begin{axis}[
+    axis x line=middle,       % Draw x-axis at the middle
+    axis y line=middle,       % Draw y-axis at the middle
+    enlarge x limits=0.1,     % Add some space around x limits
+    xmin=-2*pi, xmax=2*pi,    % Set x range
+    ymin=-1.5, ymax=1.5,      % Set y range (adjust as needed)
+    xtick={-2*pi, -3*pi/2, -pi, -pi/2, 0, pi/2, pi, 3*pi/2, 2*pi}, % Manually set ticks
+    xticklabels={$-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$}, % Labels
+    ytick={-1, 0, 1},         % Set y ticks
+    xlabel={$x$},             % Label for x-axis
+    ylabel={$y$},             % Label for y-axis
+    axis line style={-},      % Remove arrows from axis lines
+    tick style={very thick},  % Optional: Styling ticks
+]
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\[ e(x) = \sin2x \]
+
+\begin{center}
+    \begin{tikzpicture}
+\begin{axis}[
+    axis x line=middle,       % Draw x-axis at the middle
+    axis y line=middle,       % Draw y-axis at the middle
+    enlarge x limits=0.1,     % Add some space around x limits
+    xmin=-2*pi, xmax=2*pi,    % Set x range
+    ymin=-1.5, ymax=1.5,      % Set y range (adjust as needed)
+    xtick={-2*pi, -3*pi/2, -pi, -pi/2, 0, pi/2, pi, 3*pi/2, 2*pi}, % Manually set ticks
+    xticklabels={$-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$}, % Labels
+    ytick={ -1,  0, 1},         % Set y ticks
+    xlabel={$x$},             % Label for x-axis
+    ylabel={$y$},             % Label for y-axis
+    axis line style={-},      % Remove arrows from axis lines
+    tick style={very thick},  % Optional: Styling ticks
+]
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\[ f(x) = 2\sin2x \]
+
+\begin{center}
+    \begin{tikzpicture}
+\begin{axis}[
+    axis x line=middle,       % Draw x-axis at the middle
+    axis y line=middle,       % Draw y-axis at the middle
+    enlarge x limits=0.1,     % Add some space around x limits
+    xmin=-2*pi, xmax=2*pi,    % Set x range
+    ymin=-2.5, ymax=2.5,      % Set y range (adjust as needed)
+    xtick={-2*pi, -3*pi/2, -pi, -pi/2, 0, pi/2, pi, 3*pi/2, 2*pi}, % Manually set ticks
+    xticklabels={$-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$}, % Labels
+    ytick={-2, 0, 2},         % Set y ticks
+    xlabel={$x$},             % Label for x-axis
+    ylabel={$y$},             % Label for y-axis
+    axis line style={-},      % Remove arrows from axis lines
+    tick style={very thick},  % Optional: Styling ticks
+]
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\[ g(x) = 3 + 2\sin2x \]
+
+\begin{center}
+    \begin{tikzpicture}
+\begin{axis}[
+    axis x line=middle,       % Draw x-axis at the middle
+    axis y line=middle,       % Draw y-axis at the middle
+    enlarge x limits=0.1,     % Add some space around x limits
+    xmin=-2*pi, xmax=2*pi,    % Set x range
+    ymin=-0.5, ymax=5.5,      % Set y range (adjust as needed)
+    xtick={-2*pi, -3*pi/2, -pi, -pi/2, 0, pi/2, pi, 3*pi/2, 2*pi}, % Manually set ticks
+    xticklabels={$-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$}, % Labels
+    ytick={ 0, 1, 3, 5},         % Set y ticks
+    xlabel={$x$},             % Label for x-axis
+    ylabel={$y$},             % Label for y-axis
+    axis line style={-},      % Remove arrows from axis lines
+    tick style={very thick},  % Optional: Styling ticks
+]
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+
+\begin{center}
+    \begin{tikzpicture}[scale=1.5, >=stealth]
+        % Define the range for x and y
+        \def\xmin{-4}
+        \def\xmax{1}
+        \def\ymin{-7.5}
+        \def\ymax{1}
+
+        % Draw the x-axis
+        \draw[->, thick] (\xmin,0) -- (\xmax,0) node[right] {$x$};
+
+        % Draw the y-axis
+        \draw[->, thick] (0,\ymin) -- (0,\ymax) node[above] {$y$};
+
+        % Define custom y-tick positions (not equally spaced)
+        \foreach \y/\label in {
+            0/0,
+            -1/-1,
+            -4/-5,
+            -4.5/-\dfrac{139}{27},
+            -5.5/-5.5,
+            -7/-7
+        }{
+            % Draw the tick
+            \draw[thick] (-0.1,\y) -- (0.1,\y);
+            % Place the label to the left of the tick
+            \node[right=2pt] at (-0.1,\y) {$\displaystyle \label$};
+        }
+
+        % Define x-tick positions and labels
+        \foreach \x/\label in {
+            -3/-3,
+            -2/-2,
+            -0.75/-\dfrac{3}{4},
+            0/0
+        }{
+            % Draw the tick
+            \draw (\x,-0.1) -- (\x,0.1);
+            % Place the label below the tick
+            \node[below=2pt] at (\x,-0.1) {$\label$};
+        }
+
+        % Mark the stationary points and intercepts
+        % Stationary Points: (-2,-5) and (-0.75, -5.148)
+        %\filldraw[red] (-2,-5) circle (2pt) node[anchor=west, font=\small] {(-2, -5)};
+        %\filldraw[red] (-0.75,-5.148) circle (2pt) node[anchor=west, font=\small] {$\left(-\dfrac{3}{4}, -\dfrac{139}{27}\right)$};
+
+        % Y-intercept: (0,-1)
+        %\filldraw[blue] (0,-1) circle (2pt) node[anchor=west, font=\small] {(0, -1)};
+
+        % Other important point: (-3, -7)
+        %\filldraw[green] (-3,-7) circle (2pt) node[anchor=east, font=\small] {(-3, -7)};
+    \end{tikzpicture}
+\end{center}

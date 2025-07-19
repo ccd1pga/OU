@@ -1,0 +1,473 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+\usepackage{polynom}
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\begin{document}
+\bibliography{biblio.bib} 
+\tma{02}
+
+%question one
+
+\begin{question}
+
+\qpart
+\qsubpart
+
+\[ g(x,y) = (2x,7y) \]
+
+\begin{align*}
+    \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        x \\
+        y
+    \end{pmatrix}
+    &=
+    \begin{pmatrix}
+        2x\\
+        7y
+    \end{pmatrix}\\[8pt]
+    \begin{pmatrix}
+        ax + by \\
+        cx + dy
+    \end{pmatrix}
+    &=
+    \begin{pmatrix}
+        2x + 0y\\
+        0x + 7y
+    \end{pmatrix}\\[8pt]
+    &=
+    \begin{pmatrix}
+        2 & 0 \\
+        0 & 7
+    \end{pmatrix}\\
+\end{align*}
+
+This is a diagonal scaling, scale by \( 2 \) in \( x‐direction \), \( 7 \) in \( y‐direction \).
+
+\vspace{3cm}
+\qsubpart
+
+\[ h(x,y) = (x,4x+y) \]
+
+\begin{align*}
+    \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        x \\
+        y
+    \end{pmatrix}
+    &=
+    \begin{pmatrix}
+        x + y\\
+        4x + y
+    \end{pmatrix}\\[8pt]
+    \begin{pmatrix}
+        ax + by \\
+        cx + dy
+    \end{pmatrix}
+    &=
+    \begin{pmatrix}
+        x + 0y\\
+        4x + y
+    \end{pmatrix}\\[8pt]
+    &=
+    \begin{pmatrix}
+        1 & 0\\
+        4 & 1
+    \end{pmatrix}\\
+\end{align*}
+
+This is a shear transformation.
+
+\vspace{3cm}
+\qsubpart
+
+\[ k(x,y) = (y,x) \]
+
+\begin{align*}
+    \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        x \\
+        y
+    \end{pmatrix}
+    &=
+    \begin{pmatrix}
+        y\\
+        x
+    \end{pmatrix}\\[8pt]
+    \begin{pmatrix}
+        ax + by \\
+        cx + dy
+    \end{pmatrix}
+    &=
+    \begin{pmatrix}
+        0x + y\\
+        x + 0y
+    \end{pmatrix}\\[8pt]
+    &=
+    \begin{pmatrix}
+        0 & 1\\
+        1 & 0
+    \end{pmatrix}\\
+\end{align*}
+
+This swaps \( x \) and \( y \).
+
+\vspace{3cm}
+\qpart
+
+\[ g = \begin{pmatrix}
+    2 & 0 \\
+    0 & 7
+    \end{pmatrix}
+    \qquad
+    h = \begin{pmatrix}
+        1 & 0 \\
+        4 & 1
+    \end{pmatrix}
+    \qquad
+    k = \begin{pmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{pmatrix} 
+\]
+
+\[ f = k \circ h \circ g \]
+
+\begin{align*}
+    \stext{First we find \( h \circ g \) }\\
+    &= h \circ g \\
+    &= \begin{pmatrix}
+        1 & 0 \\
+        4 & 1
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        2 & 0 \\
+        0 & 7
+    \end{pmatrix}\\[8pt]
+    &= \begin{pmatrix}
+        1 \cdot 2 + 0 \cdot 0 & 1 \cdot 0 + 0 \cdot 7 \\
+        4 \cdot 2 + 1 \cdot 0 & 4 \cdot 0 + 1 \cdot 7
+    \end{pmatrix}\\
+    &= \begin{pmatrix}
+        2 & 0 \\
+        8 & 7
+    \end{pmatrix}\\
+\stext{Now we find \( k \circ h \circ g \)}\\
+    \mathbf{A}  &= k \circ \begin{pmatrix}
+        2 & 0 \\
+        8 & 7
+    \end{pmatrix}\\[8pt]
+    &= \begin{pmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        2 & 0 \\
+        8 & 7
+    \end{pmatrix}\\[8pt]
+    &= \begin{pmatrix}
+        0 \cdot 2 + 1 \cdot 8 & 0 \cdot 0 + 1 \cdot 7 \\
+        1 \cdot 2 + 0 \cdot 8 & 1 \cdot 0 + 0 \cdot 7
+    \end{pmatrix}\\[8pt]
+    &= \begin{pmatrix}
+        8 & 7 \\
+        2 & 0
+    \end{pmatrix}\\
+    \snote{As required}
+\end{align*}
+
+\vspace{3cm}
+\qpart
+
+\marginnote{To find the determiate of a matrix, we can use the formula:\[ Det A = ad - bc \]}
+\marginnote{To find th inverse of a matrix we use \[ \mathbf{A^{-1}} = \frac{1}{Det A}\begin{pmatrix}
+        d & -b \\
+        -c & a
+    \end{pmatrix} \]}
+
+
+First we have to find the determinant of \( f \).
+
+\begin{align*}
+    Det A &= Det \begin{pmatrix}
+        8 & 7 \\
+        2 & 0
+    \end{pmatrix}\\[8pt]
+    &= 8 \cdot 0 - 7 \cdot 2\\
+    &= -14
+\end{align*}
+
+As \( Det A \neq 0 \) \( f \) is inversable 
+
+\begin{align*}
+    \stext{Hence the matrix that represents \( f^{-1} \) is}
+    f^{-1} &= \frac{1}{Det A} \cdot \begin{pmatrix}
+        0 & -7 \\
+        -2 & 8
+    \end{pmatrix}\\[8pt]
+    &= \frac{-1}{14} \cdot \begin{pmatrix}
+        0 & -7 \\
+        -2 & 8
+    \end{pmatrix}\\[8pt]
+    &= \frac{1}{14} \cdot \begin{pmatrix}
+        0 & 7 \\
+        2 & -8
+    \end{pmatrix}\\[8pt]
+    &= \begin{pmatrix}
+        0 & \frac{1}{2} \\
+        \frac{1}{7} & -\frac{4}{7}
+    \end{pmatrix}\\
+\end{align*}
+
+\vspace{3cm}
+\qpart
+
+First to find the coordinates of the point in the domain of \( f \) 
+that is mapped to a general point \( (x,y) \) in the codoimain of \( f \).
+
+\begin{align*}
+    \stext{Each point \( (x,y) \) is the image under \( f \) of the point
+    \( f^{-1}(x,y) \) }
+    \mathbf{A^{-1}}\begin{pmatrix}
+        x \\
+        y
+    \end{pmatrix}
+    &= \begin{pmatrix}
+        0 & \frac{1}{2} \\
+        \frac{1}{7} & -\frac{4}{7}      
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        x \\
+        y
+    \end{pmatrix}\\[8pt]
+    &= \begin{pmatrix}
+        0 \cdot x + \frac{1}{2} \cdot y \\
+        \frac{1}{7} \cdot x - \frac{4}{7} \cdot y
+    \end{pmatrix}\\[8pt]
+\stext{Hence  \( f \) maps the point \( (\frac{y}{2}, \frac{x - 4y}{7}) \)
+to the point \( (x,y) \) }
+\end{align*}
+
+\marginnote{The general equation of the unit circle is \[ x^{2} + y^{2} = 1 \]}
+
+\begin{align*}
+\stext{Substitute these values into the unit circle to find the equation of the image \( f\rb{C} \)}\\[8pt]
+    \rb{\frac{y}{2}^{2} + \frac{x - 4y}{7}^{2}} &= 1\\[8pt]
+\stext{Mulitplying out th brackets}\\[8pt]
+    \frac{y^{2}}{4} + \frac{x^{2} - 8xy + 16y^{2}}{49} &= 1\\[8pt]
+\stext{Multiplying through by \( 196 \)}\\[8pt]
+    49y^{2} + 4x^{2} - 32xy + 64y^{2} &= 196\\[8pt]
+\stext{Combining like terms, leaves us with the equation of \( f\rb{C} \)}
+    \frac{1}{196}\rb{4x^{2} - 32xy + 113y^{2}} &= 1\\[8pt]
+\stext{Putting this into the form \( ax^{2} + bxy + cy^{2} = d \)}
+    4x^{2} - 32xy + 113y^{2} &= 196\\[8pt]
+\stext{This is the equation of the image \( f\rb{C} \)}
+\stext{where \( a = 4, b = -32, c = 113, d = 196 \)}
+\end{align*}
+
+\vspace{3cm}
+\qpart
+
+The are of the unit circle is \( \pi \) the area of \( f\rb{C} \) is given by the fact
+that linear transformations scale the area by the absolute value of the determinant of 
+the transformation matrix.
+
+\begin{align*}
+    \stext{The area of the image \( f\rb{C} \) is}
+    Area\rb{f\rb{C}} &= \vert Det f \vert \cdot Area\rb{C}\\[8pt]
+    &= 14 \cdot \pi\\
+    &= 14\pi   
+\end{align*}
+
+\end{question}
+
+\clearpage
+
+%question two
+\begin{question}
+
+    \qpart
+
+    \polylongdiv{5x^{3}-11x^{2}-99x-72}{x^{2}-3x-18}   
+
+\begin{align*}
+\stext{Hence, the quotient is}
+    Q(x) &= 5x + 4\\[8pt]
+\stext{The remainder is}
+    R(x) &= \frac{3x}{x^{2}-3x-18}\\[8pt]
+\stext{Writing as partilar fractions}
+    \frac{3x}{x^{2}-3x-18} &= \frac{A}{x-6} + \frac{B}{x+3}\\[8pt]
+\stext{Multiplying through by \( x^{2}-3x-18 \)}
+    3x &= A\rb{x+3} + B\rb{x-6}\\[8pt]
+    &= Ax + 3A + Bx - 6B\\[8pt]
+\stext{Combining like terms}
+    &= \rb{A + B}x + \rb{3A - 6B}\\[8pt]
+\stext{Using augmented matrix to solve for \( A \) and \( B \)}
+    \begin{amatrix}{2}
+        3 & -6 & 0\\
+        1 & 1 & 3
+    \end{amatrix}\\
+    \snote{subtract 3 \( \times \) R2 from R1}\\
+    \begin{amatrix}{2}
+        0 & -9 & -9\\
+        1 & 1 & 3
+    \end{amatrix}\\
+    \snote{Divide R1 by -9}\\
+    \begin{amatrix}{2}
+        0 & 1 & 1\\
+        1 & 1 & 3
+    \end{amatrix}\\
+    \snote{Subtract R1 from R2}\\
+    \begin{amatrix}{2}
+        0 & 1 & 1\\
+        1 & 0 & 2
+    \end{amatrix}\\
+\stext{hence we can write}
+    \frac{3x}{x^{2}-3x-18} &= \frac{2}{x-6} + \frac{1}{x+3}\\[8pt]
+\stext{Giving}
+    \frac{x^{3}-11x^{2}-99x-72}{x^{2}-3x-18} &= 5x + 4 + \frac{2}{x-6} + \frac{1}{x+3}\\[8pt]
+\end{align*}
+
+Using this we can solve 
+\[ \int\frac{x^{3}-11x^{2}-99x-72}{x^{2}-3x-18}\dif{x} \]
+
+\begin{align*}
+    \int\frac{x^{3}-11x^{2}-99x-72}{x^{2}-3x-18}\dif{x} &= \int5x + 4 + \frac{3x}{x^{2}-3x-18}\\[8pt]
+    &= \int5x + 4 \dif{x} + \int\frac{3x}{x^{2}-3x-18}\dif{x}\\[8pt]
+    &= \frac{5}{2}x^{2} + 4x + \int\frac{2}{x-6} + \frac{1}{x+3}\\[8pt]
+    &= \frac{5}{2}x^{2} + 4x + 2\ln(x-6) + \ln(x+3) + C\\[8pt]
+\end{align*}
+
+
+    \qpart
+    \begin{align*}
+        \stext{The matrix to represent reflection in the line \( y = -x \) is}
+        R &= \begin{pmatrix}
+            0 & -1\\
+            -1 & 0
+        \end{pmatrix}\\[8pt]
+        \stext{To reflect in the line \( y = -x + 7 \), use translation \( h \) to the origin, apply \( R \), then translate back with \( h^{-1} \)}\\[8pt]
+        \stext{Let \( h(x, y) = (x, y - 7) \), \( h^{-1}(x, y) = (x, y + 7) \)}\\[8pt]
+        \stext{Apply the composite transformation \( f(x) = h^{-1}(R(h(x))) \)}\\[8pt]
+        \stext{Step 1: Translate down by 7}
+        h(x) &= \begin{pmatrix} x \\ y - 7 \end{pmatrix}\\[8pt]
+        \stext{Step 2: Reflect in \( y = -x \)}
+        R \cdot h(x) &= \begin{pmatrix}
+            0 & -1 \\
+            -1 & 0
+        \end{pmatrix}
+        \cdot
+        \begin{pmatrix}
+            x \\
+            y - 7
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            -(y - 7) \\
+            -x
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            7 - y \\
+            -x
+        \end{pmatrix}\\[8pt]
+        \stext{Step 3: Translate up by 7}
+        f(x) &= h^{-1}(R(h(x))) =
+        \begin{pmatrix}
+            7 - y \\
+            -x + 7
+        \end{pmatrix}\\[8pt]
+        \stext{Therefore, the matrix form is:}
+        B &= \begin{pmatrix}
+            0 & -1 \\
+            -1 & 0
+        \end{pmatrix}, \quad
+        b = \begin{pmatrix}
+            7 \\
+            7
+        \end{pmatrix}
+    \end{align*}
+
+\end{question}
+
+\begin{question}
+
+\qpart
+
+\[ \frac{5x^{3} - 11x^{2} - 99x - 72}{x^{2} - 3x - 18} \]
+
+First we need to divide the polynomials using long division.
+
+\polylongdiv{5x^{3}-11x^{2}-99x-72}{x^{2}-3x-18}
+
+\begin{align*}
+    \frac{5x^{3} - 11x^{2} - 99x - 72}{x^{2} - 3x - 18} &= 5x + 4 + \frac{3x}{x^{2} - 3x - 18}\\[8pt]
+\stext{using partial fractions on the remainder}\\[8pt]
+    \frac{3x}{x^{2} - 3x - 18} &= \frac{A}{x - 6} + \frac{B}{x + 3}\\[8pt]
+\stext{Using augmented matrix to solve for \( A \) and \( B \)}\\[8pt]
+    3x &= A(x + 3) + B(x - 6)\\[8pt]
+    &= Ax + 3A + Bx - 6B\\[8pt]
+    &= (A + B)x + (3A - 6B)\\[8pt]
+\stext{Setting up the augmented matrix}\\[8pt]
+    \begin{amatrix}{2}
+        3 & -6 & 0\\
+        1 & 1 & 3
+    \end{amatrix}\\[8pt]
+\stext{Subtract 3 times R2 from R1}\\[8pt]
+    \begin{amatrix}{2}
+        0 & -9 & -9\\
+        1 & 1 & 3
+    \end{amatrix}\\[8pt]
+\stext{Divide R1 by -9}\\[8pt]
+    \begin{amatrix}{2}
+        0 & 1 & 1\\
+        1 & 1 & 3
+    \end{amatrix}\\[8pt]
+\stext{Subtract R1 from R2}\\[8pt]
+    \begin{amatrix}{2}
+        0 & 1 & 1\\
+        1 & 0 & 2
+    \end{amatrix}\\[8pt]
+\stext{Hence we can write}\\[8pt]
+    \frac{3x}{x^{2} - 3x - 18} &= \frac{2}{x - 6} + \frac{1}{x + 3}\\[8pt]
+\stext{Giving us the full expression}\\[8pt]
+    \frac{5x^{3} - 11x^{2} - 99x - 72}{x^{2} - 3x - 18} &= 5x + 4 + \frac{2}{x - 6} + \frac{1}{x + 3}\\[8pt]
+\end{align*}
+
+\qpart
+Maxima file
+
+\qpart
+
+\begin{align*}
+\int \frac{5x^{3} - 11x^{2} - 99x - 72}{x^{2} - 3x - 18} \dd{x} &= \int \left(5x + 4 + \frac{2}{x - 6} + \frac{1}{x + 3}\right) \dd{x}\\[8pt]
+&= \int 5x \dd{x} + \int 4 \dd{x} + \int \frac{2}{x - 6} \dd{x} + \int \frac{1}{x + 3} \dd{x}\\[8pt]
+&= \frac{5}{2}x^{2} + 4x + 2\ln|x - 6| + \ln|x + 3| + C\\[8pt]
+&= \frac{5}{2}x^{2} + 4x + 2\ln(x - 6) + \ln(x + 3) + C
+\end{align*}
+
+\end{question}
+
+\end{document}

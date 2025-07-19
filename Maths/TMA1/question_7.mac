@@ -1,0 +1,76 @@
+/* [wxMaxima: section start ]
+Question 7
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: subsect start ]
+
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: input   start ] */
+fraca: 1695/2599;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+float(fraca);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: subsect start ]
+
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: input   start ] */
+expb: 2*%pi-(%pi/3)+sqrt(2)+sqrt(8);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: subsect start ]
+
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: input   start ] */
+expc: 2*x^3 + 9*x^2 +7*x -6;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+factor(expc);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: subsect start ]
+
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eqnd: 3*x^3 +5*x^2-26*x +8=0;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(eqnd, x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: subsect start ]
+
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eqne: q=(2*r*s +1)/(s+t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(eqne, s);
+/* [wxMaxima: input   end   ] */
+
+
+

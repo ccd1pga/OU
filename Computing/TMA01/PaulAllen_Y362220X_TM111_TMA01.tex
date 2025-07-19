@@ -1,0 +1,81 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+\bibliography{biblio.bib} 
+\bibliographystyle{plainnat}
+\tma{01}
+
+
+%question one
+\begin{question}
+
+\end{question}
+
+
+%question two
+\begin{question}
+
+\end{question}
+
+%question three
+\begin{question}
+
+\qpart
+Passengers could be an entity for Table 1. This is because they are pysical objects and as such are tangible entities.
+
+Ship could be an entity for Table 1. The name of a ship is is also tangible, hence a entity.
+
+\qpart
+
+passengers
+\begin{tabular}[]{|c|c|c|}
+\hline
+    customer\textunderscore ID &  Forename & Surname \\
+\hline
+\end{tabular}
+
+Each customer is given their own ID number to uniquely identify them. The use of surename or forename is inappropriate as
+They are not necessarily unique to each customer.
+
+Ship
+\begin{tabular}[]{|c|c|c|}
+\hline
+        ship\textunderscore ID &  Name & Month \\
+\hline
+\end{tabular}
+
+The table Ship, has a 'ship\textunderscore ID' which is unique to each ship and when it sails. The name of the ship is not unique 
+as the same ship could be ttraveling a number of times a year. The month is not a good attribute as it does not uniquely identify a ship.
+
+\qpart
+
+\begin{tabular}[]{|c|c|}
+\hline
+    custormer\textunderscore ID & ship\textunderscore ID \\
+\hline
+\end{tabular}
+
+\qpart
+
+Flat databases, such as Table 1 are not as efficient as relational databases. One reason for this is that they only at the 
+moment the table can only accomodate for three voyages per year. This is not efficient as it does not allow for
+the possibility of more voyages. unsless you expand the table and then there wouod potentially be lots of empty rows, and hence lots 
+of wasted data storage.
+
+Another reason is that the table is not normalised. This means that there are redundancies in the data. For example,
+the ship name is repeated for each voyage. This means that if the name of the ship changes, it would have to be changed in multiple places.
+
+\end{question}
+
+%question four
+\begin{question}
+\qpart
+
+
+
+
+\end{question}
+
+\end{document}

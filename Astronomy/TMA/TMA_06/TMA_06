@@ -1,0 +1,185 @@
+\documentclass{tufte-handout}
+
+\usepackage{/Users/paulallen/OU/Astronomy/style}
+\usepackage{tensor}
+\usepackage{leftidx}
+% Define a new command for subscripts and superscripts
+\newcommand{\subsup}[3]{{#1}_{\tensor*[^{#2}]{#3}{}}}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+\usetikzlibrary{matrix} % <-- needed for matrix of nodes
+\usetikzlibrary{calc}   % <-- optional, can sometimes be helpful
+
+
+
+\begin{document}
+\tma{06}
+
+\begin{question}
+
+    \qpart
+
+    \qsubpart
+\includegraphics[scale=0.5]{FRI.png}
+\captionof{figure}{Example of Fanaroff-Riley type I radio source}
+Bright jets in the centre and fading outwards.
+
+\includegraphics[scale=0.5]{FRIb.png}
+\captionof{figure}{Example of Fanaroff-Riley type I optical source}
+Big elipse with no real extension.
+
+\includegraphics[scale=0.5]{FRII.png}
+\captionof{figure}{Example of Fanaroff-Riley type II radio source}
+Bright lobes with a weak core.
+
+\includegraphics[scale=0.5]{FRIIb.png}
+\captionof{figure}{Example of Fanaroff-Riley type II optical source}
+Distict bright lobes with narrow line radio emissions.
+
+\vspace{3cm}
+
+\qsubpart
+
+In an FR I the peak surface‑brightness occurs within the inner half of the source, 
+giving an FR ratio < 0.5, whereas in an FR II the hot‑spots are at the extremities 
+so the ratio > 0.5. Visual inspection of Figs 1 & 3 shows the bright knots are 
+(respectively) near the core and at the lobe edges, so Fig 1 must have FR ratio < 0.5 
+(type I) and Fig 3 > 0.5 (type II).
+
+
+\clearpage
+
+    \qpart
+    \qsubpart
+
+\[ L = \frac{GM\dot{M}}{R} \]
+\[ L_{Edd} = \frac{4\pi GMm_{p}\textit{c}}{\sigma_{T}} \]
+
+\begin{align*}
+\stext{hence}\\
+\frac{GM\dot{M}}{R}  &=  \frac{4\pi G M m_{p} c}{\sigma_{T}}\\[8pt]
+\frac{GM\dot{M}}{4\pi GMm_{p} c} &= \frac{R}{\sigma_{T}}\\[8pt]
+\frac{\dot{M}}{4\pi m_{p} c} &= \frac{R}{\sigma_{T}}\\[8pt]
+\dot{M}_{\text{Edd}} &= \rb{\frac{4\pi m_p c}{\sigma_T}}R
+\end{align*}
+
+As \( \pi, m_{p}, \textit{c}, \sigma_{T} \) are all constants this shows that
+maximum accretion rate depends only on the radius of the accreting object
+
+\vspace{3cm}
+
+And as 
+\[ R = \frac{2GM}{\textit{c}^{2}} \]
+
+\[
+    \frac{2GM}{\textit{c}^{2}} \Longrightarrow \dot{M}_{\text{Edd}} = \rb{\frac{8\pi G m_{p}}{\sigma_{T} c}}M
+\]
+
+and thus the the maximum accretion rate of a black hole depends only on its mass
+
+\vspace{3cm}
+
+\qsubpart
+
+\begin{align*}
+  \dot M_{\text{Edd}}
+     &= \rb{\frac{8\pi G m_p}{\sigma_T c}}M\\[10pt]
+     &=\frac{8\pi\,
+             (\SI{6.67e-11}{\N\cdot\meter\squared\per\kilogram\squared}) %G
+             (\SI{1.67e-27}{\kilogram}) %m_p
+             (\SI{1e9}{\Msun})} %M
+             {(\SI{6.652e-29}{\meter\squared}) %sigma_T
+             (\SI{3.00e8}{\meter\per\second})} \\[10pt]
+     &\approx \SI{2.8e23}{\kilogram\per\second}\\[10pt]
+    \stext{Divide by seconds in a year, and multiply by solar mass to give}
+       &\approx \SI{4.4}{\Msun\per\year}
+\end{align*}
+
+\end{question}
+
+\begin{question}
+
+    Slide 1:
+    In May 2023, the LIGO-Virgo-KAGRA collaboration detected a gravitational-wave signal, 
+    GW230529, during the early part of its fourth observing run. The event was picked up 
+    by the LIGO Livingston detector while the other observatories were offline or not 
+    sensitive enough. This signal came from a binary merger involving a compact object 
+    with a mass between 2.5 and 4.5 times that of our Sun, and a neutron star between 
+    1.2 and 2.0 solar masses. What makes GW230529 especially intriguing is that the more 
+    massive object sits in the so-called ‘lower mass gap’—a previously underpopulated 
+    range between the heaviest known neutron stars and the lightest known black holes. 
+    This detection adds compelling new evidence to the growing case that nature might 
+    be more adventurous in populating this gap than previously believed.
+
+    \vspace{5cm}
+    
+    Slide 2:
+    GW230529 was detected on 29 May 2023 at 18:15 UTC by the LIGO Livingston detector. 
+    It was a strong signal, standing out from background noise and independently confirmed 
+    by three search pipelines using matched-filtering techniques. These pipelines 
+    compare real-time data to theoretical templates, and in this case, all three 
+    flagged GW230529 as highly significant. The signal’s strength was such that even 
+    though only one detector was operational, the false alarm rate was estimated 
+    at less than one in a thousand years—making it an extraordinarily reliable detection. 
+    The waveform of the signal suggests a merger between two compact objects: one 
+    significantly heavier than the other, with the heavier component likely lying 
+    in the mass gap region between neutron stars and black holes. This event marks 
+    one of the most asymmetric mass ratios observed in neutron star–black hole mergers.
+    
+    \vspace{5cm}
+
+    Slide 3:
+    he binary system responsible for GW230529 had a primary object with an 
+    estimated mass between 2.5 and 4.5 solar masses, and a secondary object 
+    between 1.2 and 2.0 solar masses. This puts the heavier component squarely in 
+    the “lower mass gap,” a region previously thought to be empty. The total mass of 
+    the system was around 5.1 solar masses, with a chirp mass, the effective mass 
+    of a binary system (black holes or neutron stars able to produce detectable 
+    gravitational waves), in the context of the Quadrupole Gravitational Radiation 
+    emitted by it.—one of the most precisely measurable properties of a 
+    gravitational-wave event—of about 1.94 solar masses. The spin of the primary 
+    was measured to be moderate, and the system as a whole showed no signs of 
+    precession. Although we can’t be 100\% sure of the nature of the heavier object, 
+    statistical analysis suggests it's more likely to be a low-mass black hole 
+    rather than a massive neutron star. Meanwhile, the lighter companion is 
+    almost certainly a neutron star, based on its mass and lack of strong spin 
+    evidence. The system was located roughly 200 million light-years away, based on its redshift.
+    
+    \vspace{5cm}
+
+    Slide 4:
+    Because GW230529 was only detected by a single observatory—LIGO 
+    Livingston—localising its position in the sky was challenging. 
+    Without input from the other detectors, the sky area where the signal 
+    could have originated remained broad. This poor localisation made it difficult 
+    for telescopes to follow up with electromagnetic observations. Despite this, 
+    several observatories attempted follow-up campaigns, including searches 
+    for gamma-ray bursts, neutrinos, and optical transients. No significant 
+    electromagnetic counterpart was identified. However, models suggest that 
+    tidal disruption of the neutron star—and thus visible emissions—is only 
+    likely under specific conditions, such as a high spin and favourable mass ratio. 
+    For GW230529, those conditions weren’t definitively met, and the amount of matter 
+    expected to be left outside the black hole post-merger was likely too small to 
+    power a bright visible signal.
+    
+    \vspace{5cm}
+
+    Slide 5:
+    GW230529 is a landmark detection for several reasons. First, it adds weight to 
+    the growing evidence that the so-called ‘lower mass gap’—the region between the 
+    heaviest neutron stars and the lightest black holes—is not as empty as once thought. 
+    Previously, neutron stars were found through radio or X-ray emissions, typically 
+    under 2.5 solar masses, and black holes were seen in X-ray binaries, mostly above 5. 
+    This left a gap that may have simply reflected observational bias. Gravitational-wave 
+    detections, like GW230529, don’t rely on light and can reveal compact objects 
+    solely through their mass and motion. The discovery of a likely black hole with 
+    a mass in the 3–5 solar mass range challenges previous assumptions and could reshape 
+    our understanding of stellar collapse and compact object formation. It also nudges 
+    models of supernova physics and binary evolution toward accounting for lower-mass black 
+    holes and more diverse merger pathways.
+    
+    Collaboration scientists say roughly 80 more strong candidates are already under study, 
+    and they expect the tally of gravitational‑wave detections to top 200 by the end of O4.  
+
+\end{question}
+
+\end{document}

@@ -1,0 +1,96 @@
+\documentclass[a4paper]{tufte-handout}
+
+\usepackage{/Users/paulallen/OU/Maths/style}
+
+\usepackage{colortbl}
+\usepackage{mleftright}
+
+\newcommand{\lnn}[1]{%
+  \ln\left(#1\right)%
+}
+
+\newcommand{\lnb}[1]{%
+  \ln\mleft(#1\mright)%
+}
+
+\begin{document}
+
+
+For the line \( y = \frac{-1}{2}x + 6.5 \).\\
+
+The \( y-intercept \) is when \( x = 0 \) therefore \( y = 6.5 \).\\
+The \( x-intercept \) is when \( y = 0 \) therefore \( x = 13 \).\\
+
+For the curve \( y = x^2 + 6x -4 \);
+The solutions are \( 3 \pm \sqrt{13} \).\\
+The \( y-intercept \) is when \( x = 0 \) therefore \( y = -4 \).\\
+
+The turning point;
+
+\begin{align*}
+y &= x^{2} - 6x -4\\[8pt]
+\frac{dy}{dx} &= 2x -6\\[8pt]
+2x - 6 &= 0\\[8pt]
+2x &= 6\\[8pt]
+x &= 3\\[8pt]
+\stext{Substituting this back into the equation;}\\[8pt]
+y &= 3^{2} -6(3) -4\\[8pt]
+y &= -13\\
+\end{align*}
+
+Therefore \( (3,-13) \)
+
+And the two curves meet at;
+\begin{align*}
+\frac{-1}{2}x + 6.5 &= x^{2} - 6x -4\\[8pt]
+\frac{-1}{2}x &= x^{2} - 6x -\frac{21}{2}\\[8pt]
+0 &= x^{2} - 5.5x - \frac{21}{2}\\[8pt]
+&= 2x^{2} - 11x - 21\\[8pt]
+&= (2x + 3)(x - 7)\\[8pt]
+\stext{the x-coordinates are \( x = \frac{-3}{2} \text{ and } x = 7 \) }\\[8pt]
+\stext{Substituting these back into our equation of the line;}\\[8pt]
+y &= \frac{-1}{2}(\frac{-3}{2}) + 6.5\\[8pt]
+&= \frac{29}{4}\\[8pt]
+\stext{and}\\[8pt]
+y &= \frac{-1}{2}(7) + 6.5\\[8pt]
+&= 3\\ 
+\stext{therefore the curves meet at \( (\frac{-3}{2},\frac{29}{4})  \text{ and }  (7,3) \).}\\
+\end{align*}
+
+\includegraphics{question_1_d.png}
+
+
+\begin{tikzpicture}
+
+% Draw axes
+\draw[->] (-4.5,0) -- (10.5,0) node[right] {$x$}; % x-axis
+\draw[->] (0,-5.5) -- (0,8.5) node[above] {$y$};  % y-axis
+
+% Mark nodes with ticks and labels on x-axis
+%\draw (-3,0) node[below] {\( -\frac{3}{2} \)} -- ++(0,0.2); % x = -3/2
+\draw (-1.5,0) node[below] {\( 3-\sqrt{13} \)} -- ++(0,0.2);  % x = 3-sqrt(13)
+%\draw (3,0) node[below] {$3$} -- ++(0,0.2);                  % x = 3
+\draw (5,0) node[below] {\( 3+\sqrt{13} \)} -- ++(0,0.2);    % x = 3+sqrt(13)
+\draw (9,0) node[below] {$13$} -- ++(0,0.2);                 % x = 13
+%\draw (7,0) node[below] {$7$} -- ++(0,0.2);
+
+% Mark nodes with ticks and labels on y-axis
+\draw (0,5.5) node[right] {$6.5$} -- ++(-0.2,0);             % y = 6.5
+%\draw (0,7) node[right] {\( \frac{29}{4} \)} -- ++(-0.2,0);  % y = 29/4
+\draw (0,-2) node[right] {$-4$} -- ++(-0.2,0);               % y = -4
+%\draw (0,-4) node[right] {$-13$} -- ++(-0.2,0);              % y = -13
+%\draw (0,2) node[right] {$3$} -- ++(-0.2,0);
+
+% Origin
+\node[below right] at (0,0) {$O$};
+
+% Mark points on the graph
+\filldraw (-3,7) node[above left] {\( \left(-\frac{3}{2}, \frac{29}{4}\right) \)};
+\filldraw (7,2)  node[above right] {\( (7,3) \)};
+\filldraw (3,-4)  node[below right] {\( (3,-13) \)};
+
+\end{tikzpicture}
+
+
+
+\end{document}

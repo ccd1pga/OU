@@ -1,0 +1,98 @@
+\documentclass[a4paper]{tufte-handout}
+
+\usepackage{/Users/paulallen/OU/Maths/style}
+
+\usepackage{colortbl}
+\usepackage{mleftright}
+
+\newcommand{\lnn}[1]{%
+  \ln\left(#1\right)%
+}
+
+\newcommand{\lnb}[1]{%
+  \ln\mleft(#1\mright)%
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw (-2,0) -- (12,0);
+\draw (0,-1) -- (0,10);
+\node[below] at (0,0)  {o};
+\node[right] at (0,6.6)  {$6.5$};
+\node[below] at (2,0)  {$3-\sqrt{13}$};
+\node[below] at (4,0) {$3+\sqrt{13}$};
+\node[below] at (11,0) {$13$};
+\node[left] at (0,10) {y};
+\node[below] at (12,0) {x} ;
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\draw (-8,0) -- (8,0);
+\draw (0,-2) -- (0,2);
+\node[below] at (0,0)  {0};
+
+% Using \foreach for the x-axis labels
+\foreach \x/\label in {-8/-2\pi, -6/-\frac{3\pi}{2}, -4/-\pi, -2/-\frac{\pi}{2}, 2/\frac{\pi}{2}, 4/\pi, 6/\frac{3\pi}{2}, 8/2\pi} {
+    \node[below] at (\x, 0) {$\label$};
+}
+
+\node[left] at (0,2) {y};
+\node[below] at (10,0) {x} ;
+\node[left] at (0,1.8) {1};
+\node[left] at (0,-1.8) {-1};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw (-8,0) -- (8,0);
+\draw (0,-2) -- (0,2);
+\node[below] at (0,0)  {0};
+
+% Using \foreach for the x-axis labels
+\foreach \x/\label in {-8/-2\pi, -7/-\frac{7}{4}\pi, -6/-\frac{3\pi}{2}, -5/-\frac{5}{4}\pi, -4/-\pi, -3/-\frac{3}{4}\pi, -2/-\frac{\pi}{2}, -1/-\frac{\pi}{4}, 8/2\pi, 7/\frac{7}{4}\pi, 6/\frac{3\pi}{2}, 5/\frac{5}{4}\pi, 4/\pi, 3/\frac{3}{4}\pi, 2/\frac{\pi}{2}, 1/\frac{\pi}{4}} {
+    \node[below] at (\x, 0) {$\label$};
+}
+
+\node[left] at (0,2) {y};
+\node[below] at (10,0) {x} ;
+\node[left] at (0,1.8) {1};
+\node[left] at (0,-1.8) {-1};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw (-8,0) -- (8,0);
+\draw (0,-3) -- (0,3);
+\node[below] at (0,0)  {0};
+
+% Using \foreach for the x-axis labels
+\foreach \x/\label in {-8/-2\pi, -7/-\frac{7}{4}\pi, -6/-\frac{3\pi}{2}, -5/-\frac{5}{4}\pi, -4/-\pi, -3/-\frac{3}{4}\pi, -2/-\frac{\pi}{2}, -1/-\frac{\pi}{4}, 8/2\pi, 7/\frac{7}{4}\pi, 6/\frac{3\pi}{2}, 5/\frac{5}{4}\pi, 4/\pi, 3/\frac{3}{4}\pi, 2/\frac{\pi}{2}, 1/\frac{\pi}{4}} {
+    \node[below] at (\x, 0) {$\label$};
+}
+
+\node[left] at (0,3) {y};
+\node[below] at (10,0) {x} ;
+\node[left] at (0,2.8) {2};
+\node[left] at (0,-2.8) {-2};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw (-8,0) -- (8,0);
+\draw (0,-1) -- (0,5);
+\node[below] at (0,0)  {0};
+
+% Using \foreach for the x-axis labels
+\foreach \x/\label in {-8/-2\pi, -7/-\frac{7}{4}\pi, -6/-\frac{3\pi}{2}, -5/-\frac{5}{4}\pi, -4/-\pi, -3/-\frac{3}{4}\pi, -2/-\frac{\pi}{2}, -1/-\frac{\pi}{4}, 8/2\pi, 7/\frac{7}{4}\pi, 6/\frac{3\pi}{2}, 5/\frac{5}{4}\pi, 4/\pi, 3/\frac{3}{4}\pi, 2/\frac{\pi}{2}, 1/\frac{\pi}{4}} {
+    \node[below] at (\x, 0) {$\label$};
+}
+
+\node[left] at (0,5) {y};
+\node[below] at (10,0) {x} ;
+\node[left] at (0,4.8) {5};
+\node[left] at (0,2.8) {3};
+\end{tikzpicture}
+
+
+
+\end{document}

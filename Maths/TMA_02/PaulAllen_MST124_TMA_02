@@ -1,0 +1,652 @@
+\documentclass[a4paper]{tufte-handout}
+
+\usepackage{/Users/paulallen/OU/Maths/style}
+
+\usepackage{colortbl}
+\usepackage{mleftright}
+\usepackage{mathtools}
+\usepackage[thinc]{esdiff}
+
+%\newcommand{\rd}[1]{%
+%  \left(#1\right)%
+%}
+
+%\newcommand{\sb}[1]{%
+%  \left[#1\right]%
+%}
+
+\begin{document}
+\tma{02}
+
+%%%%%%%%%%Question one
+\begin{question}
+
+\qpart
+
+The equation of a straight line has the general form
+	\[y = mx +c\]
+	\hfill Where m is the gradient and c is the intercept
+
+Given our two coordinates $(3,5)$ and $(5,4)$:
+\begin{align*}
+m &= \frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\[8pt]
+&= \frac{4 - 5}{5 - 3}\\[8pt]
+&= \frac{-1}{2}
+\end{align*}
+
+Substituting this, and our coordinates: 
+\begin{align*}
+mx + c &= y\\[8pt]
+\frac{-1}{2}(3) + c &= 5\\[8pt]
+-1.5 +c &= 5\\[8pt]
+c &= 6.5\\[8pt]
+\shortintertext{Hence the equation of the line is;}
+y &= \frac{-1}{2}x + 6.5
+\end{align*}
+
+\qpart
+
+Using:
+	\[ax^2 + bx + c = a(x + r)^2 + s\]
+
+\begin{align*}
+\shortintertext{Given:}
+f(x) &= x^2 - 6x -4\\[8pt]
+\shortintertext{By completing the square:}
+&= (x - 3)^2 -9 -4\\[8pt]
+&=  (x - 3)^2 - 13
+\end{align*}
+
+\qpart
+
+\begin{align*}
+\shortintertext{Solve;}
+x^2 - 6x - 4 &= 0\\[8pt]
+\shortintertext{Using the completed square form;}
+(x - 3 )^2 - 13 &= 0\\[8pt]
+(x - 3)^2 &= 13\\[8pt]
+x - 3 &= \pm\sqrt{13}\\[8pt]
+x &= 3 \pm\sqrt{13}
+\end{align*}
+
+\qpart
+
+For the line \( y = \frac{-1}{2}x + 6.5 \).\\
+
+The \( y-intercept \) is when \( x = 0 \) therefore \( y = 6.5 \).\\
+The \( x-intercept \) is when \( y = 0 \) therefore \( x = 13 \).\\
+
+For the curve \( y = x^2 + 6x -4 \);
+The solutions are \( 3 \pm \sqrt{13} \).\\
+The \( y-intercept \) is when \( x = 0 \) therefore \( y = -4 \).\\
+
+The turning point;
+
+\begin{align*}
+y &= x^{2} - 6x -4\\[8pt]
+\frac{dy}{dx} &= 2x -6\\[8pt]
+2x - 6 &= 0\\[8pt]
+2x &= 6\\[8pt]
+x &= 3\\[8pt]
+\stext{Substituting this back into the equation;}\\[8pt]
+y &= 3^{2} -6(3) -4\\[8pt]
+y &= -13\\
+\end{align*}
+
+Therefore \( (3,-13) \)
+
+And the two curves meet at;
+\begin{align*}
+\frac{-1}{2}x + 6.5 &= x^{2} - 6x -4\\[8pt]
+\frac{-1}{2}x &= x^{2} - 6x -\frac{21}{2}\\[8pt]
+0 &= x^{2} - 5.5x - \frac{21}{2}\\[8pt]
+&= 2x^{2} - 11x - 21\\[8pt]
+&= (2x + 3)(x - 7)\\[8pt]
+\stext{the x-coordinates are \( x = \frac{-3}{2} \text{ and } x = 7 \) }\\[8pt]
+\stext{Substituting these back into our equation of the line;}\\[8pt]
+y &= \frac{-1}{2}(\frac{-3}{2}) + 6.5\\[8pt]
+&= \frac{29}{4}\\[8pt]
+\stext{and}\\[8pt]
+y &= \frac{-1}{2}(7) + 6.5\\[8pt]
+&= 3\\ 
+\stext{therefore the curves meet at \( (\frac{-3}{2},\frac{29}{4})  \text{ and }  (7,3) \).}\\
+\end{align*}
+
+\includegraphics[scale=0.7]{5.png}
+
+\end{question}
+\clearpage
+%%%%%%%%%%Question two%%%%%%
+\begin{question}
+
+Solve:
+	\[\frac{2x - 7}{3x + 1} \geq 0\]
+
+The critical values the values which make either the denominator or the numerator $0$;\\
+\begin{align*}
+\shortintertext{So for $2x - 7$ when;} 
+	x &= 3.5\\[8pt]
+	2(3.5) -7 &= 0
+\shortintertext{For $3x + 1$;}
+	x &= \frac{-1}{3}\\[8pt]
+	3\left(\frac{-1}{3} +1\right) &= 0
+\end{align*}
+
+We can use a table of signs:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& $(-\infty,\frac{-1}{3})$ & $\frac{-1}{3}$ & $(\frac{-1}{3},3.5)$ & $3.5$ & $(3.5,\infty)$\\
+\hline
+$2x-7$ & $-$ & $-$ & $-$ & $0$ & $+$\\
+$3x+1$ & $-$ & $0$ & $+$ & $+$ & $+$\\
+\hline
+$\frac{2x-7}{3x+1}$ & $+$ & $*$ & $-$ & $0$ & $+$\\
+\hline
+\end{tabular}
+\end{center}
+
+As we want the values $\geq 0$ we would use the $+$ and $0$ values of the table of signs; 
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& \cellcolor{red!25}$(-\infty,\frac{-1}{3})$ & $\frac{-1}{3}$ & $(\frac{-1}{3},3.5)$ & \cellcolor{red!25}$3.5$ & \cellcolor{red!25}$(3.5,\infty)$\\
+\hline
+$2x-7$ & \cellcolor{red!25}$-$ & $-$ & $-$ & \cellcolor{red!25}$0$ & \cellcolor{red!25}$+$\\
+$3x+1$ & \cellcolor{red!25}$-$ & $0$ & $+$ & \cellcolor{red!25}$+$ & \cellcolor{red!25}$+$\\
+\hline
+$\frac{2x-7}{3x+1}$ & \cellcolor{red!25}$+$ & $*$ & $-$ & \cellcolor{red!25}$0$ & \cellcolor{red!25}$+$\\
+\hline
+\end{tabular}
+\end{center}
+
+Using this we get:
+	\[x \in \left(-\infty,\frac{-1}{3}\right) \cup [3.5,\infty)\]
+
+\end{question}
+\clearpage
+%%%%%%%%%%%Question three
+\begin{question}
+
+\qpart
+
+We model the population size \( y \) over time \( t \) in months using the equation:
+	\[y = Ae^{kt}\]	\hfill Where $A$ and $k$ are constants.
+	
+Given that after 2 months there were 30 rabbits and after 5 months there were 80 rabbits, we can set up the following pair of simultaneous equations:
+
+\begin{align*}
+30 &= Ae^{2k} \tag{1} \\
+80 &= Ae^{5k} \tag{2}
+\end{align*}
+
+\begin{align*}
+\stext{Dividing equation (2) by equation (1) gives:}\\[8pt]
+\frac{80}{30} &= \frac{Ae^{5k}}{Ae^{2k}}\\[8pt]
+\stext{Applying the index laws, this simplifies to:}\\[8pt]
+\frac{80}{30} &= e^{5k-2k}\\[8pt]
+\frac{8}{3} &= e^{3k}\\[8pt]
+\stext{Taking the natural logarithm of both sides:}
+\ln\left(\frac{8}{3}\right) &= 3k\\[8pt]
+\stext{Solving for \( k \), we get:}
+k &= \frac{1}{3} \ln\left(\frac{8}{3}\right)\\
+\snote{as required.}
+\end{align*}
+
+\begin{align*}
+\stext{Now, to find \( A \), using equation (1):}\\[8pt]
+30 &= A e^{2k}\\[8pt]
+A &= \frac{30}{e^{2k}}\\[8pt]
+\stext{We substitute \( k = \frac{1}{3} \ln\left(\frac{8}{3}\right) \):}\\[8pt]
+A &= \frac{30}{e^{2\frac{1}{3} \ln\left(\frac{8}{3}\right)}} \\[8pt]
+&= \frac{30}{e^{\frac{2}{3} \ln\left(\frac{8}{3}\right)}}\\[8pt]
+\stext{Using the exponent rule \( e^{a \ln(b)} = b^a \), we further simplify:}\\[8pt]
+A &= \frac{30}{\left(\frac{8}{3}\right)^{\frac{2}{3}}}\\[8pt]
+\stext{Calculating this, we find:}\\[8pt]
+A &\approx 15.6
+\snote{(to 1 d.p.)}
+\end{align*}
+
+\qpart
+
+Using these values gives us:
+\[
+y = 15.6e^{t \left( \frac{1}{3}\ln\left(\frac{8}{3}\right)\right)}
+\]
+
+To find the time taken for the population to exceed \( 1000 \):
+
+\begin{align*}
+15.6e^{t \left( \frac{1}{3}\ln\left(\frac{8}{3}\right) \right)} &= 1000 \\[8pt]
+\stext{Divide both sides by \( 15.6 \):}\\[8pt]
+e^{t \left( \frac{1}{3}\ln\left(\frac{8}{3}\right) \right)} &= \frac{1000}{15.6}\\[8pt]
+\stext{Taking the natural logarithms of both sides:}\\[8pt]
+t \frac{1}{3} \ln\left(\frac{8}{3}\right) &= \ln\left(\frac{1000}{15.6}\right)\\[8pt]
+\stext{Dividing both sides by \( \frac{1}{3} \ln\left(\frac{8}{3}\right) \):}\\[8pt]
+t &= \frac{\ln\left(\frac{1000}{15.6}\right)}{\frac{1}{3} \ln\left(\frac{8}{3}\right)}\\[8pt]
+t &\approx 12.72 \dots
+\end{align*}
+
+Therefore, using our model, it would take approximately \( 13 \) months for the population to exceed \( 1000 \).
+
+
+\end{question}
+\clearpage
+%%%Question four
+
+\begin{question}
+
+\qpart
+ \includegraphics[scale=0.7]{1.png}\\
+ \includegraphics[scale=0.7]{2.png}\\
+ \includegraphics[scale=0.7]{3.png}\\
+ \includegraphics[scale=0.7]{4.png}\\
+\qpart
+
+The image set for \( g \) is;
+
+\[ g(x) = \{x \in  \mathbb{R}: [1,6] \} \]
+
+\qpart
+
+\[ -\pi \leq x \leq \pi \]
+
+\qpart
+
+\begin{align*}
+h(x) &= 3 + 2\sin2x\\[8pt]
+3 + 2 &= y\sin2x\\[8pt]
+3 + 2\sin2y &= x\\[8pt]
+3 + \sin2y &= \frac{x}{2}\\[8pt]
+3 + y &= \frac{\arcsin\frac{x}{2}}{2}\\[8pt]
+y &=\frac{\arcsin\frac{x}{2}}{2} - 3\\[8pt]
+h^{-1}(x) &= \frac{\arcsin\frac{x}{2}}{2} - 3
+\end{align*}
+
+    
+\end{question}
+\clearpage
+%%%%Question five
+
+\begin{question}
+
+\begin{center}
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(5,0){B}
+        \tkzDefPoint(1,3){C}
+        \tkzDrawSegments(A,B B,C C,A)
+        \tkzLabelPoints[below](A,B)
+        \tkzLabelPoints[above](C)
+        \tkzLabelSegment[below](A,B){c}
+        \tkzLabelSegment[right](B,C){a}
+        \tkzLabelSegment[left](C,A){b}
+    \end{tikzpicture}
+\end{center}
+
+\qpart
+
+Given \( a=\SI{5}{\centi\metre}, b=\SI{6}{\centi\metre} \) and \( C=\ang{25} \). And using the cosine rule
+
+\begin{align*}
+    c^{2} &= a^{2} + b^{2} -2ab\cos{C}\\[8pt]
+    c= \sqrt{5^{2} + 6^{2} - 2(5)(6)(\cos{25})}\\[8pt]
+    &= \sqrt{25 + 36 - 60\cos{25}}\\[8pt]
+    &= \sqrt{61 - 54.378\ldots}\\[8pt]
+    &= \SI{2.57}{\centi\metre}
+    \snote{to 2 d.p}
+\end{align*}
+
+\qpart
+
+Using the Sine rule
+\[ \frac{\sin{A}}{a} = \frac{\sin{B}}{b} = \frac{\sin{C}}{c} \]
+
+\begin{align*}
+    \frac{\sin{A}}{5} &= \frac{\sin{25}}{2.57}\\[8pt]
+    \sin{A} &= 5\left(\frac{\sin{25}}{2.57}\right)\\[8pt]
+    B &= \arcsin{5\left(\frac{\sin{25}}{2.57}\right)}\\[8pt]
+     &= \ang{55}
+     \snote{To the nearest degree}
+\end{align*}
+
+
+\begin{align*}
+    \frac{\sin{B}}{6} &= \frac{\sin{25}}{2.57}\\[8pt]
+    \sin{B} &= 6\left(\frac{\sin{25}}{2.57}\right)\\[8pt]
+    B &= \arcsin{6\left(\frac{\sin{25}}{2.57}\right)}\\[8pt]
+    &= \ang{80}
+\snote{and}
+     &= \ang{100}
+     \snote{To the nearest degree}
+\end{align*}
+
+So in this case we will need to consider the obtuse angle of \( \ang{100} \) as $b$ is the longest side therefore will have the largest angle and the total angles in a triangle must total \( \ang{180} \).
+
+\end{question}
+\clearpage
+%Question six
+
+\begin{question}
+
+    \[ \sin^2(2x) - \cos(2x) -1 = 0 \]
+
+Using the trig identity
+    \[ \sin{\theta} + \cos{\theta} = 1 \]
+
+\begin{align*}
+    \sin^2{(2x)} - \cos{(2x)} -1 &= 0\\[8pt]
+    1 - \cos^2{(2x)} - \cos{(2x)} -1 &=\\[8pt]
+    \cos^{2}(2x) \cos{(2x)} &=\\[8pt]
+    \cos(2x)(\cos(2x) + 1) &=\\[8pt]
+\stext{Thus, the solutions are}
+    \cos(2x) &= 0\\[8pt]
+    2x &= \arccos{0}\\[8pt]
+    2x &= \frac{\pi}{2}, \frac{3\pi}{2}, \ldots\\[8pt]
+    x &= \frac{\pi}{4}, \frac{3\pi}{4}, \ldots\\[8pt]
+\stext{and}
+    \cos(2x) + 1 &= 0\\[8pt]
+    \cos(2x) &= -1\\[8pt]
+    2x &= \arccos{-1}\\[8pt]
+    2x &= \pi, 3\pi, \ldots\\[8pt]
+    x &= \frac{\pi}{2}, \frac{3\pi}{2}, \ldots
+\end{align*}
+
+So for the range
+    \[ 0 \leq x \leq \pi \]
+
+The solutions are
+    \[ x = \frac{\pi}{4}, \frac{\pi}{2} \text{ and } \frac{3\pi}{4} \]
+    
+\end{question}
+\clearpage
+%%%Question seven
+\begin{question}
+
+\qpart
+
+Using the general formula for a circle
+    \[ (x - h)^{2} + (y - k)^{2} = r^{2} \]
+Where \( (x,y) \text{are coordinates of a point on the circle, and} (h,k) \text{are the coordinates of the centre of the circle.} \)
+
+\begin{align*}
+    6x^{2} + 24x + 6y^{2} - 6y &=12\\[8pt]
+    x^{2} + 4x + y^{2} - y &= 2\\[8pt]
+    (x + 2)^{2} - 4 + (y - \frac{1}{2})^{2} - \frac{1}{4} &= 2\\[8pt]
+    (x + 2)^{2} + (y - \frac{1}{2})^{2} &= \frac{25}{4}\\[8pt]
+    (x + 2)^{2} + (y - \frac{1}{2})^{2} &= (\frac{25}{2})^{2}\\[8pt]
+\end{align*}
+
+Giving a circle whose radius,  \( r = \frac{5}{2} \) and has a centre at \( (-2,\frac{1}{2}) \).
+
+\qpart
+
+The line \( y = -3x + 2 \) intersects this circle at
+
+\begin{align*}
+    (x + 2)^{2} + (y - \frac{1}{2})^{2} &= \frac{25}{4}\\[8pt]
+\stext{First expand the $y$ terms out and simplifying}
+    (x + 2)^{2} + y^{2} -y + \frac{1}{4} &=\\[8pt]
+    (x + 2)^{2} + y^{2} -y  &= 6\\[8pt]
+\stext{By using substitution to solve the quadratic}
+    (x + 2)^{2} + (-3x + 2)^{2} - (-3x + 2 ) &=\\[8pt]
+    (x^{2} + 4x + 4) + (9x^{2} - 12x + 4) + (3x -2) &=\\[8pt]
+    10x^{2} - 5x + 6 &=\\[8pt]
+    10x^{2} - 5x &= 0\\[8pt]
+\stext{Factorising}
+    x(10x - 5) &= 0\\[8pt]
+\end{align*}
+
+Thus the solutions are \( x = 0 \) and \( x = \frac{1}{2} \).
+
+\begin{align*}
+\stext{Subsitituting these back into the linear equation}
+    y &= -3x + 2\\[8pt]
+    &= -3(0) + 2\\[8pt]
+    &= 2\\[8pt]
+\stext{and}
+    y &= -3x + 2\\[8pt]
+    &= -3(\frac{1}{2}) +2\\[8pt]
+    &= \frac{-3}{2} +2\\[8pt]
+    &= \frac{1}{2}
+\end{align*}
+
+Hence the line and circle interest at \( (0,2) \) and \( (\frac{1}{2},\frac{1}{2}) \).
+    
+\end{question}
+\clearpage
+%%%Question eight
+
+\begin{question}
+
+\qpart
+
+The boat has a speed of \( \SI{20}{\kilo\metre\per\hour} \) and is traveling on a bearing of \( \ang{100} \), this is the equivalent of \( \ang{350} \) in standard trig angles \( (\theta) \) measured anticlockwise with the positive \( x \)-direction. Therefore, we can use
+\[
+\textbf{v} = |\textbf{v}|\cos\theta\textbf{i} + |\textbf{v}|\sin\theta\textbf{j}
+\]
+
+\begin{tikzpicture}[label style/.style={font=\tiny}]
+    \tkzDefPoint(0,0){o}
+    \tkzDefPoint(0,2){j}
+    \tkzDefPoint(2,0){i}
+    \tkzDefPoint(340:2){b}
+    \tkzDrawSegments[->](o,j o,i)
+    \tkzDrawSegment[->](o,b)
+    \tkzLabelPoints[below](i)
+    \tkzLabelPoints[left](j)
+    \tkzLabelSegment[below](o,b){\tiny $\SI{20}{\kilo\metre\per\hour}$}
+    \tkzMarkAngle[arc=l,size=0.2,line width=0.5pt,arrows=->](i,o,b)
+    \tkzLabelAngle[pos=0.5](i,o,b){\text{\tiny $\ang{350}$}}
+\end{tikzpicture}
+
+\begin{align*}
+\textbf{b} &= 20\cos\ang{350}\textbf{i} + 20\sin\ang{350}\textbf{j}\\[8pt]
+&= 19.70\textbf{i} - 3.47\textbf{j}\\[8pt]
+\snote{(to 2 d.p)}
+\end{align*}
+
+The current of the river is flowing at \SI{10}{\kilo\metre\per\hour} from a south-east direction, again using trig angles this gives \( \theta = \ang{135} \).
+
+\begin{tikzpicture}[label style/.style={font=\tiny}]
+    \tkzDefPoint(0,0){o}
+    \tkzDefPoint(0,2){j}
+    \tkzDefPoint(2,0){i}
+    \tkzDefPoint(315:2){b}
+    \tkzDefPoint(135:2){c}
+    \tkzDrawSegments[->](o,j o,i)
+    \tkzDrawSegment[<-](o,b)
+    \tkzLabelPoints[below](i)
+    \tkzLabelPoints[left](j)
+    \tkzLabelSegment[color=red, left](o,c){\tiny $\SI{10}{\kilo\metre\per\hour}$}
+    \tkzDrawSegment[color=red, dash pattern={on 2pt off 2pt}](o,c)
+    \tkzMarkAngle[arc=l,size=0.3,line width=0.5pt,arrows=<-](b,o,j)
+    \tkzLabelAngle[pos=0.9](b,o,j){\text{\tiny $\ang{135}$ (south-east)}}
+    \tkzMarkAngle[color=red, arc=l,size=0.2,line width=0.5pt,arrows=->](i,o,c)
+    \tkzLabelAngle[color=red, pos=0.7](j,o,c){\text{\tiny $\ang{135}$ }}
+\end{tikzpicture}
+
+\begin{align*}
+\textbf{b} &= 10\cos\ang{135}\textbf{i} + 10\sin\ang{135}\textbf{j}\\[8pt]
+&= -5\sqrt{2}\textbf{i} + 5\sqrt{2}\textbf{j}\\[8pt]
+&= -7.07\textbf{i} + 7.07\textbf{j}\\[8pt]
+\snote{(to 2 d.p)}
+\end{align*}
+
+\qpart
+
+The resultant vector, \textbf{v}, of the boat with the current is
+
+\begin{align*}
+    \textbf{v} &= \textbf{b} + \textbf{w}\\[8pt]
+    &= 19.70\textbf{i} - 5\sqrt{2}\textbf{i} - 3.47\textbf{j} + 5\sqrt{2}\textbf{j}\\[8pt]
+    &= 12.63\textbf{i} + 3.60\textbf{j}\\[8pt]
+   \snote{(to 2 d.p)}
+\end{align*}
+
+\qpart
+
+With a velocity of
+
+\begin{align*}
+    |\textbf{v}| &= \sqrt{(12.62\ldots)^{2} + (3.59\ldots)^{2}}\\[8pt]
+    &= \SI{13.13}{\kilo\metre\per\hour}\\[8pt]
+   \snote{(to 2 d.p)}
+\end{align*}
+
+With a direction of 
+
+\begin{tikzpicture}[label style/.style={font=\tiny}]
+    \tkzDefPoint(0,0){o}
+    \tkzDefPoint(0,2){j}
+    \tkzDefPoint(1.8,0){i}
+    \tkzDefPoint(0,-1.5){k}
+    \tkzDefPoint(20:1.95){v}
+    \tkzDrawSegments[->](o,j o,i)
+    \tkzDrawSegments[color=red, dash pattern={on 2pt off 2pt}](o,i i,v)
+    \tkzDrawSegment[->](o,v)
+    \tkzLabelPoints[below](i)
+    \tkzLabelPoints[left](j)
+    \tkzMarkAngle[arc=l,size=0.5,line width=0.5pt,arrows=<-](i,o,v)
+    \tkzLabelSegment[below](o,i){$12.63$}
+    \tkzLabelSegment[right](i,v){$3.6$}
+    \tkzLabelAngle[pos=1](i,o,v){\text{\tiny $\theta$}}
+\end{tikzpicture}
+
+\begin{align*}
+    \tan{\theta} &= \frac{\mathrm{opp}}{\mathrm{adj}}\\[8pt]
+    \theta &= \arctan{\left(\frac{v_y}{v_x}\right)}\\[8pt]
+    &= \frac{3.59\ldots}{12.62\ldots}\\[8pt]
+    &= \ang{15.91}\\
+\snote{(measured from the x-axis, to 2 d.p)}
+\end{align*}
+
+\begin{tikzpicture}[label style/.style={font=\tiny}]
+    \tkzDefPoint(0,0){o}
+    \tkzDefPoint(0,2){j}
+    \tkzDefPoint(1.8,0){i}
+    \tkzDefPoint(0,-1.5){k}
+    \tkzDefPoint(20:2){v}
+    \tkzDrawSegments[->](o,j o,i)
+    \tkzDrawSegments[color=red, dash pattern={on 2pt off 2pt}](o,i i,v)
+    \tkzDrawSegment[->](o,v)
+    \tkzLabelPoints[below](i)
+    \tkzLabelPoints[left](j)
+    \tkzMarkAngle[arc=l,size=0.5,line width=0.5pt,arrows=<-](v,o,j)
+    \tkzLabelAngle[pos=1](v,o,j){\text{\tiny $\ang{74}$}}
+    \tkzMarkRightAngle(j,o,i)
+\end{tikzpicture}
+
+Thus the bearing of the boat is 
+\[ 90 - 15.88 = \ang{74} \]
+\hfill (to the nearest degree)
+
+
+\end{question}
+\clearpage
+%%%Question nine
+
+\begin{question}
+
+	\[ f(x) = x^{3} + 5x^{2} + 8x -1 \]
+
+\qpart
+The stationary points of a curve are found at the points were the gradient is equal to $0$.
+
+\begin{align*}
+f(x) &= x^{3} + 5x^{2} +8x - 1\\[8pt]
+f^{\prime}(x) &= 3x^{2} + 10x + 8\\[8pt]
+\stext{factorising}
+0 &= (3x + 4)(x + 2)\\[8pt]
+\stext{substituting these two solutions \( x=-2 \) and \( x= \frac{-4}{3}\) back into our derivative}
+y &= x^{3} + 5x^{2} + 8x -1\\[8pt]
+&= (-2)^{3} + 5(-2)^{2} + 8(-2) -1\\[8pt]
+&= -8 + 20 - 16 - 1\\[8pt]
+&=  -5
+\stext{and}
+&= \left(\frac{-4}{3}\right)^{3} + 5\left(-\frac{-4}{3}\right)^{2} + 8\left(\frac{-4}{3}\right) -1\\[8pt]
+&= \frac{-64}{27} + \frac{80}{9} + \frac{-32}{3} - 1\\[8pt]
+&=  \frac{-139}{27}
+\end{align*}
+
+Hence the stationary points are 
+	\[ (-2,-5) \text{ and } \left(\frac{-3}{4},\frac{-139}{27}\right) \]
+
+\qpart
+
+\begin{align*}
+f(x) &= x^{3} + 5x^{2} +8x - 1\\[8pt]
+f^{\prime}(x) &= 3x^{2} + 10x + 8\\[8pt]
+f^{\prime\prime}(x) &= 6x +10\\[8pt]
+\stext{Using the second derivative test}
+6(-2) + 10 &= -2\\
+\snote{Thus a maximun}
+\stext{and}
+6\left(\frac{-4}{3}\right) + 10 &= 2\\
+\snote{Thus a minimum}
+\end{align*}
+
+\qpart
+
+\includegraphics[scale=0.7]{6.png}
+
+\qpart
+
+In the interval \( [-3, -1] \), \(. -7 \geq x \geq -5 \) 
+
+\end{question}
+
+%%%Question ten
+
+\begin{question}
+
+Given the equation of an object moving along a straight line with $s$ (in \( \unit{\meter} \)) from a reference point and $t$ (in \( \unit{\second} \)) 
+
+	\[ s = t^{4} - 12t^{3} + 38t^{2} - 28t + 5 \]
+\hfill (where \( t \geq 0 \))
+
+\qpart
+
+\begin{align*}
+\stext{Hence the velocity, v\unit{\meter\per\second} is given by}\\[8pt]
+v &= \diff{s}{t}\\[8pt]
+&= 4t^{3} - 36t^{2} + 76t - 28\\[8pt]
+\stext{And the acceleration, a\unit{\meter\per\square\second}}\\[8pt]
+a &= \diff{v}{t}\\[8pt]
+&= 12t^{2} - 72t + 76 
+\end{align*}
+
+\qpart
+
+Thus at time, \( t = \SI{2}{\second} \)
+
+\begin{align*}
+v &= 4t^{3} - 36t^{2} + 76t - 28\\[8pt]
+&= 4(2)^{3} - 36(2)^{2} + 76(2) - 28\\[8pt]
+&= \SI{12}{\meter\per\second}\\[8pt]
+\stext{and}\\
+a &= 12t^{2} - 72t + 76\\[8pt]
+&= 12(2)^{2} -72(2) +76\\[8pt]
+&= \SI{-20}{\meter\per\square\second}
+\end{align*}
+
+\qpart
+
+\includepdf[pages=-]{question_10_c.pdf}
+
+\end{question}
+\clearpage
+
+%%%Question eleven
+
+\begin{question}
+
+From the feedback I received for the last TMA, I focused on showing all steps clearly in my trigonometric solutions, as suggested. I also ensured that my graphs were clearly labeled as hand-drawn sketches and not computer-generated, which was another area noted.
+
+I feel confident in the topics covered in TMA01 and most of TMA02. However, I recognize that I need to work further on bearings, particularly transitioning away from using trig angle methods, which I naturally find more intuitive. I plan to review this area before the next TMA to strengthen my understanding.
+
+\end{question}
+
+\end{document}

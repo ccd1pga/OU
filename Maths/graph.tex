@@ -1,0 +1,19 @@
+\documentclass[a4paper]{tufte-handout}
+
+\usepackage{/Users/paulallen/OU/Maths/style}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw (-5,0) -- (5,0);
+\draw (0,-1) -- (0,5);
+\draw [red] plot [smooth] coordinates {(-5,5)  (0,1)  (5,5)};
+\node[left] at (0,1)  {1};
+\node[left] at (0,5)  {y};
+\node[below] at (-5,0)  {x};
+\node[below] at (0,0) {0,0};
+
+\end{tikzpicture}
+
+\end{document}

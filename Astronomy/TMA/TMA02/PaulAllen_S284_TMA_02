@@ -1,0 +1,228 @@
+\documentclass{tufte-handout}
+
+\usepackage{/Users/paulallen/OU/Astronomy/style}
+\usepackage{unicode-math}
+\begin{document}
+\tma{02}
+
+\begin{question}
+
+\qpart
+
+\qsubpart
+
+\begin{figure*}[h]
+	\includegraphics[width=\linewidth]{question_1_a}
+	\caption{Screenshot of the best-fit Planck curve overlaid on the stellar spectrum}
+	\emph{Accessed 25/11/2024}
+	\label{fig:Planck_curve}
+\end{figure*}
+
+\vspace{2cm}
+
+\qsubpart
+
+As shown in Figure 1, the Planck curve fits the spectrum well around \( \SI{3200}{\Kelvin} \) as it gives quite a good fit for most of the spectrum and so do temperatures of \( \SI{3050}{\Kelvin} \text{ to } \SI{3350}{\Kelvin} \), so we might estimate the temperature of this star to be \( \SI{3200}{\Kelvin} \pm\SI{150}{\Kelvin} \)
+
+\vspace{2cm}
+
+\qsubpart
+
+The peak for the best-fitting Planck curve is at \( \SI{892}{\nano\metre} \) with an intensity of \( 186.35 \), the temperature using Wien's law gives a wavelength of;
+
+\begin{align*}
+\lambda_{peak}(\unit{\metre}) &=\frac{\num{2.90d-3}\unit{\Kelvin\metre}}{T/(\unit{\Kelvin})}\\[8pt]
+&= \frac{\num{2.90d-3}\unit{\Kelvin\metre}}{\num{3200}/\unit{\Kelvin}}\\[8pt]
+&= \SI{9.0625d-7}{\metre}\\[8pt]
+&= \SI{906}{\nano\metre}\\ \snote{to 2 s.f}
+\end{align*}
+
+This calculated peak of \SI{906}{\nano\metre} fits well with the observed Planck's curve peak. The difference could be due to absorption or emission features in the spectrum or observational noise. 
+
+This is quite different to the peak wavelength of the spectrum \( \SI{811.0}{\nano\metre} \) with an intensity of \( 201.247 \)., which would suggest a temperature of around \SI{3600}{\Kelvin}. This discrepancy highlights that stellar spectra are not perfect blackbodies due to absorption features (e.g., molecular bands) and emission from the outer layers of the star's atmosphere.
+
+\clearpage
+
+\qpart
+
+\qsubpart
+
+\begin{figure*}[h]
+	\includegraphics[scale=0.5]{question_1_b}
+	\caption{Screenshot of the stars \( \boldsymbol{H\alpha} \) line showing an estimation of its equivalent width.}
+	\emph{Accessed 25/11/2024}
+	\label{fig:Halpha}
+\end{figure*}
+
+\clearpage
+
+\qsubpart
+
+As seen in figure 2, given the triple Ca II triplet at around \SI{8600}{\angstrom}, strong Ca II (H) and (K) at around \SI{4000}{\angstrom} and magnesium at around \SI{5200}{\angstrom} along with the equivalent width of \SI{1.94}{\angstrom} suggests an early G-class star.
+
+\end{question}
+
+\clearpage
+
+\begin{question}
+
+\qpart
+
+The orbital period of stars A and B are;
+\begin{align*}
+p_{orb} &= \SI{15.678}{\day} &\\
+&= 15.879 \times 86400 &= \SI{1354579.2}{\second}\\
+&= \frac{1354579.2}{\num{3.16e7}}  &= \SI{0.043}{\year}\\ \snote{(to 3 s.f)}
+\end{align*}
+
+\vspace{0.5cm}
+	
+and the radial velocity amplitudes are;
+	\[ V_{Rm1} = \SI{162}{\kilo\metre\per\second}\]
+and
+	\[V_{Rm2} = \SI{214}{\kilo\meter\per\second}\]
+respectively.
+
+\vspace{0.5cm}
+
+Using
+	\[d_{m} = \frac{(V_{R})(P_{orb})}{2\pi} \]
+	
+\begin{align*}
+d_{m1} &= \frac{\SI{162}{\kilo\metre\per\second} \times \SI{1354597.2}{\second}}{2\pi}\\
+&= \num{3.49e7}\unit{\kilo\metre}\\[8pt]\snote{(to 3 s.f)}
+\stext{and}
+d_{m2} &= \frac{\SI{214}{\kilo\metre\per\second} \times \SI{1354597.2}{\second}}{2\pi}\\
+&= \num{4.61e7}\unit{\kilo\metre}\\[8pt]\snote{(to 3 s.f)}
+\end{align*}
+
+\clearpage
+
+Hence the total semi-major axis of the binary system is:
+
+\begin{align*}
+a &= d_{m1} + d_{m2}\\[8pt]
+&= \SI{3.49e7}{\kilo\metre} + \SI{4.61e7}{\kilo\metre}\\[8pt]
+&= \SI{8.11e7}{\kilo\metre}\\ \snote{(to 3 s.f)} \\
+&= \frac{\SI{8.11e7}{\kilo\metre}}{\num{1.50e8}}\\[8pt]
+&= \SI{0.540}{\astronomicalunit}\\ \snote{(to 3 s.f)}
+\end{align*}
+
+\vspace{0.5cm}
+
+Using Kepler's third law:
+
+\begin{align*}
+M_{1} + M_{2} &= \frac{a^3}{p_{orb}^2}\\[8pt]
+ &= \frac{0.540^3}{0.043^2} \\[8pt]
+ &= 85.9\\ \snote{to 3 s.f}
+\end{align*}
+
+\vspace{0.5cm}
+
+And:
+
+\begin{align*}
+\frac{M_{2}}{M_{1}} &= \frac{\num{4.61e7}\unit{\kilo\metre}}{\num{3.49e7}\unit{\kilo\metre}}\\[8pt]
+&= \frac{107}{81}\\[8pt]
+&= 1.32\\ \snote{(to 3 s.f)}
+\end{align*}
+
+\vspace{0.5cm}
+
+Using both these results:
+	\[M_{1} = 1.32M_{2} \]
+and
+	\[ M_{1} = 85.9M_{\odot} - M_{2} \]
+	
+Equating both of these;
+
+\begin{align*}
+1.32M_{2} &= 85.9M_{\odot} - M_{2}\\[8pt]
+1.32M_{2} + M_{2} &= 85.9M_{\odot}\\[8pt]
+M_{2}(1.32 + 1) &= 85.9M_{\odot}\\[8pt]
+M_{2}(2.32) &= 86.9M_{\odot}\\[8pt]
+M_{2} &= \frac{85.9M_{\odot}}{2.32}\\[8pt]
+ &= 37.0M_{\odot} \snote{(to 3 s.f)}
+\end{align*}
+
+\vspace{0.5cm}
+
+And using:
+
+\begin{align*}
+\frac{M_{1}}{M_{2}} &= \frac{d_{m2}}{d_{m1}}\\[8pt]
+M_{1} &= \left(\frac{d_{m2}}{d_{m1}}\right)M_{2}\\[8pt]
+&= \left(\frac{107}{81}\right) \times 37.0\\[8pt]
+&= 48.9M_{\odot}\\ \snote{(to 3 s.f)}
+\end{align*}
+
+These values might be lower than the actual masses due to observational noise in the radial velocity amplitudes, accuracy of the \( P_{orb} \) and other uncertainties in the modeling system of stellar atmospheres, which would compound errors in any of our derived values. Due to the uncertainty in the inclination, \( i \), of the binary system, these values represent minimum masses. The closer \( i \) is to \( \ang{90} \), the larger the true masses would be compared to our calculated values.
+
+\clearpage
+
+\qpart
+
+Given:
+A Cepheid star with a pulsation period of \( \SI{13.6}{days} \) and a continuum spectrum peak at \( \SI{517}{\nano\metre} \).
+
+Using Wiens law;
+
+\begin{align*}
+\lambda_{peak}(\unit{\metre}) &= \frac{\num{2.90e-3}\unit{\metre\kelvin}}{Temperature(\unit{\kelvin})}\\[8pt]
+T(\unit{\kelvin}) &= \frac{\num{2.90e-3}\unit{\metre\kelvin}}{\lambda_{peak}(\unit{\metre})}\\[8pt]
+&=\frac{\num{2.90e-3}\unit{\metre\kelvin}}{\num{5.17e-7}\unit{\metre}}\\[8pt]
+&= \SI{5610}{\kelvin}\\ \snote{(to 3 s.f)}
+\end{align*}
+
+Calculating the absolute magnitude \( \left(M_{v}\right) \)) using the period-luminosity relation:
+
+\begin{align*}
+M_{v} &= -2.43\log_{10}(P) - 1.62\\[8pt]
+&= -2.43\log_{10}(13.6) -1.62\\[8pt]
+&= -4.37\\ \snote{(to 3 s.f)}
+\end{align*}
+
+Calculating the luminosity using the absolute magnitude to luminosity relationship:
+
+\begin{align*}
+M_{v} - M_{v\odot} &= -2.5\log_{10}\left(\frac{L}{L_{\odot}}\right)\\[8pt]
+L &= L_{\odot} \times 10^{\frac{M_{v\odot} - M_{v}}{2.5}}\\[8pt]
+&= \num{3.85e26}\unit{\watt} \times 10^{\frac{4.83 + 4.37}{2.5}}\\[8pt]
+&= \num{1.85e30}\unit{\watt}\\ \snote{(to 3 s.f)}
+\end{align*}
+
+\clearpage
+
+Calculating the radius (R) using the 'Stefan-Boltzmann law'
+
+\begin{align*}
+\frac{L}{L_{\odot}} &= \left(\frac{R}{R_{\odot}}\right)^{2} \times \left(\frac{T_{\odot}}{T}\right)^{4}\\[8pt]
+\frac{R}{R_{\odot}} &= \sqrt{\left(\frac{L}{L_{\odot}}\right)} \times \left(\frac{T_{\odot}}{T}\right)^{2}\\[8pt]
+\end{align*}
+
+\begin{align*}
+\stext{Now substituting our values:}
+&=  \sqrt{\left(\frac{\num{1.85e30}\unit{\watt}}{\num{3.84e26}\unit{\watt}}\right)} \times \left(\frac{\SI{5780}{\kelvin}}{\SI{5610}{\kelvin}}\right)^{2}\\[8pt]
+&= \sqrt{\num{4810}} \times \num{1.03}^2\\[8pt]
+&= \num{69.3} \times \num{1.06}\\[8pt]
+&= \num{73.6}R_{\odot}\\ \snote{(to 3 s.f)}
+\end{align*}
+
+\begin{marginfigure}%
+  \includegraphics[width=\linewidth]{hrdiagram1.jpg}
+  \caption{H-R diagram showing various stages of stellar evolution.}
+  \label{fig:h_r_diagram}
+ % \emph{Accessed 25/11/2024}
+\end{marginfigure}
+
+Using a H-R diagram\cite{COSMOS}; with a radius of \( 73.6R_{\odot} \), a temperature of \( \SI{5610}{\kelvin} \), luminosity of \( \num{1.85e30}\unit{\watt} \) and absolute magnitude of \( -4.37 \) suggests this is a low-end super giant or high-end giant. The radius is spot on for a super giant but the luminosity and absolute magnitude are a bit on the low side, but the temperature in the yellow-white also suggests super-giant. Cepheid variables are typically found in the instability strip of the H-R diagram, with the temperature and luminosities varying depending on the metallicity and mass of the star.
+
+Using the H-R diagram for the classification of stellar objects contains uncertainties based on the input data, errors in luminosity, effective temperature, can make it difficult to assign a definitive position on the diagram.
+
+\end{question}
+
+\bibliography{biblio}
+\bibliographystyle{plainnat}
+
+\end{document}

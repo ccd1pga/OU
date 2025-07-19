@@ -1,0 +1,50 @@
+\documentclass{standalone}
+
+\usepackage{style}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\bibliography{biblio.bib} 
+
+Force diagram of a mass on a slope.
+
+\begin{minipage}{0.7\textwidth}
+\begin{tikzpicture}
+    \tkzDefPoint(0,0){M}
+    \tkzDefShiftPoint[M](270:2){W}
+    \tkzDefShiftPoint[M](45:2){N}
+    \tkzDefShiftPoint[M](105:2){T}
+    \tkzDefShiftPoint[M](315:2){F}
+    \tkzDefShiftPoint[M](135:2){S}
+    \tkzDrawSegments[->](M,W M,N M,T M,F) 
+    \tkzDrawLine[dashed](M,S)
+    \tkzDrawPoint(M)
+    \tkzLabelPoint[below](W){$W$}
+    \tkzLabelPoint[right](M){$M$}
+    \tkzLabelPoint[above](N){$N$}
+    \tkzLabelPoint[above](T){$T$}
+    \tkzLabelPoint[below](F){$F$}
+    \tkzMarkAngle(W,M,F)
+    \tkzMarkAngle(T,M,S)
+    \tkzLabelAngle[pos=0.8](W,M,F){\( \ang{45} \)}
+    \tkzLabelAngle[pos=0.8](T,M,S){\( \ang{30} \)}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}
+\tkzDefPoint(0,0){o}
+\tkzDefShiftPoint[o](45:1){i}
+\tkzDefShiftPoint[o](135:1){j}
+\tkzDrawSegments[-{stealth}](o,i o,j) 
+\tkzLabelPoints[right](i, j)
+\end{tikzpicture}
+\end{minipage}
+
+\begin{align*}
+    |H|\sin{35}\textbf{i} +|H|\cos{35}\textbf{j} - |G|\sin{45}\textbf{i} +|G|\cos{45}\textbf{j} + 40\textbf{j} = 0 \\
+    \implies |H|\sin{35} - |G|\sin{45} = 0 \quad \text{and} \quad |H|\cos{35} + |G|\cos{45} + 40 = 0 \\
+    \implies |H| = \frac{|G|\sin{45}}{\sin{35}} \quad \text{and} \quad |G| = \frac{-40 - |H|\cos{35}}{\cos{45}}\\
+\end{align*}
+
+
+\end{document}

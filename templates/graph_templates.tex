@@ -1,0 +1,34 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\pgfplotsset{compat=1.11}
+
+\begin{document}
+\bibliography{biblio.bib} 
+
+\section{Graph Templates}
+
+\subsection{Simple axis}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=middle,       % Draw x-axis at the middle
+        axis y line=middle,       % Draw y-axis at the middle
+        enlarge x limits=0.1,     % Add some space around x limits
+        enlarge y limits=0.1,
+        xmin=-1.5, xmax=1.5,    % Set x range
+        ymin=-1, ymax=1,      % Set y range (adjust as needed)
+        xtick={-2,-1.5,-1,-0.5, 0,0.5, 1, 1.5, 2},  % Set x ticks
+        ytick={-1, -0.5, 0, 0.5, 1},                % Set y ticks
+        xticklabels={-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2}, % Set x tick labels
+        yticklabels={-1, -0.6, -0.5, 0, 0.5, 0.6, 1}, % Set y tick labels
+        xlabel={$x$},             % Label for x-axis
+        ylabel={$y$},             % Label for y-axis
+        axis line style={-},      % Remove arrows from axis lines
+        tick style={very thick},  % Optional: Styling ticks
+    ]
+    \end{axis}
+  \end{tikzpicture}
+
+\end{document}

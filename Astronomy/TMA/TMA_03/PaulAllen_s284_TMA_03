@@ -1,0 +1,131 @@
+\documentclass{tufte-handout}
+
+\usepackage{/Users/paulallen/OU/Astronomy/style}
+%\usepackage{unicode-math}
+\begin{document}
+\tma{03}
+
+\begin{question}
+
+\qpart
+
+\includegraphics[scale=0.3]{question_1_a.jpg}
+
+\vspace{5cm}
+\qpart
+
+\begin{tabular}{|c|c|}
+\hline
+Galaxy & Classification\\
+\hline
+1 & Sa \\
+\hline
+2 & E1 \\
+\hline
+3 & E4 \\
+\hline
+4 & E6 \\
+\hline
+5 & SBb \\
+\hline
+\end{tabular}
+
+\end{question}
+
+\clearpage
+
+\begin{question}
+
+\qpart
+
+\begin{tabular}{|c|c|c|}
+\hline
+Orientation & size (\( \unit{\arcsec} \)) & error (\( \unit{\arcsec} \))\\
+\hline
+vertical & 494.22 & \( \pm5 \)\\
+\hline
+horizontal & 482.48 & \( \pm5 \)\\
+\hline
+\( \ang{45} \) & 450.54 & \( \pm5 \)\\
+\hline
+\( \ang{135} \) & 498.34 & \( \pm5 \)\\
+\hline
+\end{tabular}
+
+\vspace{5cm}
+\qpart
+
+This gives us an average diameter of
+
+\[
+\frac{494.22+482.48+450.54+498.34}{4} = 481.395
+\]
+
+The average diameter of the SNR is \( \ang{;;481.395} \)\\
+
+Converting this to radians, and then to parsecs
+
+\begin{align*}
+\ang{;;481.395} \times \frac{\pi}{\SI{3600}{\arcsec\per\degree} \times \SI{180}{\degree\per\rad}} &= 0.0023\ldots\unit{\rad}\\[8pt]
+\stext{and as it is \( 4.8\unit{\kilo\parsec} \) away and using the small angle approximation }
+ D = \theta d = 0.0023\unit{\rad} \times 4800\unit{\parsec} &= \SI{11.2}{\parsec} \\[8pt]
+\snote{to 3 s.f}
+\end{align*}
+
+\clearpage
+\qpart
+
+Hence the speed of the SNR is
+
+\begin{align*}
+\stext{The size of the SNR in \( \unit{\kilo\metre} \) is}\\
+\SI{11.2}{\parsec} \times \SI{3.09e{13}}{\kilo\metre\per\parsec} &= \SI{3.46e{14}}{\kilo\meter}\\[8pt]
+\stext{assuming that the speed has bee consistent since its conception}\\
+speed &= \frac{distance}{time}\\[8pt]
+&= \frac{\num{3.46e{14}}}{\num{5.048e{10}}}\\[8pt]
+&= \SI{6860}{\kilo\meter\per\second}\\[8pt]
+\snote{to 3 s.f}
+\end{align*}
+
+\vspace{5cm}
+
+While the Tycho SNR likely expanded faster in its initial stages due to being younger (600 years), the older SNR analysed here (1600 years) continues to expand at a significant velocity. of \( \SI{6860}{\kilo\meter\per\second} \).
+
+Looking at the measurements of the SNR it does not appear to be expanding evenly in all directions. The measurement taken across the SNR at an angle of \ang{45} is significantly less than the other three measurements, implying the SNR has an asymmetry in its expansion. This could indicate either non-uniform energy distribution or potentially to external factors like interactions with surrounding material.
+
+The measurements used here are only approximations due to the resolution of the x-ray observation, and the asymmetry of the expansion and the limited measurements taken to approximate the diameter.
+
+\vspace{5cm}
+\qpart
+
+Using
+
+\begin{align*}
+ \frac{r_{1}}{r_{2}} &= \br{\frac{t_{1}}{t_{2}}}^{0.4}\\[8pt]
+ r_{1} &= r_{2}\br{\frac{t_{1}}{t_{2}}}^{0.4}\\[8pt]
+ \stext{Substituting in our values}
+ &= \frac{11.2\ldots}{2}\br{\frac{1952 - 406}{1600}}^{0.4}\\[8pt]
+ &= 5.6\ldots\br{\frac{1546}{1600}}^{0.4}\\[8pt]
+ &= \SI{5.52}{\parsec}
+\end{align*}
+
+Converting this into \( \unit{\arcsec} \)
+
+\begin{align*}
+5.52\ldots\unit{\parsec} \div \SI{4800}{\parsec} &= \num{1.15e{-3}}\unit{\rad}\\[8pt]
+\frac{\num{1.15e{-3}}}{\frac{\pi}{3600 \times 180}} &= \ang{;;237.36}\\[8pt]
+\stext{giving an angular size in $1952$ of}
+D &= 237.36\ldots \times 2\\[8pt]
+&= \ang{;;475}
+\snote{to 3 s.f}
+\end{align*}
+
+\vspace{5cm}
+
+This result for the angular size of the SNR for 1952 corresponds to the larger radius measured in 2006. This size discrepancy is in alignment with the power law relationship \( r \propto t^{0.4} \).
+
+The instrument used in 1952 had a spatial resolution of \( \ang{;2;} = \ang{;;120} \) and therfore would be well within the capabilities of this instrument to resolve the SNRs angular diameter of \ang{;;475}, assuming that it was sufficiently bright.
+
+\end{question}
+
+\end{document}

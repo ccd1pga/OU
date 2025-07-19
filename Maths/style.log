@@ -1,0 +1,44 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.14)  18 OCT 2024 10:26
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**style.sty
+(./style.sty
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-09-10>
+
+LaTeX Warning: You have requested package `',
+               but the package provides `style'.
+
+Package: style 
+
+./style.sty:13: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \usepackage{
+                 tkz-euclide}                                      %Tkz-Eucl...
+
+? 
+./style.sty:13: Emergency stop.
+ ...                                              
+                                                  
+l.13 \usepackage{
+                 tkz-euclide}                                      %Tkz-Eucl...
+
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+ 
+Here is how much of TeX's memory you used:
+ 18 strings out of 473579
+ 491 string characters out of 5728227
+ 386806 words of memory out of 5000000
+ 23013 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 12i,0n,13p,123b,14s stack positions out of 10000i,1000n,20000p,200000b,200000s
+./style.sty:13:  ==> Fatal error occurred, no output PDF file produced!
