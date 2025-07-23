@@ -35,12 +35,19 @@ If if the following statments are true:
 \textit{Robin is eating cake.}
 \end{center}
 
+Let \( P \) be the statement "It is Robin's birthday" and \( Q \) be the statement "Robin eats cake".
+The first statement can be written as \( P \implies Q \) and the second statement can be written as \( Q \).
+
 The statment;
 \begin{center}
 \textit{It is Robin's birthday.}
 \end{center}
 
-Cannot be deduced as true. 
+This Statement \( Q \) is stand alone and does not nesecerily imply that \( P \) is true.
+Robin could be eating cake for any number of reasons. This is an example of the formal falacy
+afferming the consequences.
+
+\vspace{3cm}
 
 \qpart
 
@@ -100,6 +107,8 @@ Thus the function is it's own inverse. Hence,
 
 for all real numbers such that \( y\neq\frac{4}{3} \) and \( x\neq\frac{4}{3} \).
 
+\vspace{3cm}
+
 \qpart
 
 To prove
@@ -152,7 +161,11 @@ Base case: \( n = 1 \)
 \stext{Thus } 6 \geq 1 \text{ is true.}
 \end{align*}
 
+\vspace{1cm}
+
 Inductive step: Assume \( (3n)! \geq (n!)^{3} \) is true for some \( n \in \mathbb{N}\).
+
+\vspace{1cm}
 
 We need to show that \( (3(n + 1))! \geq ((n + 1)!)^{3} \).
 \begin{align*}
@@ -204,6 +217,8 @@ frac{7x}{x+3} \leq \frac{x-3}{7x}\\[8pt]
 \end{align*}
 
 We can conclude that no such value of \( x \) exists such that \( x \) is a positive real number.
+
+\vspace{3cm}
 
 \qpart
 
@@ -262,9 +277,12 @@ If \( n^{3}+2n^{2} \) is not a multiple of \( 16 \), then \( n \) is odd.
    &= g\sqrt{\frac{600}{g}}\\[8pt]
    &= \sqrt{600g}\\[8pt]
    &= \sqrt{600 \times 9.8}\\[8pt]
-   &= \SI{77.46\ldots}{\meter\per\second}\\[8pt]
+   &= 77.46\ldots\\[8pt]
    &= \SI{77}{\meter\per\second}
 \snote{to 2 s.f}
+\end{align*}
+
+\vspace{3cm}
 
 \qpart
 
@@ -280,6 +298,8 @@ inset graph here
 
 \qpart
 
+Insert diagram here
+
 \begin{align*}
 \stext{Using}
   v_{1} &= v_{0} + at\\[8pt]
@@ -288,16 +308,19 @@ inset graph here
   x_{1} &= v_{0}t + \frac{1}{2}at^{2}\\[8pt]
   30 &= \frac{1}{2}at^{2}\\[8pt]
   60 &= at^{2}\\[8pt]
-\stext{Substituting \( at=9 \)\\[8pt]
+\stext{Substituting \( at=9 \)}\\[8pt]
   60 &= 9t\\[8pt]
   t &= \frac{60}{9}\\[8pt]
    &= \frac{20}{3}\\[8pt]
+   &= \SI{6.67}{\second}
 \stext{and}
   a &= \frac{9}{t}\\[8pt]
   a &= \frac{9}{\frac{20}{3}}\\[8pt]
   a &= \frac{27}{20}\\[8pt]
    &= \SI{1.35}{\meter\per\second\squared}
 \end{align*}
+
+\vspace{3cm}
 
 \qpart
 
@@ -310,12 +333,12 @@ F_{i} &= \sin(30)mg - \mathbf{F}\\[8pt]
 N_{j} &= \cos(30)mg\\[8pt]
 \stext{thus}
 F &= \sin30mg - \mu\cos(30)mg\\[8pt]
-\stext{And using \(F=ma\)}
+\stext{\text{And using } \(F=ma\)}\\[8pt]
 ma &= \sin(30)mg - \mu\cos(30)mg\\[8pt]
-\snote{Divinding through by \(m\)}
+\snote{\text{Divinding through by } \(m\)}\\[8pt]
 a &= \sin(30)g - \mu\cos(30)g\\[8pt]
 1.35 &= \sin(30)g - \mu\cos(30)g\\[8pt]
-\snote{Rearranging}
+\snote{Rearranging}\\[8pt]
 \mu\cos(30)g &= \sin(30)g - 1.35\\[8pt]
 \mu &= \frac{\sin(30)g - 1.35}{\cos(30)g}\\[8pt]
 &= \frac{\sin(30)9.8 - 1.35}{\cos(30)9.8}\\[8pt]
@@ -338,6 +361,8 @@ The vector expression for the acceleration is
 \[
 \mathbf{a} = -g\mathbf{j}
 \]
+
+\vspace{1cm}
 
 \qpart
 
@@ -381,6 +406,8 @@ The initial velocity vector is
 \snote{(as required)}
 \end{align*}
 
+\vspace{3cm}
+
 \qpart
 \qsubpart
 
@@ -403,6 +430,8 @@ t &= \frac{-12\sin(50) \pm\sqrt{(12\sin(50)^2-4(-\frac{1}{2}g)(1.5))}}{2(-\frac{
 \snote{to 2 s.f.}
 \end{align*}
 
+\vspace{3cm}
+
 \qsubpart
 
 The horizonal distance traveled by the ball is given by the \(\mathbf{i}\)-component of 
@@ -422,6 +451,271 @@ the position vector \(\mathbf{r}\) at time \(t\):
 %%%%%%%%%%%%Question 8
 
 \begin{question}
+
+\[ \mathbf{A} = \begin{pmatrix}
+  5 & 6\\
+  18 & 2
+\end{pmatrix} \]
+
+\qpart
+
+The determinant of matrix \(\mathbf{A}\) is given by:
+\begin{align*}
+\det(\mathbf{A}) &= 5 \cdot 2 - 6 \cdot 18\\[8pt]
+&= 10 - 108\\[8pt]
+&= -98
+\end{align*}
+
+The trace of matrix \(\mathbf{A}\) is given by the sum of the diagonal elements:
+\begin{align*}
+\text{tr}(\mathbf{A}) &= 5 + 2\\[8pt]
+&= 7
+\end{align*}
+
+\marginnote{The characteristic equation of a \(2 \times 2\) matrix \(\mathbf{A}\) is given by:
+\[ \lambda^{2} - (tr \mathbf{A})\lambda + \det\mathbf{A} = 0\]
+where \(\lambda\) is the eigenvalue.}
+
+Hence, the characteristic equation of matrix \(\mathbf{A}\) is:
+\begin{align*}
+\lambda^{2} - 7\lambda - 98 &= 0\\[8pt]
+(\lambda-14)(\lambda+7) &= 0\\[8pt]
+\stext{Hence the eigenvalues are:}\\[8pt]
+\lambda_{1} &= 14\\[8pt]
+\stext{and}\\[8pt]
+\lambda_{2} &= -7
+\end{align*}
+
+\vspace{3cm}
+
+The corresponding eigenvectors can be found by solving the equation:
+\[(\mathbf{A} - \lambda \mathbf{I})\mathbf{v} = \mathbf{0}\]
+
+\begin{align*}
+\begin{pmatrix}
+  5 - \lambda & 6\\
+  18 & 2 - \lambda
+\end{pmatrix}
+\begin{pmatrix}
+  x\\
+  y
+\end{pmatrix}
+&= \begin{pmatrix}
+  0\\
+  0
+\end{pmatrix}\\[8pt]
+\stext{For } \lambda_{1} = 14:\\
+\begin{pmatrix}
+  5 - 14 & 6\\
+  18 & 2 - 14
+\end{pmatrix}
+\begin{pmatrix}
+  x\\
+  y
+\end{pmatrix}
+&= \begin{pmatrix}
+  -9 & 6\\
+  18 & -12
+\end{pmatrix}
+\begin{pmatrix}
+  x\\
+  y
+\end{pmatrix}
+= \begin{pmatrix}
+  0\\
+  0
+\end{pmatrix}\\[8pt]
+\stext{This gives the system of equations:}\\[8pt]
+-9x + 6y &= 0\\[8pt]
+18x - 12y &= 0\\[8pt]
+\stext{Hence}
+-9x +6y &= 18x -12y\\[8pt]
+\stext{Rearranging gives}\\[8pt]
+-27x + 18y &= 0\\[8pt]
+18y &= 27x\\[8pt]
+2y &= 3x\\[8pt]
+\stext{This gives us the eigenvector:}\\[8pt]
+\begin{pmatrix}
+  2\\
+  3
+\end{pmatrix}
+\stext{For } \lambda_{2} = -7:\\
+\begin{pmatrix}
+  5 - (-7) & 6\\
+  18 & 2 - (-7)
+\end{pmatrix}
+\begin{pmatrix}
+  x\\
+  y
+\end{pmatrix}
+&= \begin{pmatrix}
+  12 & 6\\
+  18 & 9
+\end{pmatrix}
+\begin{pmatrix}
+  x\\
+  y
+\end{pmatrix}
+= \begin{pmatrix}
+  0\\
+  0
+\end{pmatrix}\\[8pt]
+\stext{This gives the system of equations:}\\[8pt]
+12x + 6y &= 0\\[8pt]
+18x + 9y &= 0\\[8pt]
+\stext{Hence}
+12x + 6y &= 18x + 9y\\[8pt]
+\stext{Rearranging gives}\\[8pt]
+-6x - 3y &= 0\\[8pt]
+-3y &= 6x\\[8pt]
+-y &= 2x\\[8pt]
+\stext{This gives us the eigenvector:}\\[8pt]
+\begin{pmatrix}
+  -1\\
+  2
+\end{pmatrix}
+\end{align*}
+
+\vspace{3cm}
+
+\qpart
+
+We can express \[ \mathbf{A} = \mathbf{P}\mathbf{D}\mathbf{P}^{-1} \]
+
+Where \( \mathbf{P} \) is \( \begin{pmatrix}
+  2 & -1\\
+  3 & 2 
+\end{pmatrix} \)
+
+and \( \mathbf{D} \) is \( \begin{pmatrix}
+  14 & 0\\
+  0 & -7
+\end{pmatrix} \)
+
+\marginnote{The inverse of a \(2 \times 2\) matrix \(\mathbf{P} = \begin{pmatrix}
+  a & b\\
+  c & d
+\end{pmatrix}\) is given by:
+\[ \mathbf{P}^{-1} = \frac{1}{ad - bc}\begin{pmatrix}
+  d & -b\\
+  -c & a
+\end{pmatrix} \]
+where \(ad - bc\) is the determinant of \(\mathbf{P}\).}
+
+and \( \mathbf{P}^{-1} \) is the inverse of \( \mathbf{P} \); 
+\begin{pmatrix}
+  \frac{2}{7} & \frac{1}{7}\\
+  \frac{-3}{7} & \frac{2}{7}  
+\end{pmatrix}
+
+Hense, we can write:
+\[ \mathbf{A} = \begin{pmatrix}
+  2 & -1\\
+  3 & 2 
+\end{pmatrix}
+\begin{pmatrix}
+  14 & 0\\
+  0 & -7
+\end{pmatrix}
+\begin{pmatrix}
+  \frac{2}{7} & \frac{1}{7}\\
+  \frac{-3}{7} & \frac{2}{7}
+\end{pmatrix} \]
+
+\vspace{3cm}
+
+\qpart
+
+\[ \mathbf{A}^5 = \mathbf{P}\mathbf{D}^5\mathbf{P}^{-1} \]
+
+\begin{align*}
+\mathbf{A}^5 &= \begin{pmatrix}
+  2 & -1\\
+  3 & 2 
+\end{pmatrix}
+\begin{pmatrix}
+  14^5 & 0\\
+  0 & (-7)^5
+\end{pmatrix}
+\begin{pmatrix}
+  \frac{2}{7} & \frac{1}{7}\\
+  \frac{-3}{7} & \frac{2}{7}
+\end{pmatrix} \\[8pt]
+&= \begin{pmatrix}
+  2 & -1\\
+  3 & 2 
+\end{pmatrix}
+\begin{pmatrix}
+  537824 & 0\\
+  0 & -16807
+\end{pmatrix}
+\begin{pmatrix}
+  \frac{2}{7} & \frac{1}{7}\\
+  \frac{-3}{7} & \frac{2}{7}
+\end{pmatrix} \\[8pt]
+&= \begin{pmatrix}
+  2 \cdot 537824 + -1 \cdot 0 & 2 \cdot 0 + -1 \cdot -16807\\
+  3 \cdot 537824 + 2 \cdot 0 & 3 \cdot 0 + 2 \cdot -16807
+\end{pmatrix}
+\begin{pmatrix}
+  \frac{2}{7} & \frac{1}{7}\\
+  \frac{-3}{7} & \frac{2}{7}
+\end{pmatrix} \\[8pt]
+&= \begin{pmatrix}
+  1075648 & 16807\\
+  1613472 & -33614
+\end{pmatrix}
+\begin{pmatrix}
+  \frac{2}{7} & \frac{1}{7}\\
+  \frac{-3}{7} & \frac{2}{7}
+\end{pmatrix} \\[8pt]
+&= \begin{pmatrix}
+  \frac{1075648 \cdot 2}{7} + \frac{16807 \cdot -3}{7} & \frac{1075648 \cdot 1}{7} + \frac{16807 \cdot 2}{7}\\
+  \frac{1613472 \cdot 2}{7} + \frac{-33614 \cdot -3}{7} & \frac{1613472 \cdot 1}{7} + \frac{-33614 \cdot 2}{7}  
+\end{pmatrix} \\[8pt]
+&= \begin{pmatrix}
+  \frac{2151296 - 50421}{7} & \frac{1075648 + 33614}{7}\\
+  \frac{3226944 + 100842}{7} & \frac{1613472 - 67228}{7}      
+\end{pmatrix} \\[8pt]
+&= \begin{pmatrix}
+  \frac{2100875}{7} & \frac{1109262}{7}\\
+  \frac{3327786}{7} & \frac{1546244}{7}      
+\end{pmatrix} \\[8pt]
+&= \begin{pmatrix}
+  300125 & 158466\\
+  475397 & 220892
+\end{pmatrix} \\[8pt]      
+\end{align*}
+
+\vspace{3cm}
+
+\qpart
+
+MAXIMA page
+
+\qpart
+
+\[ \dot{x} = 5x + 6y \]
+\[ \dot{y} = 18x + 2y \]
+
+\marginnote{The general soution of a system of linear differential equations is given by:
+\[ \mathbf{x} = e^{\lambda_1 t}\mathbf{v}_1 + e^{\lambda_2 t}\mathbf{v}_2 \]
+where \(\lambda_1\) and \(\lambda_2\) are the eigenvalues, and \(\mathbf{v}_1\) and \(\mathbf{v}_2\) are the corresponding eigenvectors.}
+
+\begin{align*}
+\mathbf{x} &= Ce^{14t}\begin{pmatrix}
+  2\\
+  3
+\end{pmatrix} + De^{-7t}\begin{pmatrix}
+  -1\\
+  2
+\end{pmatrix}\\[8pt]
+\stext{hence we can write:}\\[8pt]
+x &= 2Ce^{14t} - De^{-7t}\\[8pt]
+y &= 3Ce^{14t} + 2De^{-7t}\\[8pt]
+\stext{where \(C\) and \(D\) are constants determined by initial conditions.}
+\end{align*}
+
 
 \end{question}
 
