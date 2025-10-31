@@ -43,9 +43,9 @@ The statment;
 \textit{It is Robin's birthday.}
 \end{center}
 
-This Statement \( Q \) is stand alone and does not nesecerily imply that \( P \) is true.
-Robin could be eating cake for any number of reasons. This is an example of the formal falacy
-afferming the consequences.
+\( P \) does not imply \( Q \).
+Robin could be eating cake for any number of reasons. This is an example of the formal fallacy
+affirming the consequences.
 
 \vspace{3cm}
 
@@ -55,7 +55,13 @@ afferming the consequences.
 
 This can be proved false with;
 
-\[ 5^{7} = 78125 > 7^{6} = 117649 \]
+\begin{align*}
+\stext{Using \(n=9\)}\\
+5^9 &= 1953125\\[8pt]
+(9+1)^{6} &= 10^{6} = 1000000\\[8pt]
+\stext{Thus }
+1953125 &\leq 1000000 \text{ is false.}\\[8pt]
+\end{align*}
 
 \end{question}
 
@@ -70,15 +76,15 @@ This can be proved false with;
 \begin{align*}
 \stext{Given \( x\neq\frac{4}{3} \) and \( y\neq\frac{4}{3} \)}
 \stext{When \( x = \frac{4y-1}{3y-4}  \)}
-y &= \frac{4x - 1}{3x - 4}\\[8pt]
-&= \frac{4\left(\frac{4y-1}{3y-4}\right) - 1}{3\left(\frac{4y-1}{3y-4}\right) - 4}\\[8pt]
+y &= \frac{4x - 1}{3x - 4}\\[25pt]
+&= \frac{4\left(\frac{4y-1}{3y-4}\right) - 1}{3\left(\frac{4y-1}{3y-4}\right) - 4}\\[25pt]
 \stext{Distributing the \( 4 \) and \( 3 \)}
-&= \frac{\frac{16y - 4}{3y - 4} - 1}{\frac{12y - 3}{3y - 4} - 4}\\[8pt]
+&= \frac{\frac{16y - 4}{3y - 4} - 1}{\frac{12y - 3}{3y - 4} - 4}\\[25pt]
 \stext{Using the common denominator of \( 3y - 4 \)}
-&= \frac{\frac{16y - 4 - (3y - 4)}{3y - 4}}{\frac{12y - 3 - 4(3y - 4)}{3y - 4}}\\[8pt]
+&= \frac{\frac{16y - 4 - (3y - 4)}{3y - 4}}{\frac{12y - 3 - 4(3y - 4)}{3y - 4}}\\[25pt]
 \stext{Simplifying the numerator and denominator}
-&= \frac{\frac{16y - 4 - 3y + 4}{3y - 4}}{\frac{12y - 3 - 12y + 16}{3y - 4}}\\[8pt]
-&= \frac{\frac{13y}{3y - 4}}{\frac{13}{3y - 4}}\\[8pt]
+&= \frac{\frac{16y - 4 - 3y + 4}{3y - 4}}{\frac{12y - 3 - 12y + 16}{3y - 4}}\\[25pt]
+&= \frac{\frac{13y}{3y - 4}}{\frac{13}{3y - 4}}\\[25pt]
 \stext{Cancelling the common factor of \( 3y - 4 \)}
 &= \frac{13y}{13}\\[8pt]
 &= y
@@ -87,15 +93,15 @@ y &= \frac{4x - 1}{3x - 4}\\[8pt]
 \begin{align*}
 \stext{Assume \( x = \frac{4y-1}{3y-4} \)}
 \stext{Then \( y = \frac{4x-1}{3x-4} \)}
-x &= \frac{4y - 1}{3y - 4}\\[8pt]
-&= \frac{4\left(\frac{4x-1}{3x-4}\right) - 1}{3\left(\frac{4x-1}{3x-4}\right) - 4}\\[8pt]
+x &= \frac{4y - 1}{3y - 4}\\[25pt]
+&= \frac{4\left(\frac{4x-1}{3x-4}\right) - 1}{3\left(\frac{4x-1}{3x-4}\right) - 4}\\[25pt]
 \stext{Distributing the \( 4 \) and \( 3 \)}
-&= \frac{\frac{16x - 4}{3x - 4} - 1}{\frac{12x - 3}{3x - 4} - 4}\\[8pt]
+&= \frac{\frac{16x - 4}{3x - 4} - 1}{\frac{12x - 3}{3x - 4} - 4}\\[25pt]
 \stext{Using the common denominator of \( 3x - 4 \)}
-&= \frac{\frac{16x - 4 - (3x - 4)}{3x - 4}}{\frac{12x - 3 - 4(3x - 4)}{3x - 4}}\\[8pt]
+&= \frac{\frac{16x - 4 - (3x - 4)}{3x - 4}}{\frac{12x - 3 - 4(3x - 4)}{3x - 4}}\\[25pt]
 \stext{Simplifying the numerator and denominator}
-&= \frac{\frac{16x - 4 - 3x + 4}{3x - 4}}{\frac{12x - 3 - 12x + 16}{3x - 4}}\\[8pt]
-&= \frac{\frac{13x}{3x - 4}}{\frac{13}{3x - 4}}\\[8pt]
+&= \frac{\frac{16x - 4 - 3x + 4}{3x - 4}}{\frac{12x - 3 - 12x + 16}{3x - 4}}\\[25pt]
+&= \frac{\frac{13x}{3x - 4}}{\frac{13}{3x - 4}}\\[25pt]
 \stext{Cancelling the common factor of \( 3x - 4 \)}
 &= \frac{13x}{13}\\[8pt]
 &= x
@@ -112,7 +118,7 @@ for all real numbers such that \( y\neq\frac{4}{3} \) and \( x\neq\frac{4}{3} \)
 \qpart
 
 To prove
-\[ n + 1 \text{ is even if and only if } 2(n + 1) \text{ is a multiple of } 4 \]
+\[ n + 1 \text{ is even if and only if } 2(n + 3) \text{ is a multiple of } 4 \]
 
 Assume \( n + 1 \) is even, therefore it can be writen as \( n+1 = 2k \) for some 
 integer \( k \).
@@ -152,7 +158,7 @@ n + 1 &= 2k - 2\\[8pt]
 
     \[ (3n)! \geq (n!)^{3} \text{, for all } n \in \mathbb{N} \]
 
-Prooof by induction.
+Proof by induction.
 
 Base case: \( n = 1 \)
 \begin{align*}
@@ -170,24 +176,23 @@ Inductive step: Assume \( (3n)! \geq (n!)^{3} \) is true for some \( n \in \math
 We need to show that \( (3(n + 1))! \geq ((n + 1)!)^{3} \).
 \begin{align*}
     \stext{Since}
-3(k+1)! &= 3(k+1)(k!)\\[8pt]
-&=(3k+3)(3k+2)(3k+1)(3k!)
+(3(n+1))! &= (3n+3)! \\[8pt]
+&= (3n+3)(3n+2)(3n+1)\,(3n)! \\[8pt]
 \stext{and}
-((k+1)!)^{3} &= ((k+1)(k!))^{3}\\[8pt]
-&= (k+1)^{3}(k!)^{3}\\[8pt]
-\stext{Now using our assumption for the inductive step, we have to show;}
-(3k+3)(3k+2)(3k+1) &\geq (k+1)^{3}\\[8pt]
-\stext{Expanding the LHS:}
-(9k^{2}+9k+6k+6)(3k+1) &\geq (k+1)^{3}\\[8pt]
-27k^{3}+54k^{2}+33k+6 &\geq (k+1)^{3}\\[8pt]
-\stext{Expanding the RHS:}
-27k^{3}+54k^{2}+33k+6 &\geq (K+1)(k+1)(k+1)\\[8pt]
-&\geq (k^{2}+2k+2)(k+1)\\[8pt]
-&\geq k^{3}+3k^{2}+3k+1\\[8pt]
-\stext{Reagrranging}
-26k^{3}+51k^{2}+30k+5 &\geq 0\\[8pt]
-\stext{This is true for all \( k \in \mathbb{N} \) }
+((n+1)!)^{3} &= ((n+1)(n!))^{3}\\[8pt]
+&= (n+1)^{3}(n!)^{3}\\[8pt]
+\stext{Now using our assumption for the inductive step, it suffices to show:}
+(3n+3)(3n+2)(3n+1) &\geq (n+1)^{3}\\[8pt]
+\stext{Expanding the LHS:}\\
+(3n+3)(3n+2) &= 9n^{2}+15n+6\\[8pt]
+(9n^{2}+15n+6)(3n+1) &= 27n^{3}+54n^{2}+33n+6\\[8pt]
+\stext{Expanding the RHS:}\\
+(n+1)^{3} &= n^{3}+3n^{2}+3n+1\\[8pt]
+\stext{Subtracting the RHS from the LHS:}\\
+(27n^{3}+54n^{2}+33n+6) - (n^{3}+3n^{2}+3n+1) &= 26n^{3}+51n^{2}+30n+5 \ge 0
 \end{align*}
+
+\stext{This is true for all \( n \in \mathbb{N} \).}
 
 \end{question}
 
@@ -197,7 +202,7 @@ We need to show that \( (3(n + 1))! \geq ((n + 1)!)^{3} \).
     
     \qpart
 
-    Prove that no such value of \( x \) exists such that \( x \) is a real posive 
+    Prove that no such value of \( x \) exists such that \( x \) is a real positive 
     number.
 
 \[ \frac{7x}{x+3} \leq \frac{x-3}{7x} \]
@@ -205,7 +210,7 @@ We need to show that \( (3(n + 1))! \geq ((n + 1)!)^{3} \).
 Assume that \(x\) is a positive real number.
 
 \begin{align*}
-frac{7x}{x+3} \leq \frac{x-3}{7x}\\[8pt]
+\frac{7x}{x+3} \leq \frac{x-3}{7x}\\[8pt]
 \stext{Cross multiplying gives}
 (7x)(7x) \leq (x-3)(x+3)\\[8pt]
 \stext{Expanding both sides}
@@ -227,7 +232,7 @@ Prove that:
 If \( n^{3}+2n^{2} \) is not a multiple of \( 16 \), then \( n \) is odd.
 \end{center}
 
-Let us consider the contraposition of this stament;
+Let us consider the contraposition of this statement;
 \begin{center}
 If \( n \) is even, then \( n^{3}+2n^{2} \) is a multiple of \( 16 \).
 \end{center}
@@ -270,7 +275,9 @@ If \( n^{3}+2n^{2} \) is not a multiple of \( 16 \), then \( n \) is odd.
   t^{2} &= \frac{600}{g}\\[8pt]
   t &= \sqrt{\frac{600}{g}}\\[8pt]
    &= \sqrt{\frac{600}{9.8}}\\[8pt]
-   &= \SI{7.82\ldots}{\second}
+   &= 7.824\ldots\\[8pt]
+   &= \SI{7.82}{\second}\\[8pt]
+   \snote{to 2 s.f.}\\
 \stext{Using \(v=v_{0}+at\)}
   v_{1} &= v_{0} + at\\[8pt]
    &= 0 + g\sqrt{\frac{600}{g}}\\[8pt]
@@ -286,7 +293,7 @@ If \( n^{3}+2n^{2} \) is not a multiple of \( 16 \), then \( n \) is odd.
 
 \qpart
 
-inset graph here
+\includegraphics[scale=0.25]{question_5_b.png}
 
 \end{question}
 
@@ -298,7 +305,7 @@ inset graph here
 
 \qpart
 
-Insert diagram here
+\includegraphics[scale=0.25]{question_6_a.png}
 
 \begin{align*}
 \stext{Using}
@@ -603,12 +610,12 @@ and \( \mathbf{D} \) is \( \begin{pmatrix}
 where \(ad - bc\) is the determinant of \(\mathbf{P}\).}
 
 and \( \mathbf{P}^{-1} \) is the inverse of \( \mathbf{P} \); 
-\begin{pmatrix}
+\(\begin{pmatrix}
   \frac{2}{7} & \frac{1}{7}\\
   \frac{-3}{7} & \frac{2}{7}  
-\end{pmatrix}
+\end{pmatrix}\)
 
-Hense, we can write:
+Hence, we can write:
 \[ \mathbf{A} = \begin{pmatrix}
   2 & -1\\
   3 & 2 
@@ -683,7 +690,7 @@ Hense, we can write:
 \end{pmatrix} \\[8pt]
 &= \begin{pmatrix}
   300125 & 158466\\
-  475397 & 220892
+  475398 & 220892
 \end{pmatrix} \\[8pt]      
 \end{align*}
 
@@ -691,14 +698,14 @@ Hense, we can write:
 
 \qpart
 
-MAXIMA page
+\includegraphics[scale=0.5]{question_8_d.png}
 
 \qpart
 
 \[ \dot{x} = 5x + 6y \]
 \[ \dot{y} = 18x + 2y \]
 
-\marginnote{The general soution of a system of linear differential equations is given by:
+\marginnote{The general solution of a system of linear differential equations is given by:
 \[ \mathbf{x} = e^{\lambda_1 t}\mathbf{v}_1 + e^{\lambda_2 t}\mathbf{v}_2 \]
 where \(\lambda_1\) and \(\lambda_2\) are the eigenvalues, and \(\mathbf{v}_1\) and \(\mathbf{v}_2\) are the corresponding eigenvectors.}
 
@@ -716,6 +723,10 @@ y &= 3Ce^{14t} + 2De^{-7t}\\[8pt]
 \stext{where \(C\) and \(D\) are constants determined by initial conditions.}
 \end{align*}
 
+\end{question}
+
+%%%%%%%%%%%%Question 9
+\begin{question}
 
 \end{question}
 

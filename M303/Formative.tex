@@ -1,0 +1,60 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+%Question 10
+
+\begin{question}
+
+\qpart
+
+Let \( k = \text{number of aliens} \) and \( n = \text{number of blue eared aliens} \).
+
+Every blue eareed alien would leave on the \( n^{th} \) day at \( 6am \).
+
+\qpart
+
+If, say, \( k=2 \) and  \( n=1 \), then the blue eared alien would leave at \( 6am \) the next day, knowing
+that they are the only one on the plantoid with blue ears.
+
+If \( K=2 \) and \( n=2 \) the the next day at \( 6am \) both aliens would wait for the other to leave, and when they don't, 
+they would both realise that there must be two blue eared aliens and leave at \( 6am \) the day after.
+
+If \( k=k_i \) and  \( n=n_i \) blue eared aliens, then each blue eared alien would see \( n_i-1 \) 
+blue eared aliens. And following from the prvious two examples, they would all wait until \( 6am \)
+on the \( n_i^{th}-1 \) day, and when they don't see any of the other blue eared ailiens leave, they would all 
+simutaneously realise that there must be \( n_i \) blue eared aliens and leave at \( 6am \) the next day.
+
+
+
+\end{question}
+
+\begin{question}
+
+\qpart
+
+Let \( k \) be the total number of aliens on the planetoid, and \( n \) the number of aliens with blue ears.
+
+We will prove by induction on \( n \) that all \( n \) blue-eared aliens will leave at 6am on the \( n^\text{th} \) day.
+
+\textbf{Base case:} \( n = 1 \).  
+A single blue-eared alien sees no others with blue ears. Knowing that at least one blue-eared alien exists, they conclude it must be themself and leave at 6am the next day. ✓
+
+\textbf{Inductive step:}  
+Assume that for some \( n = m \), if there are \( m \) blue-eared aliens, they all leave on the \( m^\text{th} \) day.
+
+Now consider the case \( n = m + 1 \).  
+Each blue-eared alien sees \( m \) others with blue ears. They reason:  
+“If I do not have blue ears, there are \( m \) blue-eared aliens, and they will all leave on day \( m \).”
+
+When no one leaves on day \( m \), each realises that their assumption must be false, and therefore they too must have blue ears.  
+Thus, all \( m + 1 \) blue-eared aliens leave at 6am on the \( (m + 1)^\text{th} \) day.
+
+\textbf{Therefore, by induction}, for any \( n \ge 1 \), all blue-eared aliens leave at 6am on the \( n^\text{th} \) day.
+
+\end{question}
+
+
+\end{document}

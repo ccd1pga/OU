@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+% Minimal definitions from style.sty
+\newcounter{question}
+\renewcommand{\thequestion}{\arabic{question}}
+\newenvironment{question}{%
+    \stepcounter{question}
+    \noindent\textbf{Question \thequestion:}\quad
+}{%
+    \par\medskip
+}
+\newcommand{\stext}{\shortintertext}
+
+\begin{document}
+
+\begin{question}
+\[ 1+3+5+\cdots+(2n-1) = n^2 \]
+
+\begin{align*}
+\stext{Prove for \(n=4\)}
+1+3+5+(2(4)-1) &= 1+3+5+7 \\[8pt]
+&= 16 \\[8pt]
+&= 4^{2} \\[8pt]
+\end{align*}
+\end{question}
+
+\end{document}

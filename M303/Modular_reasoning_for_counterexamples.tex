@@ -1,0 +1,104 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+How to use this in practice
+	•	Stick it near the top of your number theory notes under something like 
+    “Modular reasoning for counterexamples”.
+	•	When you get a new problem, jot down the modulus and target residue, make 
+    the residue multiplication table for that modulus, and check whether the 
+    condition is even plausible before attempting a proof.
+
+\begin{section}{Reasoning with Modular Arithmetic for Proof or Counterexample}
+
+When faced with a statement of the form:
+\[
+\text{For all integers } n \text{ such that } n \equiv r \pmod{k}, 
+\text{ there exists a prime divisor } p \text{ such that } p \equiv r \pmod{k},
+\]
+it is often not obvious whether the statement is \emph{true} or \emph{false}.  
+Rather than testing individual numbers, it is usually more efficient to reason using 
+\emph{residue classes modulo \(k\)}.
+
+\subsection*{Step 1: Translate to modular form}
+
+Let \( n = \prod_{i=1}^t p_i^{\alpha_i} \) be the prime factorisation of \( n \).
+Then
+\[
+n \equiv \prod_{i=1}^t (p_i \bmod k)^{\alpha_i} \pmod{k}.
+\]
+Hence, the residue of \(n\) modulo \(k\) depends only on the residues of its prime factors.
+
+If the statement claims that one of the factors must have a specific residue,
+you can test whether that residue is \emph{necessary} for the product to have a certain value.
+
+\subsection*{Step 2: Identify possible residues of primes modulo \(k\)}
+
+For a given modulus \(k\), the primes \(p\) (other than those dividing \(k\)) 
+can only take residues coprime to \(k\).  
+Define the reduced residue system modulo \(k\) as:
+\[
+R = \{ r \in \{1, 2, \ldots, k-1\} : \gcd(r, k) = 1 \}.
+\]
+
+\marginnote{Example: For \(k = 14\), \(R = \{1, 3, 5, 9, 11, 13\}\).}
+
+\subsection*{Step 3: Construct the multiplication table of residues in \(R\)}
+
+Compute all possible products \(r_i r_j \bmod{k}\) for \(r_i, r_j \in R\).
+This shows which residues can arise as products of primes in \(R\).
+
+If a particular residue (such as \(r = 3\)) can be expressed as a product of 
+other residues without using \(r\) itself, then it is \emph{not necessary}
+for any prime factor to be congruent to \(r \pmod{k}\).
+
+\marginnote{In such a case, a counterexample exists.}
+
+\subsection*{Step 4: Example with \(k = 14\)}
+
+We compute the products of elements of \(R = \{1, 3, 5, 9, 11, 13\}\) modulo 14.
+
+\[
+\begin{array}{c|cccccc}
+\times & 1 & 3 & 5 & 9 & 11 & 13 \\\hline
+1 & 1 & 3 & 5 & 9 & 11 & 13 \\
+3 & 3 & 9 & 1 & 13 & 5 & 11 \\
+5 & 5 & 1 & 11 & 3 & 13 & 9 \\
+9 & 9 & 13 & 3 & 11 & 1 & 5 \\
+11& 11& 5 & 13 & 1 & 9 & 3 \\
+13& 13& 11& 9 & 5 & 3 & 1 \\
+\end{array}
+\]
+
+From this table, we see that
+\[
+5 \times 9 \equiv 3 \pmod{14}, \quad 11 \times 13 \equiv 3 \pmod{14}.
+\]
+Therefore, a product can be congruent to \(3 \pmod{14}\) even if 
+none of its prime factors are congruent to \(3 \pmod{14}\).
+
+\marginnote{Hence, the original claim that every \(n \equiv 3 \pmod{14}\) 
+must have a prime divisor \(p \equiv 3 \pmod{14}\) is false.}
+
+\subsection*{Step 5: General conclusion}
+
+To test similar statements:
+
+\begin{enumerate}
+  \item Express the statement in modular form.
+  \item Determine the set of possible residues of primes modulo \(k\).
+  \item Examine whether the target residue can be written as a product of other residues.
+  \item If yes, construct a counterexample.
+  \item If no, the statement may hold (and you can attempt a proof).
+\end{enumerate}
+
+This method avoids brute-force computation by working directly with 
+modular structures, providing a clean, logical way to decide 
+whether a “prove or counterexample” question is worth proving or disproving.
+
+\end{section}
+
+
+\end{document}

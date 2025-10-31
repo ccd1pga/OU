@@ -1,0 +1,398 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{01} % TMA number
+
+%Question 1
+\begin{question}
+
+    \qpart
+    \qsubpart
+
+\functionmap[ALabel=A,BLabel=B,rowsep=4mm,colsep=30mm,padA=8pt,padB=10pt,color=myblue]
+{1,2,3,4,5}
+{Cat,Dog,Rabbit,Hamster,}
+{1/1,2/4,3/2,4/3,5/1}
+
+This is an example of a ONTO function because every element in the codomain has at least 
+one arrow pointing to it from the domain. However, it is not a ONE-TO-ONE function because 
+there are two arrows pointing to the same element in the codomain (1 and 5 both point to Cat).
+
+\qsubpart
+
+\functionmap[ALabel=A,BLabel=D,rowsep=4mm,colsep=30mm,padA=8pt,padB=10pt,color=myblue]
+{1,2,3,4,5}
+{\(\alpha\),\(\beta\),\(\gamma\),\(\delta\),}
+{1/1,2/4,3/2,4/2,5/1}
+
+This is neither a ONTO function nor a ONE-TO-ONE function. It is not ONTO because there is no
+arrow pointing to \(\delta\) in the codomain. It is not ONE-TO-ONE because there are two arrows
+pointing to the same element in the codomain.
+    
+\qsubpart
+
+\functionmap[ALabel=A,BLabel=C,rowsep=4mm,colsep=30mm,padA=8pt,padB=10pt,color=myblue]
+{1,2,3,4,5}
+{\mathbb{Z}}
+{1/1,2/1,3/1,4/1,5/1}
+
+This is not a ONTO function because there are many elements in the codomain that do not have
+an arrow pointing to them from the domain (e.g. 2, 3, -1, -2, etc.). However, it is a ONE-TO-ONE function
+because no two arrows point to the same element in the codomain (all arrows point to \(\mathbb{Z}\)).
+
+    \qsubpart
+
+\functionmap[ALabel=B,BLabel=D,rowsep=4mm,colsep=30mm,padA=8pt,padB=10pt,color=myblue]
+{Cat,Dog,Rabbit,Hamster,}
+{\(\alpha\),\(\beta\),\(\gamma\),\(\delta\),}
+{1/1,2/3,3/2,4/4}
+
+This is both a ONTO function and a ONE-TO-ONE function, a bijection. It is ONTO because every element in the
+codomain has at least one arrow pointing to it from the domain. It is ONE-TO-ONE because no two arrows
+point to the same element in the codomain.
+
+\qpart
+
+\[ S = \{2,3,5,7\} \]
+\[ T = \{1,3,5,7\} \]
+
+\qsubpart
+
+A one-one map of S to T.
+
+\functionmap[ALabel=S,BLabel=T,rowsep=4mm,colsep=30mm,padA=8pt,padB=10pt,color=myblue]
+{2,3,5,7}
+{1,3,5,7}
+{1/1,2/1,3/3,4/4}
+
+\qsubpart
+
+A bijection map of S to T.
+
+\functionmap[ALabel=S,BLabel=T,rowsep=4mm,colsep=30mm,padA=8pt,padB=10pt,color=myblue]
+{2,3,5,7}
+{1,3,5,7}
+{1/1,2/2,3/3,4/4}
+
+\end{question}
+
+%Question 2
+\begin{question}
+
+    \[ \text{for } n /geq 1, 7^{2n} - 6^{n} \text{ is divisible by } 43 \]
+
+\begin{proof}
+Using proof by induction we will first proove the basis of induction \( n = 1 \)
+
+\begin{align*}
+    P(1) &= 7^{2(1)} - 6^1\\[8pt]
+    &= 49 - 6 \\[8pt]
+    &= 43\\[8pt]
+    \stext{Hence P(1) is divisible by 43}
+\end{align*}
+
+Now we will assume that \( P(k) \) is true for some arbitrary \( k \geq 1 \)
+\begin{align*}
+    P(k) &= 7^{2k} - 6^k \\[8pt]
+    &= 43m\\[8pt]
+\stext{ for some integer m}
+\end{align*}
+
+Next we will use this as our inductive hypothesis to prove that \( P(k+1) \) is true
+
+\begin{align*}
+P(k+1) &= 7^{2(k+1)} - 6^{k+1}\\[8pt]
+&= 7^{2k+2} - 6^{k+1}\\[8pt]
+&= 7^2 \cdot 7^{2k} - 6 \cdot 6^k\\[8pt]
+&= 49 \cdot 7^{2k} - 6 \cdot 6^k\\[8pt]
+\stext{From our inductive hypothesis we know that \( 7^{2k} - 6^k = 43m \)}\\[8pt]
+&= 49(43m + 6^k) - 6 \cdot 6^k\\[8pt]
+&= 49 \cdot 43m + 49 \cdot 6^k - 6 \cdot 6^k\\[8pt]
+\stext{Factorising out the \( 6^k \)}
+&= 49 \cdot 43m + (49 - 6) \cdot 6^k\\[8pt]
+&= 49 \cdot 43m + 43 \cdot 6^k\\[8pt]
+\stext{Factoring out the 43}\\[8pt]
+&= 43(49m + 6^k)\\[8pt]
+\stext{Since \( m \text{ and } k \) are both integers, \( 49m + 6^k \) is also an integer}\\[8pt]
+\stext{hence \( P(k+1) \) is divisible by 43}\\[8pt]
+\stext{By the principle of mathematical induction we have shown that \( P(n) \) is true for all \( n \geq 1 \)}
+\end{align*}
+
+\end{proof}
+
+\end{question}
+
+%Question 3
+\begin{question}
+
+\[ \gcd(2025,630) = 2025x +630y \]
+
+\begin{align*}
+2025 &= 3 \cdot \circled{630} + \circled{135}\\
+\circled{630} &= 4 \cdot \circled{135} + \circled{90}\\
+\circled{135} &= 1 \cdot \circled{90} + \circled{45}\\
+\circled{90} &= 2 \cdot \circled{45} + 0\\
+\stext{Hence, } \gcd(2025,630) = 45\\
+\end{align*}
+
+rearranging to make the remainder the subject;
+\begin{align*}
+45 &= 135 - 1 \cdot 90\\
+90 &= 630 - 4 \cdot 135\\
+135 &= 2025 - 3 \cdot 630\\
+\end{align*}
+
+Substituting back up the chain we get;
+\begin{align*}
+45 &= 135 - 1(630 - 4 \cdot 135)\\
+&= 5 \cdot 135 - 1 \cdot 630\\
+&= 5(2025 - 3 \cdot 630) - 1 \cdot 630\\
+&= 5 \cdot 2025 - 15 \cdot 630 - 1 \cdot 630\\
+&= 5 \cdot 2025 - 16 \cdot 630\\
+\stext{Hence one solution is } 
+x = 5, y = -16
+\end{align*}
+
+\end{question}
+
+%Question 4
+\begin{question}
+
+\qpart
+
+If \( a \) and \( b \) are positive integers and  \( p \) divides \( \gcd(a^2,b) \) if, and only if,
+\( p \) divides \( \gcd(a,b^2) \).
+
+\marginnote{(Definition 4.3) Factors and multiples: \( a \) divides \( b \) if there exists an integer \( q \) 
+such that \( a = bq \).}
+\marginnote{(Definition 4.5) Definition of gcd: The greatest common divisor of two integers \( a \) and \( b \), 
+not both zero, is the largest positive integer that divides both \( a \) and \( b \).}  
+\marginnote{(Theorem 1.4) Euclid's lemma for prime factors: If a prime \( p \) divides the product \( a_{1}a_{2} \ldots a_{n} \), 
+then \( p \) must divide \( a_{i} \) for some integer \( i \), where \( a \leq i \leq n \).}
+
+\begin{proof}
+
+Let \( p \) be a prime number.
+
+Forward direction (\( \Rightarrow \)):
+Suppose \( p \mid \gcd(a^2,b) \) then by the definition 4.5,
+\[ p \mid a^2 \text{ and } p \mid b \]
+
+Since \( p \) is a prime nunber, and \( p \mid a^2 \), by Theorem 1.4,
+\[ p \mid a \]
+Hence,
+\[ p \mid a \text{ and } p \mid b \]
+
+Which implies, by definition 4.5,
+\[ p \mid \gcd(a,b^2) \because p \mid b \implies p \mid b^2 \]
+
+Backward direction (\( \Leftarrow \)):
+conversely suppose \( p \mid \gcd(a,b^2) \) Then
+\[ p \mid a \text{ and } p \mid b^2 \]
+
+Again by Theorem 1.4, 
+\[ p \mid b^2 \implies p \mid b \]
+Therefore,
+\[ p \mid a \text{ and } p \mid b \implies p \mid a^2 \text{ also } \]
+
+Hence \( p \mid(a^2,b) \)
+
+Thus, we have shown in both dirrections and so;
+\[ p \mid \gcd(a^2,b) \Longleftrightarrow p \mid \gcd(a,b^2)  \]
+
+\end{proof}
+
+\vspace{5cm}
+
+\qpart
+
+If \( a \) and \( b \) are positive integers and \( m \) and \( n \) are
+defined by 
+\[ m = 3a + b \quad \text{ and } \quad n = 5a + 2b  \]
+then \( \gcd(m,n) = \gcd(a,b) \)
+
+\marginnote{(Theorem 4.4) Properties of division: If 
+\( a \mid c \text{ and } a \mid d \) then \( a \mid (mc + nd) \) for any integers 
+\( m text{ and } n \).}
+\marginnote{(Definition 4.6) Integer combination: If \( a \text{ and } b \) are integers, then any 
+integer of the form \( ma + nb \), with \( n,m \in \mathbb{Z} \), is called an integer combination
+of \( a \text{ and } b \).}
+\marginnote{(Definition 4.8) Coprime: Two integers \( a \text{ and } b \), notboth zero,
+are coprime or relativly prime whenever \( \gcd(a,b) = 1 \).}
+
+
+\begin{proof}
+
+Let \( d = \gcd(a,b) \) and \( c = \gcd(m,n) \).
+
+Since \( d \) is the greatest common divisor of \( a \) and \( b \), by definition 4.5,
+\[ d \mid a \text{ and } d \mid b \]
+
+Then by Theorem 4.4,
+\[ d \mid (3a + b) \text{ and } d \mid (5a + 2b) \]
+Hence,
+\[ d \mid m \text{ and } d \mid n \]
+Therefore, by definition 4.5,
+\[ d \mid c \]  
+
+And since \( c \) is the greatest common divisor of \( m \) and \( n \), by definition 4.5,
+\[ c \mid m \text{ and } c \mid n \]
+Then by Theorem 4.4,
+\[ c \mid (2m - n) \text{ and } c \mid (5n - 3m) \]
+Hence,
+\[ c \mid a \text{ and } c \mid b \]
+Therefore, by definition 4.5,
+\[ c \mid d \]
+Thus, \( d \mid c \text{ and } c \mid d \implies c = d \)
+\[ \gcd(m,n) = \gcd(a,b) \]
+
+\end{proof}
+
+\vspace{5cm}
+
+\qpart
+
+A number of the form \( 14a + 3 \), where \( a \) is a non-negative integer, must have a prime
+divisor of this same form \( 14b + 3 \), where \( b \) is a non-negative integer.
+
+\marginnote{(Theorem 1.7) The fundamental theorem of arithmetic: Any integer \( n /geq 2 \) can be 
+written uniquely in the form \( n = p_1^{k_1}p_2^{k_2} \ldots p_r^{k_r} \), where \( p_i \), 
+\( i = 1, \ldots r \), are primes with \( p_1 < p_2 < \ldots p_r \) and each of \( k_i \),
+\( i = 1, \ldots r \), is a natural number.}
+
+\begin{proof}
+
+    Consider if \( n \) is prime, then \( n \) is a prime divisor of itself and since
+    \( n = 14a + 3 \), \( n \) is of the form \( 14b + 3 \) where \( b = a \).
+
+    Now consider if \( n \) is composite, then by Theorem 1.7, \( n \) can be expressed as;
+    \[ n = p_1^{k_1}p_2^{k_2} \ldots p_r^{k_r} \]
+    thus having at leaset one prime factor such that \( p \mid n \)
+
+    Hence we will have to show that;
+    \[ n \equiv 3 \pmod{14} \]
+        and
+    \[ p \mid n, \text {such that } p \equiv 3 \pmod{14} \]
+
+    Conside the counter example where \( n = 185 \), that is;
+    \[ n = 185 = 5 \times 37 \]
+    \[ 5 \equiv 5 \pmod{14} \]
+    and
+    \[ 37 \equiv 9 \pmod{14} \]
+As niether of these prime factors are of the form \( 14b + 3 \) the stament is incorect.
+
+
+\end{proof}
+
+\vspace{5cm}
+
+\qpart
+
+
+\marginnote{(Definition 2.2) The \( \tau \) function: For any integer \(n \geq 1 \), \( \tau(n) \) is 
+definied to be the number of distinct factors of \( n \), including \( 1 \text{ and } n \)}
+\marginnote{(Proposition 2.3) The formula for \( \tau(n) \): For any integer \( n \geq 2 \), with
+prime decomposition \( n = p_1^{k_1}p_2^{k_2} \ldots p_r^{k_r} \), we have \( \tau(n) = (k_1 + 1)(k_2 + 2) \ldots (k_r + 1) \). }
+
+If \( n \) is divisible by \( 15 \) but not divisible by \( 9 \text{ or } 25 \), then \( \tau(n) \)
+is divisible by \( 4 \).
+
+\begin{proof}
+
+By Theorem 1.7, we can express \( n \) as a product of its prime factors;
+\[ n = 3^{k_1} \cdot 5^{k_2} \cdot p_1^{k_1} \cdot p_2^{k_2} \ldots \]
+where \( k_1, k_2 = 1 \) as \( n \) is divisible by \( 15 \) but not by \( 9 \text{ or } 25 \).
+
+Hence,
+\[ n = 3^1 \cdot 5^1 \cdot p_1^{k_1} \cdot p_2^{k_2} \ldots \]
+
+Then by Proposition 2.3, we can express \( \tau(n) \) as;
+\begin{align*}
+\tau(n) &= (1 + 1)(1 + 1)(k_1 + 1)(k_2 + 1) \ldots \\[8pt]
+&= 2 \cdot 2 \cdot (k_1 + 1)(k_2 + 1) \ldots \\[8pt]
+&= 4 \cdot (k_1 + 1)(k_2 + 1) \ldots \\[8pt]
+\stext{Since \( (k_1 + 1)(k_2 + 1) \ldots \) is an integer, \( \tau(n) \) is divisible by 4}
+\end{align*}
+
+\end{proof}
+
+\end{question}
+
+%Question 5
+\begin{question}
+
+\qpart
+\qsubpart
+
+\marginnote{(Theorem 3.4) Solution of linear conguences}
+\marginnote{(Theorem 4.2) Chinese Remainder Theorem}
+\marginnote{(Theorem 4.5) Simutaneous solutions of linear congruences}
+
+\begin{align*}
+3x \equiv 4 \pmod{5}\\[8pt]
+\stext{\( \gcd(3,5) = 1 \), hence \( 3 \) has a multiplicative inverse modulo \( 5 \)}\\
+\stext{Hence, this will be the unique solution to the linear congruence}
+3v \equiv 1 \pmod{5}\\[8pt]
+\stext{By trying values for \( v \) we find that;}
+3 \cdot 2 \equiv 1 \pmod{5}\\[8pt]
+\stext{Thus, \( v = 2 \) is the multiplicative inverse of \( 3 \) modulo \( 5 \)}\\
+\stext{Multiplying both sides of the original congruence by \( 2 \) gives;}
+6x \equiv 8 \pmod{5}\\[8pt]
+\stext{Reducing \( 6 \) and \( 8 \) modulo \( 5 \) gives;}
+x \equiv 3 \pmod{5}\\[8pt]
+\stext{Thus, the solution is;}
+\boxed{x \equiv 3 \pmod{5}}
+\end{align*}
+
+\qsubpart
+
+\begin{align*}
+3x -1 \equiv 2(4 + x) \pmod{7}\\[8pt]
+\stext{distributing the \( 2 \) on the RHS;}
+3x - 1 \equiv 8 + 2x \pmod{7}\\[8pt]
+\stext{subtracting \( 2x \) from both sides;}
+x - 1 \equiv 8 \pmod{7}\\[8pt]
+\stext{adding \( 1 \) to both sides;}
+x \equiv 9 \pmod{7}\\[8pt]
+\stext{reducing \( 9 \) modulo \( 7 \) gives;}
+x \equiv 2 \pmod{7}\\[8pt]
+\stext{Thus, the solution is;}
+\boxed{x \equiv 2 \pmod{7}}
+\end{align*}
+
+\qsubpart
+
+\begin{align*}
+2(7 - x) \equiv 8 - x \pmod{17}\\[8pt]
+\stext{distributing the \( 2 \) on the LHS;}
+14 - 2x \equiv 8 - x \pmod{17}\\[8pt]
+\stext{adding \( 2x \) to both sides;}
+14 \equiv 8 + x \pmod{17}\\[8pt]
+\stext{subtracting \( 8 \) from both sides;}
+6 \equiv x \pmod{17}\\[8pt]
+\stext{Thus, the solution is;}
+\boxed{x \equiv 6 \pmod{17}}
+\end{align*}
+
+\qpart
+
+\[ x \equiv 3 \pmod{5} \]
+\[ x \equiv 2 \pmod{7}  \]
+\[ x \equiv 6 \pmod{17} \]
+\[ \gcd(5,2) = 1 \quad \gcd(7,17) = 1 \quad \gcd(7,17) = 1 \]
+
+Hence by Theorem 4.5, the uniques solution is \( \lcm(3 \pmod{5}, 2 \pmod{7}, 6 \pmod{17}) \);
+
+
+\[ 3, 8, 13, 18, \circled{23} \]
+\[ 2, 9 16, \circled{23} \]
+\[ 6, \circled{23} \]
+
+\[ \boxed{x = 23 } \]
+
+\end{question}
+
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+%%Question 20
+\begin{question}
+
+\begin{align*}
+    \int \frac{x^{2}}{\sqrt{x^{2} - 9}} \dd{x}\\[8pt]
+\stext{using the substitution \( x=3\cosh{u} \) and hence \( dx=3\sinh{u} \dd{u} \)}
+&= \int \frac{(3\cosh{u})^2}{\sqrt{(3\cosh{u})^2 - 9}} \cdot 3\sinh{u} \dd{u}\\[8pt]
+&= \int \frac{9\cosh^2{u}}{\sqrt{9\cosh^2{u} - 9}} \cdot 3\sinh{u} \dd{u}\\[8pt]
+&= \int \frac{9\cosh^2{u}}{\sqrt{9(\cosh^2{u} - 1)}} \cdot 3\sinh{u} \dd{u}\\[8pt]
+\stext{Using the identity \( \cosh^2{u} - 1 = \sinh^2{u} \)}
+&= \int \frac{9\cosh^2{u}}{\sqrt{9\sinh^2{u}} } \cdot 3\sinh{u} \dd{u}\\[8pt]
+&= \int \frac{9\cosh^2{u}}{3\sinh{u}} \cdot 3\sinh{u} \dd{u}\\[8pt]
+&= \int 9\cosh^2{u} \dd{u}\\[8pt]
+&= 9 \int \cosh^2{u} \dd{u}\\[8pt]
+\stext{Using the identity \( \cosh^2{u} = \frac{1 + \cosh{2u}}{2} \)}
+&= 9 \int \frac{1 + \cosh{2u}}{2} \dd{u}\\[8pt]
+&= \frac{9}{2} \int (1 + \cosh{2u}) \dd{u}\\[8pt]
+&= \frac{9}{2} \left( u + \frac{\sinh{2u}}{2} \right) + C\\[8pt]
+&= \frac{9}{2} u + \frac{9}{4} \sinh{2u} + C\\[8pt]
+\stext{Using the identity \( \sinh{2u} = 2\sinh{u}\cosh{u} \)}
+&= \frac{9}{2} u + \frac{9}{4} (2\sinh{u}\cosh{u}) + C\\[8pt]
+\ &= \frac{9}{2} u + \frac{9}{2} \sinh{u}\cosh{u} + C\\[8pt]
+\stext{Back-substitute \( \cosh u = \tfrac{x}{3},\ \sinh u = \tfrac{\sqrt{x^{2}-9}}{3},\ u=\arccosh\!\big(\tfrac{x}{3}\big) \)}
+&= \frac{9}{2}\,\arccosh\!\left(\frac{x}{3}\right) + \frac{9}{2}\left(\frac{\sqrt{x^{2}-9}}{3}\cdot \frac{x}{3}\right) + C\\[8pt]
+&= \frac{9}{2}\,\arccosh\!\left(\frac{x}{3}\right) + \frac{1}{2}\,x\sqrt{x^{2}-9} + C\\[8pt]
+\stext{Equivalently, using \( \arccosh t = \ln\!\big(t+\sqrt{t^{2}-1}\big) \)}
+&= \frac{1}{2}\,x\sqrt{x^{2}-9} + \frac{9}{2}\,\ln\!\Big(x+\sqrt{x^{2}-9}\Big) + C\\[8pt]
+&=
+\boxed{\frac{1}{2}\,x\sqrt{x^{2}-9} + \frac{9}{2}\,\arccosh\!\left(\frac{x}{3}\right) + C}
+\end{align*}
+
+\end{question}
+
+
+
+\end{document}

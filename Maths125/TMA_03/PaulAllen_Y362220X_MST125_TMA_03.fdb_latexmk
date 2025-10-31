@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex PaulAllen_Y362220X_MST125_TMA_03"] 1750938574.55948 "PaulAllen_Y362220X_MST125_TMA_03.aux" "PaulAllen_Y362220X_MST125_TMA_03.bbl" "PaulAllen_Y362220X_MST125_TMA_03" 1753182848.98765 0
-  "PaulAllen_Y362220X_MST125_TMA_03.aux" 1753182845.26965 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+["bibtex PaulAllen_Y362220X_MST125_TMA_03"] 0 "PaulAllen_Y362220X_MST125_TMA_03.aux" "PaulAllen_Y362220X_MST125_TMA_03.bbl" "PaulAllen_Y362220X_MST125_TMA_03" 1754337006.33057 0
+  "PaulAllen_Y362220X_MST125_TMA_03.aux" 0 -1 0 "pdflatex"
   "biblio.bib" 0 -1 0 ""
   (generated)
   "PaulAllen_Y362220X_MST125_TMA_03.bbl"
   "PaulAllen_Y362220X_MST125_TMA_03.blg"
   (rewritten before read)
-["pdflatex"] 1753182845.275 "/Users/paulallen/OU/Maths125/TMA_03/PaulAllen_Y362220X_MST125_TMA_03.tex" "PaulAllen_Y362220X_MST125_TMA_03.pdf" "PaulAllen_Y362220X_MST125_TMA_03" 1753182848.98783 2
-  "/Users/paulallen/OU/Maths125/TMA_03/PaulAllen_Y362220X_MST125_TMA_03.tex" 1753182841.11787 17563 7509fe67e10c4567d679afdfa402656f ""
+["pdflatex"] 1754337003.67681 "/Users/paulallen/OU/Maths125/TMA_03/PaulAllen_Y362220X_MST125_TMA_03.tex" "PaulAllen_Y362220X_MST125_TMA_03.pdf" "PaulAllen_Y362220X_MST125_TMA_03" 1754337006.3307 2
+  "/Users/paulallen/OU/Maths125/TMA_03/PaulAllen_Y362220X_MST125_TMA_03.tex" 1754336610.58862 17879 a162ce851123b079e5a7c06ddbb7ba04 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc" 1490131464 2934 a4a9158faed2e9e89c771b4e3b7fc12f ""
@@ -448,11 +448,14 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1750182909 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1750182833 3345740 781d1e11167f3934644100faa700175f ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "PaulAllen_Y362220X_MST125_TMA_03.aux" 1753182848.54084 298 eb4e6cdbfa4a644ce00efcb09c925b06 "pdflatex"
+  "PaulAllen_Y362220X_MST125_TMA_03.aux" 1754337006.04842 298 f90166a2446a4952178433165b0a176f "pdflatex"
   "PaulAllen_Y362220X_MST125_TMA_03.bbl" 1750938574.75415 0 d41d8cd98f00b204e9800998ecf8427e "bibtex PaulAllen_Y362220X_MST125_TMA_03"
-  "PaulAllen_Y362220X_MST125_TMA_03.out" 1753182847.76773 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "PaulAllen_Y362220X_MST125_TMA_03.tex" 1753182841.11787 17563 7509fe67e10c4567d679afdfa402656f ""
-  "style.sty" 1750325420.27284 11064 70403fe18e7c07aeb38166f4da363c18 ""
+  "PaulAllen_Y362220X_MST125_TMA_03.out" 1754337005.18382 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "PaulAllen_Y362220X_MST125_TMA_03.tex" 1754336610.58862 17879 a162ce851123b079e5a7c06ddbb7ba04 ""
+  "question_5_b.png" 1754131642.79706 114637 b9f028e7ecb83525bc38568f51b3cf07 ""
+  "question_6_a.png" 1754131694.90316 50775 27659d31ece74829b3e3569fecbe8915 ""
+  "question_8_d.png" 1754328968.11297 467763 a680dfdb9727640dddca16fc2c3f41fe ""
+  "style.sty" 1754336999.21389 11848 b66ca73660bec2aff8dab6d921d22121 ""
   (generated)
   "PaulAllen_Y362220X_MST125_TMA_03.aux"
   "PaulAllen_Y362220X_MST125_TMA_03.log"

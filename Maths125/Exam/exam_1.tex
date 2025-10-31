@@ -1,0 +1,78 @@
+
+\documentclass{tufte-handout}
+\usepackage{style}
+
+\begin{document}
+
+\begin{tabular}{|c|c|}
+    Question & answer\\
+    \hline
+    1 & D\\
+    2 & B\\
+    3 & C\\
+    4 & \\
+    5 & \\
+    6 & \\
+    7 & D\\
+    8 & A\\
+    9 & C\\
+    10 & A\\
+    11 & D\\
+    12 & B\\
+    13 & B\\
+    14 & E\\
+    15 & D\\
+    16 & C\\
+    17 & E\\
+    18 & D\\
+\end{tabular}
+
+Question 19
+\begin{question}
+\qpart
+\[x=29\pmod{39}\]
+
+\qpart
+No solutions as 22 id not divisible by 3
+\end{question}
+
+Question 20
+\begin{question}
+\qpart
+
+\qpart
+\[q=30N\]
+\end{question}
+
+Question 21
+\begin{question}
+\qpart
+
+\begin{align*}
+\sinh(5x)\cosh(3x) &= \frac{1}{2}\left( \sinh(8x) + \sinh(2x) \right)\\[8pt]
+\stext{Given}
+\sinh(5x-3x) = \sinh(2x) &= \sinh(5x)\cosh(3x) - \cosh(5x)\sinh(3x)\\[8pt]
+\stext{and}
+\sinh(5x+3x) = \sinh(8x) &= \sinh(5x)\cosh(3x) + \cosh(5x)\sinh(3x)\\[8pt]
+\stext{we can write}
+\sinh(8x) + \sinh(2x) &= 2\left[ \sinh(5x)\cosh(3x) \right] -\cosh(5x)\sinh(3x) + \cosh(5x)\sinh(3x)\\[8pt]
+&= 2\sinh(5x)\cosh(3x)\\[8pt]
+\stext{Thus, we have}
+\sinh(5x)\cosh(3x) &= \frac{1}{2}\left( \sinh(8x) + \sinh(2x) \right)\\[8pt]
+\snote{as required.}
+\end{align*}
+
+\qpart
+
+\begin{align*}
+\int \sinh(5x)\cosh(3x) \dd{x} &= \int \frac{1}{2}\left( \sinh(8x) + \sinh(2x) \right) \dd{x}\\[8pt]
+&= \frac{1}{2}\left( \int \sinh(8x) \dd{x} + \int \sinh(2x) \dd{x} \right)\\[8pt]
+&= \frac{1}{2}\left( \frac{1}{8}\cosh(8x) + \frac{1}{2}\cosh(2x) \right) + C\\[8pt]
+&= \frac{1}{16}\cosh(8x) + \frac{1}{4}\cosh(2x) + C\\[8pt]
+\end{align*}
+
+\end{question}
+
+
+
+\end{document}

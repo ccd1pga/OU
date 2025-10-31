@@ -1,0 +1,393 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{02} % TMA number
+
+\section{Part A}
+
+%Question 1
+\begin{question}
+
+\end{question}
+
+
+%Question 2
+\begin{question}
+
+\[ G = \{ a + b\sqrt{-5} : a,b \in \mathbb{Z} \} \]
+and \( \boldsymbol{+}_{G} \) be
+\[ (a + a^\prime) + (b + b^\prime)\sqrt{-5} \]
+and a sunset of \( G \)
+\[ H = \{ a + b\sqrt{-5} : a,b \in 4\mathbb{Z} \} \]
+
+\vspace{1cm}
+
+\qpart
+
+\qsubpart
+
+The identity element, \( e \), of \( G \) is, \( 0 + 0\sqrt{-5} \).
+
+\qsubpart
+
+An element of \( H \) that is not the identity is, \( 4 + 8\sqrt{-5} \).
+
+\qsubpart
+
+An element of \( G \) that is not in \( H \) is, \( 3 + 5\sqrt{-5} \).
+
+\qsubpart
+
+The sum, under \( \boldsymbol{+}_{G} \), of these two elements are,
+\begin{align*}
+(4 + 8\sqrt{-5}) + (3 + 5\sqrt{-5}) &= (4 + 3) + (8 + 5)\sqrt{-5}\\
+&= 7 + 13\sqrt{-5}
+\end{align*}
+
+\vspace{5cm}
+
+\qpart
+
+\textbf{Closure}:
+
+Let,
+\[ x = a + b\sqrt{-5} \quad \text{ and } y = a^\prime + b^\prime\sqrt{-5} \]
+
+then
+\[ x + y = (a + a^\prime) + (b + b^\prime)\sqrt{-5} \]
+
+and as \( \mathbb{Z} \) is closed under addition \( a + a^\prime \in \mathbb{Z} \text{ and } b + b^\prime \in \mathbb{Z}\),
+Hence, \( x + y \in G \).
+
+\vspace{2cm}
+
+\textbf{Associativity}:
+
+Let,
+\[ x = a + b\sqrt{-5}, \quad y = a^\prime + b^\prime\sqrt{-5}, \quad z = a^{\prime\prime} + b^{\prime\prime}\sqrt{-5} \]
+
+then
+\begin{align*}
+(x + y) + z &= ((a + a^\prime) + a^{\prime\prime}) + ((b + b^\prime) + b^{\prime\prime})\sqrt{-5}\\[8pt]
+x + (y + z) &= (a + (a^\prime + a^{\prime\prime})) + (b + (b^\prime + b^{\prime\prime}))\sqrt{-5}\\[8pt]
+\stext{As addition in \( \mathbb{Z} \) is associative, }
+(a + a^\prime) + a^{\prime\prime} &= a + (a^\prime + a^{\prime\prime})\\
+\stext{and}
+(b + b^\prime) + b^{\prime\prime} &= b + (b^\prime + b^{\prime\prime})
+\stext{Thus, }
+(x + y) + z &= x + (y + z)
+\end{align*}
+
+\vspace{2cm}
+
+\textbf{Identity element}:
+
+Let,
+\[ e = 0 + 0\sqrt{-5} \]
+and
+\[ x = a + b\sqrt{-5} \]
+then
+\begin{align*}
+x + e &= (a + 0) + (b + 0)\sqrt{-5}\\
+&= a + b\sqrt{-5}\\
+&= x
+\end{align*}
+
+\vspace{2cm}
+
+\textbf{Inverse element}:
+
+Let,
+\[ x = a + b\sqrt{-5} \]
+then
+\begin{align*}
+x + (-x) &= (a + -a) + (b + -b)\sqrt{-5}\\
+&= 0 + 0\sqrt{-5}\\
+&= e
+\end{align*}
+
+Hence \( (G, \boldsymbol{+}_{G}) \) is a group.
+
+\vspace{5cm}
+
+\qpart
+
+Using \textup{Proposition 2.5; Subgroup criteria, HB Chapter 5 p26.}
+
+\[ x,y \in H \implies x - y \in H \]
+
+Let,
+\[ x = 4m + 4n\sqrt{-5} \quad \text{ and } y = 4p + 4q\sqrt{-5} \]
+
+then
+\begin{align*}
+x - y &= (4m - 4p) + (4n - 4q)\sqrt{-5}\\
+&= 4(m - p) + 4(n - q)\sqrt{-5}
+\end{align*}
+
+As \( m - p \in \mathbb{Z} \text{ and } n - q \in \mathbb{Z} \), then \( x - y \in H \).
+Hence, \( H \) is a subgroup of \( G \).
+
+\vspace{5cm}
+
+\qpart
+
+The quotient order of the group \( \frac{G}{H} \) is 16.
+
+\vspace{2cm}
+
+\qpart
+
+The order of the element \( 1 +\sqrt{-5} + H \in \frac{G}{H} \) is 4.
+
+\end{question}
+
+%Question 3
+\begin{question}
+
+\[ M = \begin{pmatrix}
+a,0\\
+b,c
+\end{pmatrix} : a,b,c \in \mathbb{Z}_5 \]
+
+\qpart
+
+The additive inverse is 
+\[ \begin{pmatrix}
+-a,-0\\
+-b,-c
+\end{pmatrix} \]
+
+\qpart
+
+Let 
+\[ \varphi: M \rightarrow \mathbb{Z}_5\]
+be the map that takes a matrix in \( M \) to the lower left entry in \( M \).
+
+\begin{proof}
+To show that \( \varphi \) is a homomorphism, let
+\[ X = \begin{pmatrix}
+a,0\\
+b,c
+\end{pmatrix} \quad \text{ and } \quad Y = \begin{pmatrix}
+d,0\\
+e,f
+\end{pmatrix} \]
+then
+\begin{align*}
+\varphi(X + Y) &= \varphi\begin{pmatrix}
+a + d,0 + 0\\
+b + e,c + f
+\end{pmatrix}\\
+&= b + e
+\end{align*}
+and
+\begin{align*}
+\varphi(X) + \phi(Y) &= b + e
+\end{align*}
+Thus,
+\[\varphi(X + Y) = \varphi(X) + \varphi(Y) \]
+Hence, \( \varphi \) is a homomorphism.
+\end{proof}
+
+\qpart
+
+The kernel of \( \varphi \) is,
+\[ \begin{pmatrix}
+a,0\\
+b,c
+\end{pmatrix} : a,c \in \Z, b \in 5\Z \]
+
+\qpart
+
+A group that is isomorphic to the quotient group
+\( M/Ker(\varphi) \) is \( \Z_{5} \)
+
+\end{question}
+
+%Question 4
+\begin{question}
+
+
+    \[ G = \Z_{101} \times \Z_{50} \]
+
+    \qpart
+
+As \( 101 \text{ and } 50 \) are coprime (\textup{Corollary 2.12, HB Chapter 6, pg.32}),
+\[ \Z_{101} \times \Z_{50} \cong \Z_{5050} \]
+
+The order of \( G \) is \( 101 \times 50 = 5050 \).
+
+\qsubpart
+
+The order of the element \( (25,1) \) is;
+
+\begin{align*}
+\frac{101}{\hcf(101,25)} &= 101\\
+\frac{50}{\hcf(50,1)} &= 50\\
+\stext{Thus, the order of (25,1) is } \lcm(101,50) &= 5050
+\end{align*}
+
+Hence \( (25,1) \) is a generator of  \( G \).
+
+    \qsubpart
+
+The order of the element \( (1,25) \) is;
+
+\begin{align*}
+\frac{101}{\hcf(101,1)} &= 101\\
+\frac{50}{\hcf(50,25)} &= 2\\
+\stext{Thus, the order of (1,25) is } \lcm(101,2) &= 202
+\end{align*}
+
+Hence \( (1,25) \) is not a generator of \( G \).
+
+\qpart
+
+\qsubpart
+
+First group
+
+\[ \Z_{600} \times \Z_{49} \]
+
+The order of this group is \( 600 \times 49 = 29400 \).
+
+Using \textup{Corollary 2.12 and Theorem 2.13, HB Chapter 6, p32},
+\begin{align*}
+\Z_{600} &\cong \Z_{8} \times \Z_{3} \times \Z_{25}\\
+\Z_{49} &\cong \Z_{49}
+\end{align*}
+
+Hence,
+\[ \Z_{600} \times \Z_{49} \cong \Z_{8} \times \Z_{3} \times \Z_{25} \times \Z_{49} \]
+
+Second group
+
+\[ \Z_{2} \times \Z_{12} \times \Z_{175} \times \Z_{7} \]
+
+The order of this group is \( 2 \times 12 \times 175 \times 7 = 29400 \).
+
+Using \textup{Corollary 2.12 and Theorem 2.13, HB Chapter 6, p32},
+\begin{align*}
+\Z_{2} &\cong \Z_{2}\\
+\Z_{12} &\cong \Z_{4} \times \Z_{3}\\
+\Z_{175} &\cong \Z_{25} \times \Z_{7}\\
+\Z_{7} &\cong \Z_{7}
+\end{align*}    
+
+Therefore a decomposition as a direct product of cyclic groups of prime power order is,
+
+\[ \Z_{2} \times (\Z_{4} \times \Z_{3}) \times (\Z_{25} \times \Z_{7}) \times \Z_{7} \cong \]
+\[ \Z_{2} \times \Z_{4} \cong \Z_{3} \]
+
+Thus (By \textup{Theorem 2.13, HB Chapter 6, p32}),
+\[ \Z_{2} \times \Z_{12} \times \Z_{175} \times \Z_{7} \cong \Z_{14} \times \Z_{2100} \]
+
+Third group
+
+ \[ \Z_{2} \times \Z_{2} \times \Z_{6} \times \Z_{1225} \]
+ 
+The order of this group is \( 2 \times 2 \times 6 \times 1225 = 29400 \).
+
+Using \textup{Corollary 2.12 and Theorem 2.13, HB Chapter 6, p32},
+\begin{align*}
+\Z_{2} &\cong \Z_{2}\\
+\Z_{6} &\cong \Z_{2} \times \Z_{3}\\
+\Z_{1225} &\cong \Z_{25} \times \Z_{49}
+\end{align*}
+
+Thus (By \textup{Theorem 2.13, HB Chapter 6, p32}),
+\[ \Z_{2} \times \Z_{2} \times \Z_{6} \times \Z_{1225} \cong \Z_{2} \times \Z_{2} \times \Z_{2} \times \Z_{3} \times \Z_{25} \times \Z_{49} \]
+
+\qsubpart
+
+By \textup{Theorem 2.11, HB Chapter 6, p32}, a direct product is cyclic if and only if
+the component orders are coprime.
+
+\begin{itemize}
+\item First group; \( \Z_{600} \times \Z_{49} \); \( \hcf(600,49) = 1 \) so it is cyclic.
+\item Second group; \( \Z_{2} \times \Z_{12} \times \Z_{175} \times \Z_{7} \); \( \hcf(2,12) = 2 \) so it is not cyclic.
+\item Third group; \( \Z_{2} \times \Z_{2} \times \Z_{6} \times \Z_{1225} \); \( \hcf(2,6) = 2 \) so it is not cyclic.
+\end{itemize}
+
+Therefore only the group \( \Z_{600} \times \Z_{49} \) is cyclic.
+
+\qpart
+
+Since
+\[ 1144 = 2^3 \times 11 \times 13 \]
+and, Using \textup{Corollary 2.12, HB Chapter 6, p32},
+\[ \Z_{11} \times \Z_{13} \cong \Z_{143} \]
+
+Two possible (non-isomorphic) non-cyclic abelian groups of order \( 1144 \) are,
+
+\[ \Z_{1144} \cong \Z_{4} \times \Z_{2} \times \Z_{143} \]
+\[ \Z_{1144} \cong \Z_{2} \times \Z_{2} \times \Z_{2} \times \Z_{143} \]
+
+They are non-isomorphic because their 2-power components differ.
+
+\end{question}
+
+%Question 5
+\begin{question}
+
+   \[ D_{50} = \langle r,s \mid r^{50} = s^{2} = e, sr = r^{49}s \rangle \]
+
+\qpart
+
+Let \( H = \{ r^{2i}s^{j}:i=0,\dots,24, j=0,1 \} \)
+    
+Using \textup{Proposition 2.4, HB p25}.
+
+\begin{proof}
+$ $\newline
+
+\textbf{a. Non-empty:}
+
+Let \( i=0, j=0 \)
+\[ r^{0}s^{0} &= e \in H \]
+Thus, H is non-empty.
+
+\vspace{2cm}
+
+\textbf{b. }\( x,y \in H \implies x^{-1}y \in H: \)
+
+Let
+\[ x = r^{2a}s^{b} \text{ and } y = r^{2c}s^{d}, \quad a,c\in\{ 0,\ldots,24 \}, \quad b,d\in\{0,1\}  \]
+then
+\begin{align*}
+x^{-1} &= r^{-2a}s^{b}\\[8pt]
+\snote{since \( s^{-1} = s \)}\\
+x^{-1}y &= r^{-2a}s^{b} \cdot r^{2c}s^{d}\\[8pt]
+&= r^{-2a} \cdot s^{b+d} \cdot r^{2c}\\[8pt]
+\end{align*}
+
+Let \( j = 0 \),
+\begin{align*}
+x^{-1}y &= r^{-2a} \cdot r^{2c}\\[8pt]
+&= r^{2(c - a)} \in H
+\end{align*}
+
+Let \( j = 1 \),
+\begin{align*}
+x^{-1}y &= r^{-2a}s \cdot r^{2c}s\\[8pt]
+&= r^{-2a} \cdot r^{2c} \cdot s^{2}\\[8pt]
+\stext{As \( s^{2} = e \), }
+&= r^{2(c - a)} \in H
+\end{align*}
+
+Hence, \( H \) is a subgroup of \( D_{50} \).
+
+\end{proof}
+
+\end{question}
+
+
+\section{Part B}
+
+
+
+\end{document}
