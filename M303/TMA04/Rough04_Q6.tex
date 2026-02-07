@@ -1,0 +1,80 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{04} % TMA number
+
+\section{Part A}
+
+%Question 6
+\begin{question}
+
+    \[ D = \left\{ x\in \R : x = \frac{m}{p} \text{ for some } m \in \N \text{ and } p \text{ prime } \right\} \]
+
+\qpart
+
+\( m \in \N \) is countable, \textup{Definition 6.4 HB Chapter 16 p87}, and 
+\( p \in \N \) is countable. Hence \( D \in \Q \), is countable, \textup{Theorem 6.6 HB Chapter 16 p87}.
+
+\bigskip
+
+\qpart
+
+\qsubpart
+
+For
+\[ y \geq 0 \]
+and
+\[ r > 0 \]
+Hence
+\[ y+r > 0 \]
+
+Let
+\[ x = \frac{m}{p} \in D \]
+such that
+\[ x > y \]
+and
+\[ x < y + r \]
+Then
+\begin{align*}
+y &< \frac{m}{p} < y + r \\[8pt]
+yp &< m < p(y + r) \\[8pt]
+\Rightarrow m &\in \left( yp, p(y + r) \right)
+\end{align*}
+
+Since there are an infinite number of natural numbers, there exists at least one \( m \in \N \) such that
+\[ m \in \left( yp, p(y + r) \right) \]
+Thus
+\[ y < \frac{m}{p} < y + r \]
+and so
+\[ \exists x \in D : y < x < y + r \]   
+
+\vspace{2cm}
+
+\qsubpart
+
+To show the \( D \) is dense in \( [0,\infty) \), we need to show that for any
+\[ a, b \in [0, \infty) \]
+such that
+\[ a < b \]
+there exists
+\[ x \in D \]
+such that
+\[ a < x < b \]
+
+Let
+\[ r = b - a > 0 \]
+From part (i), we know that there exists
+\[ x \in D \] such that
+\[ a < x < a + r \]
+But
+\[ a + r = a + (b - a) = b \]
+Thus
+\[ a < x < b \]
+and so \( D \) is dense in \( [0, \infty) \).
+
+\end{question}
+
+\end{document}

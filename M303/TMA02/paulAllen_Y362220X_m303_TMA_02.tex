@@ -11,6 +11,23 @@
 %Question 1
 \begin{question}
 
+\qpart
+
+\qsubpart
+Section 1 and 2 are core.
+
+\qsubpart
+Section 3 is non-core.
+
+\vspace{2cm}
+
+\qpart
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Question_1_b.jpg}
+\end{center}
+
+
 \end{question}
 
 
@@ -20,7 +37,7 @@
 \[ G = \{ a + b\sqrt{-5} : a,b \in \mathbb{Z} \} \]
 and \( \boldsymbol{+}_{G} \) be
 \[ (a + a^\prime) + (b + b^\prime)\sqrt{-5} \]
-and a sunset of \( G \)
+and a subgroup of \( G \)
 \[ H = \{ a + b\sqrt{-5} : a,b \in 4\mathbb{Z} \} \]
 
 \vspace{1cm}
@@ -47,11 +64,11 @@ The sum, under \( \boldsymbol{+}_{G} \), of these two elements are,
 &= 7 + 13\sqrt{-5}
 \end{align*}
 
-\vspace{5cm}
+\vspace{3cm}
 
 \qpart
 
-\textbf{Closure}:
+\textbf{G1 Closure}:
 
 Let,
 \[ x = a + b\sqrt{-5} \quad \text{ and } y = a^\prime + b^\prime\sqrt{-5} \]
@@ -64,26 +81,7 @@ Hence, \( x + y \in G \).
 
 \vspace{2cm}
 
-\textbf{Associativity}:
-
-Let,
-\[ x = a + b\sqrt{-5}, \quad y = a^\prime + b^\prime\sqrt{-5}, \quad z = a^{\prime\prime} + b^{\prime\prime}\sqrt{-5} \]
-
-then
-\begin{align*}
-(x + y) + z &= ((a + a^\prime) + a^{\prime\prime}) + ((b + b^\prime) + b^{\prime\prime})\sqrt{-5}\\[8pt]
-x + (y + z) &= (a + (a^\prime + a^{\prime\prime})) + (b + (b^\prime + b^{\prime\prime}))\sqrt{-5}\\[8pt]
-\stext{As addition in \( \mathbb{Z} \) is associative, }
-(a + a^\prime) + a^{\prime\prime} &= a + (a^\prime + a^{\prime\prime})\\
-\stext{and}
-(b + b^\prime) + b^{\prime\prime} &= b + (b^\prime + b^{\prime\prime})
-\stext{Thus, }
-(x + y) + z &= x + (y + z)
-\end{align*}
-
-\vspace{2cm}
-
-\textbf{Identity element}:
+\textbf{G2 Identity element}:
 
 Let,
 \[ e = 0 + 0\sqrt{-5} \]
@@ -98,7 +96,7 @@ x + e &= (a + 0) + (b + 0)\sqrt{-5}\\
 
 \vspace{2cm}
 
-\textbf{Inverse element}:
+\textbf{G3 Inverse element}:
 
 Let,
 \[ x = a + b\sqrt{-5} \]
@@ -109,9 +107,14 @@ x + (-x) &= (a + -a) + (b + -b)\sqrt{-5}\\
 &= e
 \end{align*}
 
+\vspace{2cm}
+\textbf{G4 Associativity}:
+
+The associativity condition holds for addition in \( \Z \),
+
 Hence \( (G, \boldsymbol{+}_{G}) \) is a group.
 
-\vspace{5cm}
+\clearpage
 
 \qpart
 
@@ -131,17 +134,26 @@ x - y &= (4m - 4p) + (4n - 4q)\sqrt{-5}\\
 As \( m - p \in \mathbb{Z} \text{ and } n - q \in \mathbb{Z} \), then \( x - y \in H \).
 Hence, \( H \) is a subgroup of \( G \).
 
-\vspace{5cm}
+\vspace{3cm}
 
 \qpart
 
-The quotient order of the group \( \frac{G}{H} \) is 16.
+The number of distinct cosets of \( H \) in \( G \) is \( 16 \).
 
-\vspace{2cm}
+\begin{itemize}
+\item \( a \pmod{4} \) has 4 possible values; \( 0,1,2,3 \) in \( 4\Z \).
+\item \( b \pmod{4} \) has 4 possible values; \( 0,1,2,3 \) in \( 4\Z \).
+\end{itemize}
+
+Thus, by the counting principle, the total number of cosets is \( 4 \times 4 = 16 \).
+
+\vspace{1cm}
 
 \qpart
 
 The order of the element \( 1 +\sqrt{-5} + H \in \frac{G}{H} \) is 4.
+
+\[ \left(1 + \sqrt{-5}\right) + H, \quad 2\left(1+\sqrt{-5}\right) + H, \quad 3\left(1+\sqrt{-5}\right) + H, \quad 4\left(1+\sqrt{-5}\right) + H  = H \]
 
 \end{question}
 
@@ -153,6 +165,8 @@ a,0\\
 b,c
 \end{pmatrix} : a,b,c \in \mathbb{Z}_5 \]
 
+\vspace{2cm}
+
 \qpart
 
 The additive inverse is 
@@ -160,6 +174,8 @@ The additive inverse is
 -a,-0\\
 -b,-c
 \end{pmatrix} \]
+
+\vspace{2cm}
 
 \qpart
 
@@ -193,13 +209,21 @@ Thus,
 Hence, \( \varphi \) is a homomorphism.
 \end{proof}
 
+\vspace{3cm}
+
 \qpart
 
 The kernel of \( \varphi \) is,
-\[ \begin{pmatrix}
+\[
+Ker\( \left(\varphi\right) = \)
+\begin{pmatrix}
 a,0\\
-b,c
-\end{pmatrix} : a,c \in \Z, b \in 5\Z \]
+0,c
+\end{pmatrix} : a,c \in \Z_{5} \]
+
+because the lower-left entry must be \( 0 \).
+
+\vspace{2cm}
 
 \qpart
 
@@ -221,6 +245,8 @@ As \( 101 \text{ and } 50 \) are coprime (\textup{Corollary 2.12, HB Chapter 6, 
 
 The order of \( G \) is \( 101 \times 50 = 5050 \).
 
+\vspace{2cm}
+
 \qsubpart
 
 The order of the element \( (25,1) \) is;
@@ -233,6 +259,8 @@ The order of the element \( (25,1) \) is;
 
 Hence \( (25,1) \) is a generator of  \( G \).
 
+\vspace{2cm}
+
     \qsubpart
 
 The order of the element \( (1,25) \) is;
@@ -244,6 +272,8 @@ The order of the element \( (1,25) \) is;
 \end{align*}
 
 Hence \( (1,25) \) is not a generator of \( G \).
+
+\vspace{3cm}
 
 \qpart
 
@@ -280,8 +310,7 @@ Using \textup{Corollary 2.12 and Theorem 2.13, HB Chapter 6, p32},
 
 Therefore a decomposition as a direct product of cyclic groups of prime power order is,
 
-\[ \Z_{2} \times (\Z_{4} \times \Z_{3}) \times (\Z_{25} \times \Z_{7}) \times \Z_{7} \cong \]
-\[ \Z_{2} \times \Z_{4} \cong \Z_{3} \]
+\[ \Z_{2} \times \Z_{4} \times \Z_{3} \times \Z_{25} \times \Z_{7} \times \Z_{7} \]
 
 Thus (By \textup{Theorem 2.13, HB Chapter 6, p32}),
 \[ \Z_{2} \times \Z_{12} \times \Z_{175} \times \Z_{7} \cong \Z_{14} \times \Z_{2100} \]
@@ -302,6 +331,8 @@ Using \textup{Corollary 2.12 and Theorem 2.13, HB Chapter 6, p32},
 Thus (By \textup{Theorem 2.13, HB Chapter 6, p32}),
 \[ \Z_{2} \times \Z_{2} \times \Z_{6} \times \Z_{1225} \cong \Z_{2} \times \Z_{2} \times \Z_{2} \times \Z_{3} \times \Z_{25} \times \Z_{49} \]
 
+\vspace{5cm}
+
 \qsubpart
 
 By \textup{Theorem 2.11, HB Chapter 6, p32}, a direct product is cyclic if and only if
@@ -314,6 +345,8 @@ the component orders are coprime.
 \end{itemize}
 
 Therefore only the group \( \Z_{600} \times \Z_{49} \) is cyclic.
+
+\vspace{2cm}
 
 \qpart
 
@@ -345,22 +378,22 @@ Using \textup{Proposition 2.4, HB p25}.
 \begin{proof}
 $ $\newline
 
-\textbf{a. Non-empty:}
+\textbf{Non-empty:}
 
 Let \( i=0, j=0 \)
-\[ r^{0}s^{0} &= e \in H \]
+\[ r^{0}s^{0} = e \in H \]
 Thus, H is non-empty.
 
 \vspace{2cm}
 
-\textbf{b. }\( x,y \in H \implies x^{-1}y \in H: \)
+\textbf{Closure }\( x,y \in H \implies x^{-1}y \in H: \)
 
 Let
 \[ x = r^{2a}s^{b} \text{ and } y = r^{2c}s^{d}, \quad a,c\in\{ 0,\ldots,24 \}, \quad b,d\in\{0,1\}  \]
 then
 \begin{align*}
-x^{-1} &= r^{-2a}s^{b}\\[8pt]
-\snote{since \( s^{-1} = s \)}\\
+x^{-1} &= s^{b}r^{-2a}\\[8pt]
+\snote{Since \( sr = r^{-1}s \), we can move \( s \) past powers of \( r \).}\\
 x^{-1}y &= r^{-2a}s^{b} \cdot r^{2c}s^{d}\\[8pt]
 &= r^{-2a} \cdot s^{b+d} \cdot r^{2c}\\[8pt]
 \end{align*}
@@ -374,6 +407,7 @@ x^{-1}y &= r^{-2a} \cdot r^{2c}\\[8pt]
 Let \( j = 1 \),
 \begin{align*}
 x^{-1}y &= r^{-2a}s \cdot r^{2c}s\\[8pt]
+\snote{Again since \( sr = r^{-1}s \), we can move \( s \) past powers of \( r \).}\\
 &= r^{-2a} \cdot r^{2c} \cdot s^{2}\\[8pt]
 \stext{As \( s^{2} = e \), }
 &= r^{2(c - a)} \in H
@@ -383,10 +417,236 @@ Hence, \( H \) is a subgroup of \( D_{50} \).
 
 \end{proof}
 
+\vspace{3cm}
+
+\qpart
+
+The order of the group \( D_{50} \) is \( 100 \).
+The order of the subgroup \( H \) is \( 50 \).
+
+Hence the index of H in \( D_{50} \) is 
+\[ \frac{\mid D_{50} \mid}{\mid H \mid} = \frac{100}{50} = 2 \]
+
+As the index of \( H \) is \( 2 \), its left and right cosets are the same, hence \( H \) 
+is a normal subgroup of \( D_{50} \), by \textup{Proposition 3.7, HB Chapter 6, p27.}
+
+\vspace{2cm}
+
+\qpart
+
+Let \( k \) be the subgroup generated by \( r^{25} \).
+
+The order of \( k \) is \( 2 \), as
+\begin{align*}
+(r^{25})^{1} &= r^{25}\\
+(r^{25})^{2} &= r^{50} = e
+\end{align*}
+
+Which is isomorphic to \( \Z_{2} \) which also has order \( 2 \).
+
+\vspace{2cm}
+
+\qpart
+
+Given \( D_{50} \langle sr = r^{49}s = r^{-1}s \rangle \) ;
+
+\[ Z(H) = \{\,a \in H : ah = ha \ \forall\, h \in H \} \]
+
+\begin{align*}
+sr^{n} &= r^{-n}s\\[8pt]
+sr^{25} &= r^{-25}s\\[8pt]
+&= r^{50-25}s\\[8pt]
+&= r^{25}s
+\end{align*}
+
+Since \( sr^{25} = r^{-25}s = r^{25}s \) (because \( r^{50} = e \)), \( r^{25} \) commutes with both
+\( r \) and \( s \) and so lies in the centre. 
+By \textup{Exercise 2.5 of chapter 7,} subgroups of \( Z(G) \) are normal subgroups of 
+\( G \), thus \( K \) is normal.
+
+Hence, by \textup{Proposition 3.7, HB chapter 6 p27}, \( k \) is a normal subgroup of \( D_{50} \).
+
+\vspace{2cm}
+
+\qpart
+
+All elements in the subgroup \( H \) are of the form \( r^{2i}s^j \), with the exponent of the \( r \) 
+term being even and the element \( e \).
+
+As \( r^{25} \) has an odd exponent, its only other element is \( e \).
+
+Thus \( H \cap k = \{ e \} \).
+
+\vspace{2cm}
+
+\qpart
+
+By \textup{Proposition 1.9, HB Chapter 6 p31}, 
+
+\[ D_{50} \text{ has order } 100 \]
+\[ H \text{ has order } 50 \]
+\[ k \text{ has order } 2 \]
+
+As \( 100 = 50 \times 2 \), and \( H \cap k = \{ e \} \),
+then \( D_{50} \cong H \times k \).
+
 \end{question}
 
 
+\vspace{5cm}
+
+%Question 6
+\begin{question}
+
+Given \( G \) is a group of order \( 48668 = 4 \times 23^{3} \).
+
+\qpart
+
+By \textup{Definition 1.7, HB Chapter 8 p38}, the Sylow \(2\)-subgroups of \( G \) are order \( 4 \),
+and the Sylow \(23\)-subgroups of \( G \) are order \( 23^{3} = 12167 \).
+
+\vspace{2cm}
+
+\qpart
+
+Using The  Sylows Theorems, \textup{Theorem 1.12 , HB Chapter 8 p39},
+
+For the Sylow \(2\)-subgroups of \( G \);
+
+\[ n_2 \equiv 1 \pmod{2} \]
+\[ n_{2} \mid 12167 \equiv 1 \pmod{2}  \]
+
+given the factors of \( 12167 \) are \( 1, 23, 529, 12167 \), thus the possible values of \( n_{2} \) are;
+\[ n_{2} = 1, 23, 529, 12167 \]
+as all these possible alues are odd, they are all congruent to \( 1 \pmod{2} \).
+
+For the Sylow \(23\)-subgroups of \( G \);
+\[ n_{23} \mid 4 \equiv 1 \pmod{23}  \]
+
+given the factors of \( 4 \) are \( 1, 2, 4 \), thus the possible value of \( n_{23} \) are;
+
+\begin{align*}
+    1 &\equiv 1 \pmod{23}\\
+    2 &\equiv 2 \pmod{23}\\
+    4 &\equiv 4 \pmod{23}
+\end{align*}
+
+
+as \( 1 \) is the only value congruent to \( 1 \pmod{23} \), thus by \textup{Lemma 1.9, HB Chapter 8 p39},
+there is a unique Sylow \(23\)-subgroup of \( G \), which is normal.
+
+\end{question}
+
+%Question 7
+\begin{question}
+
+\qpart
+
+Let \( q \) be a prime, with \( q \neq 29 \)
+
+A counter example to the proposition that the order of the group \( 29q \) is cyclic is;
+\[ q = 2, \text{ with } \mid 29q \mid = 58 \]
+and thus,
+\[ D_{29} \text{ is non abelian, thus not cyclic.} \]
+
+\vspace{2cm}
+
+\qpart
+
+Line \( 7 \) of the 'proof' is false. Using \textup{Definition 3.6, Propositions 3.7 and 3.10, HB Chapter 5 p 27},
+\( H \text{ and } K \) are cyclic subgroups of \( G \), but being cyclic does not imply being normal.
+A cyclic subgroup of a non-abelian group need not be normal.
+
+\end{question}
+
 \section{Part B}
+
+%question 9
+
+\begin{question}
+Question 9 from TMA02 material.
+
+Let C[0,1] be the group of all continuous functions from [0,1] to \( \R \).
+Let \( + \) be the operation defined By
+\[ f + g \text{ is the function from } \left[0,1\right] \text{ to } \( \R \) \text{ given by } (f+g)(x)=f(x)+g(x) \]
+
+\textbf{G1 Closure:}
+If \( f,g \in C[0,1] \) then \( x \in C[0,1], f(x),g(x) \in \R \)
+
+Since the sum of two continuous functions is continuous, \textup{Combination rules for continuous functions from \( \R \text{ to } \R \), HB Chapter 13 p65},
+\[ f + g \in C[0,1]  \]
+
+Hence, \( C[0,1] \) is closed under \( + \).
+
+\vspace{2cm}
+
+\textbf{G2 Identity:}
+Let \( e \) be the function from \( [0,1] \text{ to } \R \) defined by \( e(x) = 0 \text{ for all } x \in [0,1] \).
+
+Then for any \( f \in C[0,1] \) and \( x \in [0,1] \),
+\begin{align*}
+(f + e)(x) &= f(x) + e(x)\\
+&= f(x) + 0\\
+&= f(x)
+\end{align*}
+
+Thus, \( f + e = f \) for all \( f \in C[0,1] \), so \( e \) is the identity element of \( C[0,1] \).
+
+\vspace{2cm}
+
+\textbf{G3 Inverse:}
+Define \( (-f)(x) = -f(x) \), for all \( x \in [0,1] \).
+
+Since \( f \)  is continuous \( -f \) is also continuous, by \textup{Combination rules for continuous functions from \( \R \text{ to } \R \), HB Chapter 13 p65}.
+
+Then 
+\begin{align*}
+(f+(-f))(x) &= f(x) - f(x) 
+&= 0(x) 
+&= e
+\end{align*}
+
+Thus every element has an inverse in \( C[0,1] \).
+
+\vspace{2cm}
+
+\textbf{G4 Associativity:}
+Associativity holds because we are told in the question that  addition in \( \R \) is associative.
+
+Hence, \( (C[0,1], +) \) is a group.
+\end{question}
+
+%Question 11
+\begin{question}
+Question 11 from TMA02 material.
+
+\qpart
+
+\[ \Z_{3} \times \Z_{4} \cong \Z_{2} \times \Z_{6} \]
+\[ \Z_{2} \times \Z_{2} \cong \Z_{4} \]
+
+\vspace{2cm}
+
+\qpart
+
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Group & Order of group & Isomorphic groups & Order of elements & Cyclic? Abelian\\
+    \hline
+    \( \Z_{15} \) & \( 15 \) & \( \Z_{3} \times \Z_{5} \) & \( 1,3,5,15 \) & Cyclic\\
+    \hline
+    \( \Z_{2} \times \Z_{10} \) & \( 20 \) & \( \Z_{2} \times \Z_{2} \times \Z_{5} \) & \( 1,2,5,10 \) & Abelian, non-cyclic\\
+    \hline
+    \( Dic_{6} \) & \( 24 \) & \( \Z_{2} \times \Z_{2} \times \Z_{6} \) & \( 1,2,4,6,12,24 \) & non-abelian \\
+    \hline
+    \( \Z_{3} \times \Z_{4} \) & \( 12 \) & \( \Z_{12} \) & \( 1,2,3,4,6,12 \) & Cyclic, Abelian\\
+    \hline
+    \( \Z_{2} \times \Z_{2} \times \Z_{3} \) & \( 12 \) & \( \Z_{12} \) & \( 1,2,3,4,6 \) & Non-Cyclic\\
+    \hline
+\end{tabular}
+
+\end{question}
+
 
 
 

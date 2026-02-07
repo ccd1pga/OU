@@ -1,0 +1,257 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{04} % TMA number
+
+\section{Part A}
+
+%Question 1
+\begin{question}
+
+\qpart
+
+By \textup{Definition 1.9 Chapter 13 p63 and Theorem 1.22 Chapter 13 p 64};
+
+\qsubpart
+
+An example of a strictly monotonic decreasing sequence is;
+\[ (x_n) = 1 + \frac{1}{n}, \text{ for } n \geq 1 \]
+
+It is decreasing because;
+\begin{align*}
+x_{n+1} - x_n &= \left( 1 + \frac{1}{n+1} \right) - \left( 1 + \frac{1}{n} \right) \\[8pt]
+&= \frac{1}{n+1} - \frac{1}{n} 
+&= \frac{n - (n+1)}{n(n+1)} \\[8pt]
+&= \frac{-1}{n(n+1)} < 0\\[8pt]
+\snote{for all \( n \geq 1 \)}
+\end{align*}
+
+and,
+
+\[ \lim\limits_{n \to \infty} x_n = \lim\limits_{n \to \infty} \left( 1 + \frac{1}{n} \right) = 1 + 0 = 1 \]
+
+Thus by Theorem 1.22 Chapter 13 p 64, since \( (x_n) \) is strictly monotonic decreasing and bounded below by 1, it must converge to its greatest lower bound i.e. \( \lim\limits_{n \to \infty} x_n = 1 \).
+
+\vspace{2cm}
+
+\qsubpart
+
+An example of a strictly monotonic increasing sequence is;
+\[ (y_n) = -1 - \frac{1}{n}, \text{ for } n \geq 1 \]
+
+It is increasing because;
+\begin{align*}
+y_{n+1} - y_n &= \left( -1 - \frac{1}{n+1} \right) - \left( -1 - \frac{1}{n} \right) \\[8pt]
+&= - \frac{1}{n+1} + \frac{1}{n} 
+&= \frac{n - (n+1)}{n(n+1)} \\[8pt]
+&= \frac{1}{n(n+1)} > 0\\[8pt]
+\snote{for all \( n \geq 1 \)}
+\end{align*}    
+
+and,
+
+\[ \lim\limits_{n \to \infty} y_n = \lim\limits_{n \to \infty} \left( -1 - \frac{1}{n} \right) = -1 - 0 = -1 \]
+Thus by Theorem 1.22 Chapter 13 p 64, since \( (y_n) \) is strictly monotonic increasing and bounded above by -1, it must converge to its least upper bound i.e. \( \lim\limits_{n \to \infty} y_n = -1 \).
+
+\vspace{2cm}
+
+\qpart
+
+\begin{equation*}
+    (z_n) =
+\begin{cases}
+ x_n, & \text{if } n \text{ is odd}\\
+ y_n, & \text{if } n \text{ is even}
+\end{cases}
+\end{equation*}
+
+Where \( (x_n) \) is the strictly monotonic decreasing sequence defined in part (a)(i) and \( (y_n) \) is the strictly monotonic increasing sequence defined in part (a)(ii).
+We can see that the subsequence of odd terms \( (z_{2n-1}) \) is equivalent to \( (x_n) \) and the subsequence of even terms \( (z_{2n}) \) is equivalent to \( (y_n) \).
+Thus we have that;
+\[\lim\limits_{n \to \infty} z_{2n-1} = \lim\limits_{n \to \infty} x_n = 1 \]
+and
+\[\lim\limits_{n \to \infty} z_{2n} = \lim\limits_{n \to \infty} y_n = -1 \]
+Since the two subsequences converge to different limits, the sequence \( (z_n) \) does not converge.
+
+\end{question}
+
+%Question 2
+
+\begin{question}
+
+\[ L = \bm{L_{a,\theta}} = \{ (x,a+x\tan\theta):x \in \R \} \]
+
+Where \( a \) is the y- intercept of the line and \( \theta \) is the angle of inclination of the line to the positive x-axis.
+
+\[ \mathbf{X} =  \bm{L_{a,\theta}} : \mathbf{a} \in \R \text{ and } \theta \in (-\pi/2, \pi/2)  \]
+
+and
+
+\[ \Delta(\bm{L_{a,\theta}}, \bm{L_{b,\phi}}) = \mid a-b \mid + \mid \tan{\theta} - \tan{\phi} \mid \]
+for \( \bm{L_{a,\theta}}, \bm{L_{b,\phi}} \in \mathbf{X} \)
+
+\qpart
+
+The distance between \( \bm{L_{0,\pi/4}} \text{ and } \bm{L_{1,-\pi/4}} \);
+
+\begin{align*}
+\Delta(\bm{L_{0,\pi/4}}, \bm{L_{1,-\pi/4}}) &= \mid 0-1 \mid + \mid \tan{\pi/4} - \tan{-\pi/4} \mid \\[8pt]
+&= 1 + \mid 1 - (-1) \mid \\[8pt]
+&= 1 + \mid 2 \mid \\[8pt]
+&= 1 + 2 = 3
+\end{align*}
+
+\qpart
+
+By \textup{Definition 2.1,HB Chapter 14 p72},
+
+\qsubpart
+
+To show \( \Delta \) satisfies (M1) non-negativity, we need to show that for any 
+\( d^{(2)}(\mathbf{a},\mathbf{b}) \geq 0 \)
+
+\begin{align*}
+\Delta(\bm{L_{a,\theta}}, \bm{L_{b,\phi}}) &= \mid a-b \mid + \mid \tan{\theta} - \tan{\phi} \mid \\[8pt]
+\stext{As \( \mathbf{a,b} \in \R \) and \( \theta \in (-\pi/2, \pi/2) \), both \( \mid a-b \mid \geq 0 \) and \( \mid \tan{\theta} - \tan{\phi} \mid \geq 0 \)} \\[8pt]
+&\geq 0 + 0 \\[8pt]
+\end{align*}
+
+Thus, \( \Delta(\bm{L_{a,\theta}}, \bm{L_{b,\phi}}) \geq 0 \) and (M1) is satisfied.
+
+\vspace{2cm}
+
+\qsubpart
+
+To show \( \Delta \) satisfies (M2) symetry, we need to show that for any
+\( d^{(2)}(\mathbf{a},\mathbf{b}) = d^{(2)}(\mathbf{b},\mathbf{a}) \)
+
+\begin{align*}
+\Delta(\bm{L_{a,\theta}}, \bm{L_{b,\phi}}) &= \mid a-b \mid + \mid \tan{\theta} - \tan{\phi} \mid \\[8pt]
+\stext{By the properties of absolute values, HB p8, \( \mid a-b \mid = \mid b-a \mid \) and \( \mid \tan{\theta} - \tan{\phi} \mid = \mid \tan{\phi} - \tan{\theta} \mid \)} \\[8pt]
+&= \mid b-a \mid + \mid \tan{\phi} - \tan{\theta} \mid \\[8pt]
+&= \Delta(\bm{L_{b,\phi}}, \bm{L_{a,\theta}})
+\end{align*}
+
+Thus, \( \Delta(\bm{L_{a,\theta}}, \bm{L_{b,\phi}}) = \Delta(\bm{L_{b,\phi}}, \bm{L_{a,\theta}}) \) and (M2) is satisfied.
+
+\vspace{2cm}
+
+\qsubpart
+
+To show \( \Delta \) satisfies (M3) triangle inequality, we need to show that for any
+\( d^{(2)}(\mathbf{a},\mathbf{c}) \leq d^{(2)}(\mathbf{a},\mathbf{b}) + d^{(2)}(\mathbf{b},\mathbf{c}) \)
+
+\begin{align*}
+\Delta(\bm{L_{a,\theta}}, \bm{L_{c,\psi}}) &= \mid a-c \mid + \mid \tan{\theta} - \tan{\psi} \mid \\[8pt]
+\stext{By the triangle inequality for real numbers, HB p9,}
+&\leq \left( \mid a-b \mid + \mid b-c \mid \right) + \left( \mid \tan{\theta} - \tan{\phi} \mid + \mid \tan{\phi} - \tan{\psi} \mid \right) \\[8pt]
+&= \mid a-b \mid + \mid \tan{\theta} - \tan{\phi} \mid + \mid b-c \mid + \mid \tan{\phi} - \tan{\psi} \mid \\[8pt]
+&= \Delta(\bm{L_{a,\theta}}, \bm{L_{b,\phi}}) + \Delta(\bm{L_{b,\phi}}, \bm{L_{c,\psi}})
+\end{align*}
+
+Thus, \( \Delta(\bm{L_{a,\theta}}, \bm{L_{c, \psi}}) \leq \Delta(\bm{L_{a,\theta}}, \bm{L_{b,\phi}}) + \Delta(\bm{L_{b,\phi}}, \bm{L_{c, \psi}}) \) and (M3) is satisfied.
+
+\vspace{5cm}
+
+\qpart
+
+\[ \mathbf{B_{\Delta}}(\mathbf{L_{0,0}},1) \]
+
+By \textup{Definition 2.6, HB Chapter 14 p72},
+
+\begin{align*}
+\mathbf{B_{\Delta}}(\mathbf{L_{0,0}},1) &= \{ \bm{L_{b,\theta}} \in \mathbf{X} : \Delta(\mathbf{L_{0,0}}, \bm{L_{b,\theta}}) < 1 \} \\[8pt]
+&= \{ \bm{L_{b,\theta}} \in \mathbf{X} : \mid 0-b \mid + \mid \tan{0} - \tan{\theta} \mid < 1 \} \\[8pt]
+&= \{ \bm{L_{b,\theta}} \in \mathbf{X} : \mid b \mid + \mid 0 - \tan{\theta} \mid < 1 \} \\[8pt]
+&= \{ \bm{L_{b,\theta}} \in \mathbf{X} : \mid b \mid + \mid \tan{\theta} \mid < 1 \}
+\end{align*}
+
+Applying the triaangle inequality tin \( \R \) to each absolut value term,
+\[ \{ \bm{L_{b,\phi}} \in \mathbf{X} : \mid b \mid + \mid \tan\phi \mid < 1} \} \]
+
+\vspace{2cm}
+
+\qpart
+
+The sequence of lines;
+\[ (\mathbf{L_{n}})_{n=1}^{\infty} \text{ given by } \mathbf{L_{n}} = \mathbf{L}_{-1/n,\pi/2-1/n} \]
+is not \( \Delta-convergent \) because, by \textup{Definition 3.2 HB Chapter 14 p73};
+
+\begin{align*}
+\stext{Using \(\bm{L_{b,\phi}} \in \mathbf{X} \) Then}
+\Delta(\mathbf{L_n}, \bm{L_{b,\phi}}) &= \left|-\frac{1}{n} - b\right|+ \left|\tan\left(\frac{\pi}{2}-\frac{1}{n}\right) - \tan\phi\right| \\[8pt]
+\stext{As \(n \to \infty\), we have \(-1/n \to 0\), so}
+\left|-\frac{1}{n} - b\right| \to |b|\\[8pt]
+\stext{Also, as \(n \to \infty\), we have}
+\tan\left(\frac{\pi}{2}-\frac{1}{n}\right) \to +\infty \\[8pt]
+\stext{and since \(\tan\phi\) is finite for all \(\phi \in (-\pi/2,\pi/2)\),}
+\left|\tan\left(\frac{\pi}{2}-\frac{1}{n}\right) - \tan\phi\right| \to \infty.
+\end{align*}
+
+Hence \(\Delta(\mathbf{L_n}, \bm{L_{b,\phi}}) \to \infty\), and so
+\((\mathbf{L_n})\) is not \(\Delta\)-convergent.
+
+\end{question}
+
+%Question 3
+\begin{question}
+
+\begin{equation*}
+f_{n}(x) = 
+\begin{cases}
+\sin(\pi x), \text{ if } 2n \leq x < (2n+1),\\
+0, \text{ otherwise. }
+\end{cases}
+\end{equation*}
+
+\qpart
+
+
+\qpart
+
+To test for pointwise limits we can take \( x = 2.5 \) as a constant value.
+
+\begin{align*}
+\stext{When \( n=1 \) the interval is \( [2,3) \)}
+f_1(2.5) &= \sin(2.5\pi) = 1\\[8pt]
+\stext{When \( n=2 \) the interval is \( [4,5) \)}
+f_2(2.5) &= 0\\[8pt]
+\stext{When \( n=3 \) the interval is \( [6,7) \)}
+f_3(2.5) &= 0\\[8pt]
+&\vdots \\[8pt]
+\stext{When \( n=k \) the interval is \( [2k,2k+1) \)}
+f_k(2.5) &= 0\\[8pt]
+\end{align*}
+
+\[ \forall x \in \R, \lim_{n\to\infty} = 0 \]
+
+Therefore \( f_n \to f \text{ pointwise as } n \to \infty \) 
+
+\vspace{3cm}
+
+\qpart
+
+
+Using \textup{Dfinition 4.4 Chapter 15 p 78} we can test for uniform convergence.
+
+Assume \( \epsilon = \frac{1}{2} \)
+\begin{align*}
+|f_n(x) - f(x)| &< \epsilon \\[8pt]
+|\sin(\pi x) - 0| &< \frac{1}{2} \\[8pt]
+|\sin(\pi x)| &< \frac{1}{2} \\[8pt]
+\end{align*}
+
+This is true for some values of \( x \) but not for all values of \( x \) in the domain of \( f_n(x) \).
+
+Therefore \( f_n \) does not converge uniformly to \( f \text{ as } n \to \infty \)
+
+\end{question}
+
+%Question 4
+
+
+
+\end{document}

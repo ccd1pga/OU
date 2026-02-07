@@ -1,12 +1,12 @@
 # Fdb version 4
-["bibtex paulAllen_Y362220X_m303_TMA_02"] 1761841469.10438 "paulAllen_Y362220X_m303_TMA_02.aux" "paulAllen_Y362220X_m303_TMA_02.bbl" "paulAllen_Y362220X_m303_TMA_02" 1761898582.48637 2
-  "paulAllen_Y362220X_m303_TMA_02.aux" 1761898582.16341 462 44e8b1ee38aff80cb0cf7f3df6e49104 "pdflatex"
+["bibtex paulAllen_Y362220X_m303_TMA_02"] 1765066765.44009 "paulAllen_Y362220X_m303_TMA_02.aux" "paulAllen_Y362220X_m303_TMA_02.bbl" "paulAllen_Y362220X_m303_TMA_02" 1765715697.12172 2
+  "paulAllen_Y362220X_m303_TMA_02.aux" 1765715696.92509 462 96ec546ad701ff7a0caa11f0f14cba52 "pdflatex"
   (generated)
   "paulAllen_Y362220X_m303_TMA_02.bbl"
   "paulAllen_Y362220X_m303_TMA_02.blg"
   (rewritten before read)
-["pdflatex"] 1761898578.97323 "/Users/paulallen/OU/M303/TMA02/paulAllen_Y362220X_m303_TMA_02.tex" "paulAllen_Y362220X_m303_TMA_02.pdf" "paulAllen_Y362220X_m303_TMA_02" 1761898582.4865 2
-  "/Users/paulallen/OU/M303/TMA02/paulAllen_Y362220X_m303_TMA_02.tex" 1761898574.46509 8489 c470842006eab40b385a49d3360701cc ""
+["pdflatex"] 1765715694.97833 "/Users/paulallen/OU/M303/TMA02/paulAllen_Y362220X_m303_TMA_02.tex" "paulAllen_Y362220X_m303_TMA_02.pdf" "paulAllen_Y362220X_m303_TMA_02" 1765715697.12181 2
+  "/Users/paulallen/OU/M303/TMA02/paulAllen_Y362220X_m303_TMA_02.tex" 1765715691.5957 14996 a83cf5ea11d136d89dc94690d3cec75e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc" 1490131464 2934 a4a9158faed2e9e89c771b4e3b7fc12f ""
@@ -471,11 +471,12 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1750182909 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1750182833 3345740 781d1e11167f3934644100faa700175f ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "paulAllen_Y362220X_m303_TMA_02.aux" 1761898582.16341 462 44e8b1ee38aff80cb0cf7f3df6e49104 "pdflatex"
-  "paulAllen_Y362220X_m303_TMA_02.bbl" 1761841469.2512 0 d41d8cd98f00b204e9800998ecf8427e "bibtex paulAllen_Y362220X_m303_TMA_02"
-  "paulAllen_Y362220X_m303_TMA_02.out" 1761898582.16426 154 5c35a27290a903d6ed348a7206bfcfa3 "pdflatex"
-  "paulAllen_Y362220X_m303_TMA_02.tex" 1761898574.46509 8489 c470842006eab40b385a49d3360701cc ""
-  "style.sty" 1761511997.14552 14947 2eba6110e7b09fa038c73c74ce859b0d ""
+  "Question_1_b.jpg" 1765064892.05581 185077 5acbc24c716aa33500b8d6a04f263493 ""
+  "paulAllen_Y362220X_m303_TMA_02.aux" 1765715696.92509 462 96ec546ad701ff7a0caa11f0f14cba52 "pdflatex"
+  "paulAllen_Y362220X_m303_TMA_02.bbl" 1765066765.66336 0 d41d8cd98f00b204e9800998ecf8427e "bibtex paulAllen_Y362220X_m303_TMA_02"
+  "paulAllen_Y362220X_m303_TMA_02.out" 1765715696.92563 154 5c35a27290a903d6ed348a7206bfcfa3 "pdflatex"
+  "paulAllen_Y362220X_m303_TMA_02.tex" 1765715691.5957 14996 a83cf5ea11d136d89dc94690d3cec75e ""
+  "style.sty" 1762886322.54642 14947 2eba6110e7b09fa038c73c74ce859b0d ""
   (generated)
   "paulAllen_Y362220X_m303_TMA_02.aux"
   "paulAllen_Y362220X_m303_TMA_02.log"

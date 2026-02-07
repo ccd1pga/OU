@@ -1,0 +1,77 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{03} % TMA number
+
+\begin{question}
+
+\qpart
+
+\qsubpart
+
+\[ \left(\frac{-48}{229}\right) \]
+
+\begin{align*}
+\stext{\textup{Theorem 2.2(c), HB Chapter 10 p46}}
+\left(\frac{-48}{229}\right) &= \left(\frac{-1}{229}\right) \cdot \left(\frac{16}{229}\right) \cdot \left(\frac{3}{229}\right)\\[8pt]
+\stext{Calculating each term separately, using standard results}
+\left(\frac{-1}{229}\right) &= 1\\[8pt]
+\snote{\textup{Theorem 2.2(e), HB Chapter 10 p46}}\\
+\left(\frac{16}{229}\right) &= 1\\[8pt]
+\snote{\textup{Theorem 2.2(b), HB Chapter 10 p46}}\\
+\left(\frac{3}{229}\right) &= 1\\[8pt]
+\snote{\textup{Proposition 4.7, HB Chapter 10 p46}}\\
+\stext{Combining these results}
+\left(\frac{-48}{229}\right) &= 1 \cdot 1 \cdot 1 \\[8pt]
+&= 1 \\[8pt]
+\stext{So \( -48 \) is a quadratic residue modulo \( 229 \)}
+\end{align*}
+
+\vspace{2cm}
+
+\qsubpart
+
+\[ \left(\frac{151}{43}\right) \]
+
+\begin{align*}
+\left(\frac{151}{43}\right) &= \left(\frac{22}{43}\right) \\[8pt]
+&= \left(\frac{2}{43}\right) \cdot \left(\frac{11}{43}\right) \\[8pt]
+\snote{\textup{Theorem 2.2(c), HB Chapter 10 p46}}\\
+\stext{Calculating each term separately}
+\left(\frac{2}{43}\right) &= -1 \\[8pt]
+\snote{\textup{Proposition 3.2, HB Chapter 10 p46}}\\
+\left(\frac{11}{43}\right) &= -\left(\frac{43}{11}\right) \\[8pt]
+\snote{\textup{Theorem 4.2, HB Chapter 10 p46}}\\
+&= -\left(\frac{10}{11}\right) \\[8pt]
+&= -\left(\frac{2}{11}\right) \cdot \left(\frac{5}{11}\right) \\[8pt]
+\snote{\textup{Theorem 2.2(c), HB Chapter 10 p46}}\\
+\stext{Calculate each term seperatly}
+\left(\frac{2}{11}\right) &= -1 \\[8pt]
+\snote{\textup{Proposition 3.2, HB Chapter 10 p46}}\\
+\left(\frac{5}{11}\right) &= \left(\frac{11}{5}\right) \\[8pt]
+\snote{\textup{Theorem 4.2, HB Chapter 10 p46}}\\
+&= \left(\frac{1}{5}\right) \\[8pt]
+\left(\frac{1}{5}\right) &= 1 \\[8pt]
+\snote{\textup{Theorem 2.2(b), HB Chapter 10 p46}}\\
+\stext{Combining these results}
+\left(\frac{151}{43}\right) &= \left(\frac{22}{43}\right)=\left(\frac{2}{43}\right)\left(\frac{11}{43}\right)\\[8pt]
+\left(\frac{2}{43}\right) &=  -1\\[8pt]
+\stext{and}
+\left(\frac{11}{43}\right) &= -\left(\frac{10}{11}\right) = -\left(\frac{2}{11}\right) \cdot \left(\frac{5}{11}\right)\\
+\left(\frac{2}{11}\right) &= -1\\[8pt]
+\left(\frac{5}{11}\right) &= 1\\[8pt]
+\stext{So}
+\left(\frac{11}{43}\right) &=  -\left(\frac{2}{11}\right) \cdot \left(\frac{5}{11}\right) = -((-1)(1)) = 1\\[8pt]
+\stext{therefore}
+\left(\frac{151}{43}\right) &= \left(\frac{2}{43}\right)\left(\frac{11}{43}\right) = (-1)(1) = -1\\[8pt]
+\stext{So \( 151 \) is a quadratic non-residue modulo \( 43 \)}
+\end{align*}
+
+\end{question}
+
+\end{question}
+
+\end{document}

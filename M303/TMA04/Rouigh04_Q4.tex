@@ -1,0 +1,61 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{04} % TMA number
+
+\section{Part A}
+
+%Question 1
+\begin{question}
+
+    \[ F : C[0,1] \to C[0,1] \]
+
+    \[ F(f)(t) = \int_{t}^{1}(1 - x^4)f(x) \dd{x} \text{ for each } f \in C[0,1] \text{ and } t \in [0,1] \]
+
+Let \( f \in C[0,1] \) and \( s,t \in [0,1] \) with \( s \leq t \).
+
+%\begin{align*}
+%|F(f)(t) - F(f)(s)| &= \left| \int_{t}^{1}(1 - x^4)f(x) \dd{x} - \int_{s}^{1}(1 - x^4)f(x) \dd{x} \right| \\[8pt]
+%&= \left| \int_{t}^{s}(1 - x^4)f(x) \dd{x} \right| \\[8pt]
+%&\leq \int_{s}^{t} |(1 - x^4)f(x)| \dd{x} \\[8pt]
+%&\leq \int_{s}^{t} (1 - x^4) |f(x)| \dd{x} \\[8pt] 
+%\stext{Since \( 0 < (1-x^4) < 1 \) for \( x \in [0,1] \)} \\[8pt]
+%&< \int_{s}^{t} |f(x)| \dd{x} \\[8pt]
+%&< \int_{s}^{t} d_{max}(f,0) \dd{x} \\[8pt]
+%&= d_{max}(f,0) (t - s) \\[8pt]
+%&= d_{max}(f,0) |t - s| \\[8pt]
+%\end{align*}
+
+%Hence \( F(f) \) is a \( d^{(1)},d^{(1)} \)-Lipschitz function on \( [0,1] \),
+%with Lipschitz constant \( d_{max}(f,0) \). Thus \( F(f) \) is
+%    continuous by \textup{Theorem 3.2 Chapter 15 p76}.
+
+Let \( f,g \in C[0,1] \) and \( t \in [0,1] \).
+
+\begin{align*}
+|F(f)(t) - F(g)(t)| &= \left| \int_{t}^{1}(1 - x^4)f(x) \dd{x} - \int_{t}^{1}(1 - x^4)g(x) \dd{x} \right| \\[8pt]
+&= \left| \int_{t}^{1}(1 - x^4)(f(x) - g(x)) \dd{x} \right| \\[8pt]
+&\leq \int_{t}^{1} |(1 - x^4)(f(x) - g(x))| \dd{x} \\[8pt]
+&\leq \int_{t}^{1} (1 - x^4) |f(x) - g(x)| \dd{x} \\[8pt] 
+\stext{Since \( 0 < (1-x^4) < 1 \) for \( x \in [0,1] \)} \\[8pt]
+&< \int_{t}^{1} |f(x) - g(x)| \dd{x} \\[8pt]
+&< \int_{t}^{1} d_{max}(f,g) \dd{x} \\[8pt]
+&= d_{max}(f,g) (1 - t) \\[8pt]
+&\leq d_{max}(f,g) (1 - 0) \\[8pt]
+&= d_{max}(f,g) \\[8pt]
+\end{align*}
+
+Hence \( F \) is a \( d_{max},d_{max} \)-Lipschitz function on \( C[0,1] \). 
+Thus \( F \) is continuous by \textup{Theorem 3.2 Chapter 15 p76}.
+
+
+
+\end{question}
+
+
+
+
+\end{document}

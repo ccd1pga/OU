@@ -1,0 +1,249 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{04} % TMA number
+
+\begin{question}
+
+Let \( a \) be the \( y \)-intercept and \( \theta \) be the angle the line makes with the \( x \)-axis.
+
+\[ L = L_{a,\theta} = \{ (x, a + x\tan\theta) : x \in \R \} \]
+
+and teh set of all such lines;
+
+\[ X = \{ L_{a,\theta} : a \in \R \text{ and } \theta \in (\frac{-\pi}{2}, \frac{\pi}{2}) \} \]
+
+With distance function \( \Delta \text { on } X \);
+
+\[ \Delta(L_{a,\theta}, L_{b,\phi}) = \mid a - b \mid + \mid \tan\theta - \tan\phi \mid \]
+
+\qpart
+
+\begin{align*}
+\Delta(L_{0,\frac{\pi}{4},L_{1,\frac{-\pi}{4}}}) &= \mid 0 - 1 \mid + \mid \tan\frac{\pi}{4} - \tan\frac{-\pi}{4}\\[8pt]
+&= \mid 1 \mid + \mid 1 - (-1) \mid\\[8pt]
+&= 1 + 2\\[8pt]
+&= 3
+\end{align*}
+
+\vspace{2cm}
+
+\qpart
+
+Using \textup{Definition 2.1 Chapter 14 p72};
+
+\qsubpart
+
+\textbf{M1:}
+
+\[ d(a,b) \geq 0 \]
+Let \( L_{a,\theta}, L_{b,\phi} \in X \).
+\begin{align*}
+\Delta(L_{a,\theta}, L_{b,\phi}) &= \mid a - b \mid + \mid \tan\theta - \tan\phi \mid\\[8pt]
+&\geq 0 + 0\\[8pt]
+&= 0
+\end{align*}
+
+Since absolute values are always non-negative, non-negativity holds.
+
+\vspace{1cm}
+
+Let \( L_{a,\theta}, L_{b,\phi} \in X \).
+\begin{align*}
+\Delta(L_{a,\theta}, L_{b,\phi}) &= \mid a - b \mid + \mid \tan\theta - \tan\phi \mid = 0\\[8pt]
+\stext{This holds if and only if both absolute value terms are zero}
+&\iff \mid a - b \mid = 0 \text{ and } \mid \tan\theta - \tan\phi \mid = 0\\[8pt]
+&\iff a = b \text{ and } \tan\theta = \tan\phi\\[8pt]
+&\iff a = b \text{ and } \theta 
+= \phi \quad \text{(since } \theta, \phi \in (\frac{-\pi}{2}, \frac{\pi}{2})\text{)}\\[8pt]
+&\iff L_{a,\theta} = L_{b,\phi}
+\end{align*}
+
+\vspace{1cm}
+
+\qsubpart
+
+\textbf{M2:}
+
+\[ d(a,b) = d(b,a) \]
+
+\begin{align*}
+\Delta(L_{a,\theta}, L_{b,\phi}) &= \mid a - b \mid + \mid \tan\theta - \tan\phi \mid\\[8pt]
+&= \mid b - a \mid + \mid \tan\phi - \tan\theta \mid\\[8pt]
+&= \Delta(L_{b,\phi}, L_{a,\theta})
+\end{align*}
+
+Thus, symmetry holds.
+
+\vspace{1cm}
+
+\qsubpart
+
+\textbf{M3:}
+
+\[ d(a,c) \leq d(a,b) + d(b,c) \]
+
+Let \( L_{a,\theta}, L_{b,\phi}, L_{c,\psi} \in X \).
+\begin{align*}
+\Delta(L_{a,\theta}, L_{c,\psi}) &= \mid a - c \mid + \mid \tan\theta - \tan\psi \mid\\[8pt]
+&\leq \mid a - b \mid + \mid b - c \mid + \mid \tan\theta - \tan\phi \mid + \mid \tan\phi - \tan\psi \mid\\[8pt]
+&= \Delta(L_{a,\theta}, L_{b,\phi}) + \Delta(L_{b,\phi}, L_{c,\psi})
+\end{align*}
+
+Thus, the triangle inequality holds.
+
+\vspace{3cm}
+
+\qpart
+
+Using \textup{Definition 2.6 Chapter 14 p72};
+
+\[ B_{\Delta}(L_{0,0},1) \]
+
+\begin{align*}
+B_{\Delta}(L_{0,0},1) &= \{ L_{b,\phi} \in X : \Delta(L_{0,0}, L_{b,\phi}) < 1 \}\\[8pt]
+&= \{ L_{b,\phi} \in X : \mid 0 - b \mid + \mid \tan0 - \tan\phi \mid < 1 \}\\[8pt]
+&= \{ L_{b,\phi} \in X : \mid b \mid + \mid 0 - \tan\phi \mid < 1 \}\\[8pt]
+\stqxt{Applying the triangle inequality in \( \R \) to each absolute value term}
+&= \{ L_{b,\phi} \in X : \mid b \mid + \mid \tan\phi \mid < 1 \}
+\end{align*}
+
+\vspace{2cm}
+
+\qpart
+
+Is the sequence of lines given by;
+
+\[ (L_{n})_{n=1}^{\infty}, L_{n} = L_{\frac{-1}{n},\frac{\pi}{2}-\frac{1}{n}} \]
+
+\( \Delta-convergent \)?
+
+To be \( \Delta-convergent \), there must exist some line \( L_{b,\phi} \in X \) such that for every \( \epsilon > 0 \), there exists some \( N \in \N \) such that for all \( n \geq N \);
+\[ \Delta(L_{n}, L_{b,\phi}) < \epsilon \]
+Calculating \( \Delta(L_{n}, L_{b,\phi}) \);
+\begin{align*}
+\Delta(L_{n}, L_{b,\phi}) &= \Delta(L_{\frac{-1}{n},\frac{\pi}{2}-\frac{1}{n}}, L_{b,\phi})\\[8pt]
+&= \mid \frac{-1}{n} - b \mid + \mid \tan(\frac{\pi}{2}-\frac{1}{n}) - \tan\phi \mid\\[8pt]
+\end{align*}    
+
+\end{question}
+
+Alternative
+
+\begin{question}
+
+\[ L = \mathbf{L_{a}} ,\theta = \{ (x,a+x\tan\theta):x \in \R \} \]
+
+Where \( a \) is the y- intercept of the line and \( \theta \) is the angle of inclination of the line to the positive x-axis.
+
+\[ \mathbf{X} =  \mathbf{L_{a}} ,\theta : \mathbf{a} \in \R \text{ and } \theta \in (-\pi/2, \pi/2)  \]
+
+and
+
+\[ \Delta(\mathbf{L_{a}},\theta, \mathbf{L_{b}}, \phi) = \mid a-b \mid + \mid \tan{\theta} - \tan{\phi} \mid \]
+for \( \mathbf{L_{a}},\theta, \mathbf{L_{b}}, \phi \in \mathbf{X} \)
+
+\qpart
+
+The distance between \( \mathbf{L_{0}},\pi/4 \text{ and } \mathbf{L_{1}},-\pi/4 \);
+
+\begin{align*}
+\Delta(\mathbf{L_{0}},\pi/4, \mathbf{L_{1}},-\pi/4) &= \mid 0-1 \mid + \mid \tan{\pi/4} - \tan{-\pi/4} \mid \\[8pt]
+&= 1 + \mid 1 - (-1) \mid \\[8pt]
+&= 1 + \mid 2 \mid \\[8pt]
+&= 1 + 2 = 3
+\end{align*}
+
+\qpart
+
+Bt \textup{Definition 2.1,HB Chapter 14 p72},
+
+\qsubpart
+
+To show \( \Delta \) satisfies (M1) non-negativity, we need to show that for any 
+\( d^{(2)}(\mathbf{a},\mathbf{b}) \geq 0 \)
+
+\begin{align*}
+\Delta(\mathbf{L_{a}},\theta, \mathbf{L_{b}}, \phi) &= \mid a-b \mid + \mid \tan{\theta} - \tan{\phi} \mid \\[8pt]
+\stext{As \( \mathbf{a,b} \in \R \) and \( \theta \in (-\pi/2, \pi/2) \), both \( \mid a-b \mid \geq 0 \) and \( \mid \tan{\theta} - \tan{\phi} \mid \geq 0 \)} \\[8pt]
+&\geq 0 + 0 \\[8pt]
+\end{align*}
+
+Thus, \( \Delta(\mathbf{L_{a}},\theta, \mathbf{L_{b}}, \phi) \geq 0 \) and (M1) is satisfied.
+
+\vspace{2cm}
+
+\qsubpart
+
+To show \( \Delta \) satisfies (M2) symetry, we need to show that for any
+\( d^{(2)}(\mathbf{a},\mathbf{b}) = d^{(2)}(\mathbf{b},\mathbf{a}) \)
+
+\begin{align*}
+\Delta(\mathbf{L_{a}},\theta, \mathbf{L_{b}}, \phi) &= \mid a-b \mid + \mid \tan{\theta} - \tan{\phi} \mid \\[8pt]
+\stext{By the properties of absolute values, HB p8, \( \mid a-b \mid = \mid b-a \mid \) and \( \mid \tan{\theta} - \tan{\phi} \mid = \mid \tan{\phi} - \tan{\theta} \mid \)} \\[8pt]
+&= \mid b-a \mid + \mid \tan{\phi} - \tan{\theta} \mid \\[8pt]
+&= \Delta(\mathbf{L_{b}},\phi, \mathbf{L_{a}}, \theta)
+\end{align*}
+
+Thus, \( \Delta(\mathbf{L_{a}},\theta, \mathbf{L_{b}}, \phi) = \Delta(\mathbf{L_{b}},\phi, \mathbf{L_{a}}, \theta) \) and (M2) is satisfied.
+
+\vspace{2cm}
+
+\qsubpart
+
+To show \( \Delta \) satisfies (M3) triangle inequality, we need to show that for any
+\( d^{(2)}(\mathbf{a},\mathbf{c}) \leq d^{(2)}(\mathbf{a},\mathbf{b}) + d^{(2)}(\mathbf{b},\mathbf{c}) \)
+
+\begin{align*}
+\Delta(\mathbf{L_{a}},\theta, \mathbf{L_{c}}, \psi) &= \mid a-c \mid + \mid \tan{\theta} - \tan{\psi} \mid \\[8pt]
+\stext{By the triangle inequality for real numbers, HB p9, \( \mid a-c \mid \leq \mid a-b \mid + \mid b-c \mid \) and \( \mid \tan{\theta} - \tan{\psi} \mid \leq \mid \tan{\theta} - \tan{\phi} \mid + \mid \tan{\phi} - \tan{\psi} \mid \)} \\[8pt]
+&\leq \left( \mid a-b \mid + \mid b-c \mid \right) + \left( \mid \tan{\theta} - \tan{\phi} \mid + \mid \tan{\phi} - \tan{\psi} \mid \right) \\[8pt]
+&= \mid a-b \mid + \mid \tan{\theta} - \tan{\phi} \mid + \mid b-c \mid + \mid \tan{\phi} - \tan{\psi} \mid \\[8pt]
+&= \Delta(\mathbf{L_{a}},\theta, \mathbf{L_{b}}, \phi) + \Delta(\mathbf{L_{b}},\phi, \mathbf{L_{c}}, \psi)
+\end{align*}
+
+Thus, \( \Delta(\mathbf{L_{a}},\theta, \mathbf{L_{c}}, \psi) \leq \Delta(\mathbf{L_{a}},\theta, \mathbf{L_{b}}, \phi) + \Delta(\mathbf{L_{b}},\phi, \mathbf{L_{c}}, \psi) \) and (M3) is satisfied.
+
+\vspace{5cm}
+
+\qpart
+
+\[ \mathbf{B_{\Delta}}(\mathbf{L_{0,0}},1) \]
+
+By \textup{Definition 2.6, HB Chapter 14 p72},
+
+\begin{align*}
+\mathbf{B_{\Delta}}(\mathbf{L_{0,0}},1) &= \{ \mathbf{L_{b}}, \theta \in \mathbf{X} : \Delta(\mathbf{L_{0,0}}, \mathbf{L_{b}}, \theta) < 1 \} \\[8pt]
+&= \{ \mathbf{L_{b}}, \theta \in \mathbf{X} : \mid 0-b \mid + \mid \tan{0} - \tan{\theta} \mid < 1 \} \\[8pt]
+&= \{ \mathbf{L_{b}}, \theta \in \mathbf{X} : \mid b \mid + \mid 0 - \tan{\theta} \mid < 1 \} \\[8pt]
+&= \{ \mathbf{L_{b}}, \theta \in \mathbf{X} : \mid b \mid + \mid \tan{\theta} \mid < 1 \}
+\end{align*}
+
+\vspace{2cm}
+
+\qpart
+
+The sequence of lines;
+\[ (\mathbf{L_{n}})_{n=1}^{\infty} \text{ given by } \mathbf{L_{n}} = \mathbf{L}_{-1/n,\pi/2-1/n} \]
+is not \( \Delta-convergent \) because, by \textup{Definition 3.2 HB Chapter 14 p73};
+
+\begin{align*}
+\stext{Using \(L_{b,\phi} \in X\) Then}
+\Delta(L_n, L_{b,\phi}) &= \left|-\frac{1}{n} - b\right|+ \left|\tan\left(\frac{\pi}{2}-\frac{1}{n}\right) - \tan\phi\right| \\[8pt]
+\stext{As \(n \to \infty\), we have \(-1/n \to 0\), so}
+\left|-\frac{1}{n} - b\right| \to |b|\\[8pt]
+\stext{Also, as \(n \to \infty\), we have}
+\tan\left(\frac{\pi}{2}-\frac{1}{n}\right) \to +\infty \\[8pt]
+\stext{and since \(\tan\phi\) is finite for all \(\phi \in (-\pi/2,\pi/2)\),}
+\left|\tan\left(\frac{\pi}{2}-\frac{1}{n}\right) - \tan\phi\right| \to \infty.
+\end{align*}
+
+Hence \(\Delta(L_n, L_{b,\phi}) \to \infty\), and so
+\((L_n)\) is not \(\Delta\)-convergent.
+
+\end{question}
+
+\end{document}

@@ -1,0 +1,92 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{04} % TMA number
+
+\begin{question}
+
+\begin{equation*}
+f_{n}(x) = 
+\begin{cases}
+\sin(\pi x), \text{ if } 2n \leq x < (2n+1),\\
+0, \text{ otherwise. }
+\end{cases}
+\end{equation*}
+
+\qpart
+
+\includegraphics[scale=0.5]{name}
+
+\vspace{2cm}
+
+\includegraphics[scale=0.5]{name}
+
+\vspace{2cm}
+
+\includegraphics[scale=0.5]{name}
+
+\vspace{2cm}
+
+\qpart
+
+To test of a pointwise convergence of \( f_n(x) \) to \( f(x) \), we need to consider different cases for \( x \).
+
+\begin{align*}
+\text{Case 1: } & x \in [0,1) \\
+& f_n(x) = \sin(\pi x) \text{ for all } n \geq 0 \\
+& \lim\limits_{n \to \infty} f_n(x) = \sin(\pi x) \\
+& \therefore f(x) = \sin(\pi x) \\[12pt]
+\text{Case 2: } & x \in [1,2) \\
+& f_n(x) = 0 \text{ for all } n \geq 0 \\
+& \lim\limits_{n \to \infty} f_n(x) = 0 \\
+& \therefore f(x) = 0 \\[12pt]
+\text{Case 3: } & x \in [2,3) \\
+& f_n(x) = \sin(\pi x) \text{ for all } n \geq 1 \\
+& \lim\limits_{n \to \infty} f_n(x) = \sin(\pi x) \\
+& \therefore f(x) = \sin(\pi x) \\[12pt]
+\text{Case 4: } & x \in [3,4) \\
+& f_n(x) = 0 \text{ for all } n \geq 1 \\
+& \lim\limits_{n \to \infty} f_n(x) = 0 \\
+& \therefore f(x) = 0 \\[12pt]
+& \vdots \\[12pt]
+\text{Case k: } & x \in [k, k+1) \\
+& f_n(x) = 
+\begin{cases}
+\sin(\pi x), \text{ if } k \text{ is even and } n \geq k/2,\\
+0, \text{ if } k \text{ is odd and } n \geq (k-1)/2.
+\end{cases} \\
+& \lim\limits_{n \to \infty} f_n(x) = 
+\begin{cases}
+\sin(\pi x), \text{ if } k \text{ is even},\\
+0, \text{ if } k \text{ is odd. }
+\end{cases} \\
+& \therefore f(x) = 
+\begin{cases}
+\sin(\pi x), \text{ if } k \text{ is even},\\
+0, \text{ if } k \text{ is odd. }
+\end{cases}     
+\end{align*}
+
+Thus we have that the pointwise limit function \( f(x) \) is given by;
+\begin{equation*}
+f(x) = 
+\begin{cases}
+\sin(\pi x), \text{ if } \lfloor x \rfloor \text{ is even},\\
+0, \text{ if } \lfloor x \rfloor \text{ is odd. }
+\end{cases}
+\end{equation*} 
+
+
+
+\vspace{3cm}
+
+\qpart
+
+
+
+\end{question}
+
+\end{document}
