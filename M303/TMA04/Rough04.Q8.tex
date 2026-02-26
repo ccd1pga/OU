@@ -1,0 +1,82 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\begin{question}
+
+    Question 8 from section B
+
+Let \( R \) be the ring \( \Z[\sqrt{-13}] \)
+
+\qpart
+
+\[ A = \{ s + t\sqrt{-13} : s,t \in \Z, s - t \equiv 0\pmod{7} \} \]
+
+As \( s = t\pmod{7} \) there eisits an integer \( k \) such that,
+\[ s = t + 7k \]
+Hence,
+\begin{align*}
+s + t\sqrt{-13} &= (t + 7k) + t\sqrt{-13} \\[8pt]
+&= t(1 + \sqrt{-13}) + 7k\\[8pt]
+\stext{So}
+A \langle 7, 1 + \sqrt{-13} \rangle
+\end{align*} 
+
+By \textup{Definition 2.1 HB Chapter 17 p94},
+
+To Show \( A \) is ideal, it must be closed under multiplication by any \( r \in R \).
+So we need the product of the generator and \( \sqrt{-13} \) to stay in \( A \).
+
+\begin{align*}
+\sqrt{-13}(1 + \sqrt{-13}) &= \sqrt{-13} -13\\[8pt]
+\stext{since} -13 &\equiv 1\pmod{7} \\[8pt]
+-13 &= 1 -14\\[8pt]
+\sqrt{-13} -13 &= (\sqrt{-13} + 1) - 14\\[8pt]
+&= (\sqrt{-13} + 1) + 7(-2)
+\end{align*}
+
+Since \( (\sqrt{-13} + 1) \in A \) and \( 14 = 2(7) \in A \) it follows that \( A \) 
+is closed under multiplication by any element of \( R \) and hence is an ideal.
+
+\vspace{3cm}
+
+\qpart
+
+\[ B = \{ u + v\sqrt{-13} : u,v \in \Z, u + v \equiv 0\pmod{7} \} \]
+
+As \( u = -v\pmod{7} \) there eisits an integer \( k \) such that, 
+\[ u = -v + 7k \] 
+
+Hence, 
+\begin{align*} 
+    u + v\sqrt{-13} &= (-v + 7k) + v\sqrt{-13} \\[8pt] 
+    &= v(-1 + \sqrt{-13}) + 7k\\[8pt] 
+    \stext{So} 
+    B \langle 7, -1 + \sqrt{-13} \rangle
+\stext{because \( -1 \) is a unit in \( \Z[\sqrt{-13}] \), therefore we can multiply the second generator by \( -1 \) and it will still generate the same ideal.}
+    B \langle 7, 1 - \sqrt{-13} \rangle
+\end{align*}
+
+Hence,
+
+\begin{align*}
+A & \langle 7, 1 + \sqrt{-13} \rangle \\[8pt]
+\stext{and}
+B & \langle 7, 1 - \sqrt{-13} \rangle\\[8pt]
+\stext{By \textup{Lemma 3.9 HB Chapter 17 p97}, the product of two ideals \(A\) and \( B \)}
+AB & \langle 7\cdot 7, 7(1 - \sqrt{-13}), 7(1 + \sqrt{-13}), (1 + \sqrt{-13})(1 - \sqrt{-13}) \rangle \\[8pt] 
+& \langle 49, 7(1 - \sqrt{-13}), 7(1 + \sqrt{-13}), 14 \rangle\\[8pt]
+\stext{Since the \( \hcf(14, 49) = 7 \) and \( 7(1 - \sqrt{-13}) \) and \( 7(1 + \sqrt{-13}) \) are multiples of \( 7 \) and,}
+7 &= 49 -3(14) \in AB\\[8pt]
+7 &\subseteq AB\\[8pt]
+\stext{hence}
+AB & \langle 7 \rangle
+\end{align*}
+
+
+
+\end{question}
+
+\end{document}

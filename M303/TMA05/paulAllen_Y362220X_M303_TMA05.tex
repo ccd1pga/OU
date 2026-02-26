@@ -1,0 +1,151 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{04} % TMA number
+
+\section{Part A}
+
+%Question 1
+\begin{question}
+
+    Let \( R \) be the ring,
+    \[ \Z[\sqrt{-14}] \]
+
+    \qpart
+
+    Let \( A \) be the subring,
+    \[ A = \{ a + b\sqrt{-14} : a,b \in \Z, a - b \equiv 0\pmod{5} \} \]
+
+    As \( a = b\pmod{5} \) there exists some \( k \in \Z \) such that \( a = b + 5k \).
+
+    Hence,
+    \begin{align*}
+    a + b\sqrt{-14} &= b + 5k + b\sqrt{-14}\\[8pt]
+    &= b(1 + \sqrt{-14}) + 5k\\[8pt]
+    \stext{So}
+    A &= \langle 1 + \sqrt{-14}, 5 \rangle
+    \end{align*}
+
+    By \textup{Definition 2.1 HB chapter 19 p94}, and \( R = \Z[\sqrt{-14}] = \langle 1, \sqrt{-14} \rangle_{\Z} \),
+    so we only need to check multipliation by \( \sqrt{-14} \), as \( 1 \) is trival.
+
+    \begin{align*}
+    \sqrt{-14}(1 + \sqrt{-14}) &= \sqrt{-14} + (\sqrt{-14})^2\\[8pt]
+    \stext{and since}
+    -14 \equiv 1 \pmod{5} \\[8pt]
+    \stext{and}
+    -14 = 1 -15\\[8pt]
+    \stext{So}
+    \sqrt{-14} - 14 &= (\sqrt{-14} + 1) - 15\\[8pt]
+    &= (\sqrt{-14} + 1) + 5(-3)\\[8pt]
+    \end{align*}
+
+    AS \( \sqrt{-14} \in A \) and \( 15 = 3(5) \in A \), it follows that \( A \) is closed under multiplication by any 
+    element of \( R \), and hence \( A \) is an ideal of \( R \).
+
+    \qpart
+
+
+
+\end{question}
+
+%Question 2
+\begin{question}
+
+\[ f(x) = 3x^{4} + 156x^{3} + 26x^{2} +130x +26 \in Z[x] \]
+
+\qpart
+
+Using \textup{Thereom 4.15 HB Chapter 12 p52},
+
+using the prime \( p = 13 \)
+\begin{itemize}
+\item \( 13 \mid 156 \)\\
+\item \( 13 \mid 26 \)\\
+\item \( 13 \mid 130 \)\\
+\item \( 13 \mid 26 \)\\
+\item \( 13 \nmid 3 \)\\
+\item \( 13^2 \nmid 26 \)\\
+\end{itemize}
+
+Hence by Eisenstein's criterion, \( f(x) \) is irreducible over \( \Q[x] \).
+
+\vspace{2cm}
+
+\qpart
+
+Let,
+\[ \alpha \in \C \quad \beta \in \C \]
+be two distinct roots of \( f(x) \)
+
+Since
+\[ f(x) \in \Z[x] \subset \Q[x] \]
+is irreducible over \( \Q \), and \( \alpha \in \C \) satisfies \( f(\alpha) = 0 \)
+it follows that the minimal polynomial of \( \alpha \) over \( \Q \) is \( f(x) \).
+
+Using \textup{Theorem 2.21 HB Chapter 18 p105},
+\[ \Q(\alpha) \cong \Q[x]/(f(x)) \]
+
+The same applies to \( \beta \), and hence
+\[ \Q(\beta) \cong \Q[x]/(f(x)) \]
+
+Thus,
+\[ \Q(\alpha) \cong \Q(\beta) \]
+
+\end{question}
+
+%Question 3
+\begin{question}
+
+    Let
+    \[ \alpha = \sqrt{13} + \sqrt{n} \]
+
+    \qpart
+
+    \begin{align*}
+    \alpha^{3} - (n + 39)\alpha &= (\sqrt{13} + \sqrt{n})^{3} - (n + 39)(\sqrt{13} + \sqrt{n})\\[8pt]
+    &= (\sqrt{13} + \sqrt{n})(\sqrt{13} + \sqrt{n})^2 - (n + 39)(\sqrt{13} + \sqrt{n})\\[8pt]
+    &= (\sqrt{13} + \sqrt{n})(13 + n + 2\sqrt{13}\sqrt{n}) - (n + 39)(\sqrt{13} + \sqrt{n})\\[8pt]
+    &= (\sqrt{13} + \sqrt{n})((13 + n + 2\sqrt{13n}) - (n + 39))\\[8pt]
+    &= (\sqrt{13} + \sqrt{n})(-26 + 2\sqrt{13n})\\[8pt]
+    &= -26\sqrt{13} + 2\cdot\sqrt{13}\sqrt{13n} - 26\sqrt{n} + 2\sqrt{13n^2}\\[8pt]
+    &= -26\sqrt{13} + 2\cdot13\sqrt{n} - 26\sqrt{n} + 2\sqrt{13}n\\[8pt]
+    &= -26\sqrt{13} + 26\sqrt{n} - 26\sqrt{n} + 2\sqrt{13}n\\[8pt]
+    &= -26\sqrt{13} + 2\sqrt{13}n\\[8pt]
+    &= \sqrt{13}(2n - 26)\\[8pt]
+    \end{align*}
+
+    Hence,
+    \[ \alpha^{3} - (n + 39)\alpha = \sqrt{13}(2n - 26) \]
+
+    and we can write this as,
+    \[ \sqrt{13} = \frac{\alpha^{3} - (n + 39)\alpha}{(2n - 26)} \]
+
+    So
+    \[ \sqrt{13} \in \Q_{\alpha} \]
+
+    and since \( \sqrt{n} = \alpha - \sqrt{13} \), it follows that
+    \[ \sqrt{n} \in \Q_{\alpha} \]
+
+    Hence,
+    \[ \Q(\sqrt{13}, \sqrt{n}) \subseteq \Q_{\alpha} \]
+
+    Hence,
+    \[ \Q(\sqrt{13}, \sqrt{n}) \subseteq \Q(\sqrt{13} + \sqrt{n}) \]
+
+\end{question}
+
+
+%Question 4
+\begin{question}
+
+    Let
+    \[ /bm{F}  =  \]
+
+\end{question}
+
+
+\end{document}

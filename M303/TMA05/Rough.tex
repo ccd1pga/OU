@@ -1,0 +1,70 @@
+\documentclass{tufte-handout}
+
+\usepackage{style}
+
+\begin{document}
+
+\tma{04} % TMA number
+
+\section{Part A}
+
+%Question 4
+\begin{question}
+
+    Let
+    \[ \bm{F}  = \Z_{2}(\omega) \]
+
+    Where,
+    \[ \omega^{4} = \omega + 1 \]
+
+    \qpart
+
+    For \( z \in F \) we have \( z + z = 0 \) because \( z + z = 2z \equiv 0 \pmod{2} \), so \( z = -z \) for all \( z \in F \).
+
+
+
+\qpart
+
+\qsubpart
+
+    To find the multiplicative inverse of \( 1 + \omega^{2} \in F \) we by an arbitary element of \( K \).
+
+    \begin{align*}
+    \stext{The given elemnt can be wriiten as,}
+    a\omega^{3} + b\omega^{2} + c\omega + d
+    \stext{Where \( a,b,c,d \in \Z_{2} \), so we need to find \( a,b,c,d \) such that,}
+    1 &= (\omega^{2} + 1)(a\omega^{3} + b\omega^{2} + c\omega + d)\\[8pt]
+    &= a\omega^{5} + b\omega^{4} + c\omega^{3} + d\omega^{2} + a\omega^{3} + b\omega^{2} + c\omega + d\\[8pt]
+    \stext{Since \( \omega^{4} = \omega + 1 \),}
+    \stext{ we can write \( \omega^{5} = \omega\omega^{4} = \omega(\omega + 1) = \omega^{2} + \omega \), so,}
+    &= a(\omega^{2} + \omega) + b(\omega + 1) + c\omega^{3} + d\omega^{2} + a\omega^{3} + b\omega^{2} + c\omega + d\\[8pt]
+    &= (b + d) + (a + b + c)\omega + (a + b + d)\omega^{2} + (a + c)\omega^{3}\\[8pt]
+    \end{align*}
+
+\vspace{1cm}
+
+\qsubpart
+
+This gives us the system of equations,
+\begin{align*}
+b + d &= 1 \in \Z_{2}\\[8pt]
+a + b + c &= 0 \in \Z_{2}\\[8pt]
+a + b + d &= 0 \in \Z_{2}\\[8pt]
+a + c &= 0 \in \Z_{2}\\[8pt]
+\end{align*}
+
+From the last equation we have \( c = a \), and substituting this into the second equation gives us \( b = 0 \), and substituting this into the third equation 
+gives us \( d = a \), and substituting this into the first equation gives us \( a = 1 \).
+
+Hence, the multiplicative inverse of \( 1 + \omega^{2} \) is,
+
+\[ \omega^{3} + \omega + 1 \]
+
+\vspace{2cm}
+
+\qpart
+
+
+\end{question}
+
+\end{document}
